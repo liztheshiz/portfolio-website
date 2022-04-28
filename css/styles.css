@@ -43,6 +43,16 @@ h3 {
 
 main {
 	padding: 40px 40px 20px;
+	animation: 0.4s ease-in 0s 1 fadeIn backwards;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opactiy: 1;
+  }
 }
 
 main h1, main h2, main h3 {
@@ -141,6 +151,10 @@ a:active {
 	padding: 1%;
 }
 
+#home-main {
+	animation: 0.7s ease-in 0.1s 1 fadeIn backwards;
+}
+
 #home {
 	margin: 0 auto;
 	padding: 50px 0;
@@ -148,11 +162,10 @@ a:active {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	animation: 0.7s ease-in 0.1s 1 fadeIn;
 }
 
 .bar {
-	position: absolute;
+	position: fixed;
 	top: 0px;
   width: 15%;
   height: 100%;
@@ -250,15 +263,6 @@ a:active {
   }
   100% {
       transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opactiy: 1;
   }
 }
 
