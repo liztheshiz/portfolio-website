@@ -38,31 +38,34 @@
 
 	<main>
 		<h1>Contact</h1>
-		<div class="contact-list-container">
-			<div class="contact-list">	
-				Elizabeth Stone<br>
-				Somerville, MA<br>
-				<br>
-				<a href="tel:+14062242936">Tel (406) 224-2936</a><br>
-				<a href="mailto:lizzystone13@gmail.com">lizzystone13@gmail.com</a>
-				<br>
-				<a href="mailto:lizzystone13@gmail.com">Contact me</a>
+		<div class="contact-grid">
+			<div class="contact-grid__item">
+				<div class="contact-list">	
+					Elizabeth Stone<br>
+					Somerville, MA<br>
+					<br>
+					<a href="tel:+14062242936">Tel (406) 224-2936</a><br>
+					<a href="mailto:lizzystone13@gmail.com">lizzystone13@gmail.com</a><br>
+					<a href="mailto:lizzystone13@gmail.com">Contact me</a>
+				</div>
+			</div>
+
+			<div class="contact-grid__item">
+				<form action="#" method="post" id="contact-form">
+		  			<label for="user email" class="standard-label">E-mail*:</label><br>
+		  			<input class="user-input" id="user email" type="email" required><br>
+
+		  			<label for="user tel" class="standard-label">Tel:</label><br>
+		  			<input class="user-input" id="user tel" type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br>
+		  
+		  			<label for="user message" class="standard-label">Message*<br>(max 240 char):</lable><br>
+		  			<textarea class="user-input" id="user message" maxlength="240" required></textarea><br>
+		  			<p>*Starred items are required.</p>
+		  
+		  			<button type="submit" value="send">Send</button>
+				</form>
 			</div>
 		</div>
-
-		<form action="#" method="post" id="contact-form">
-  			<label for="user email" class="standard-label">E-mail*:</label>
-  			<input class="user-input" id="user email" type="email" required>
-
-  			<label for="user tel" class="standard-label">Tel:</label>
-  			<input class="user-input" id="user tel" type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
-  
-  			<label for="user message" class="standard-label">Message*<br>(max 240 char):</lable>
-  			<textarea class="user-input" id="user message" maxlength="240" required></textarea>
-  			<p>*Starred items are required.</p>
-  
-  			<button type="submit" value="send">Send</button>
-		</form>
 	</main>
 
 	<footer class="page-footer">

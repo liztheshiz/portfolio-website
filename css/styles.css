@@ -315,20 +315,43 @@ a:active {
 
 /* >>>Contact page main elements<<< */
 
-.contact-list-container {
-	display: flex;
-	justify-content: center;
+.contact-grid_item {
+	display: inline-block;
+	width: 50%;
+}
+
+@supports (display: grid) {
+	.contact-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 20px;
+		margin: 0;
+	}
+
+	.contact-grid__item {
+		background-color: red;
+		width: auto;
+		min-height: auto;
+		margin: 0;
+		border-radius: 20px;
+		padding-bottom: 20px;
+	}
 }
 
 .contact-list {
+	margin: 40px auto 0px;
 	line-height: 1.6;
+	background-color: orange;
+	text-align: right;
 }
 
 #contact-form {
-	display: flex;
-	margin: 40px auto 0px;
-	flex-direction: column;
-	width: 200px;
+	/*display: flex;*/
+	margin: 40px 0px 0px;
+	/*flex-direction: column;*/
+	/*width: 200px;*/
+	text-align: left;
+	background-color: green;
 }
 
 .user-input {
