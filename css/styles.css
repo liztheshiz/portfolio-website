@@ -23,7 +23,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 1.4;
 }
 
 h1 {
@@ -204,6 +204,10 @@ a:active {
 .contact-list-container {
 	display: flex;
 	justify-content: center;
+}
+
+.contact-list {
+	line-height: 1.6;
 }
 
 #contact-form {
