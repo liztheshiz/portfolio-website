@@ -164,6 +164,12 @@ a:active {
 	margin: 20px auto;
 }
 
+.home__description {
+	font-size: 22px;
+	font-style: italic;
+	margin: 15px auto;
+}
+
 .home__item:last-child {
 	text-align: center;
 }
