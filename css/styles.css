@@ -11,7 +11,7 @@
 
 
 * {
-  	box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 
@@ -27,18 +27,18 @@ body {
 }
 
 h1 {
-  	font-size: 30px;
-  	font-weight: var(--bold);
+	font-size: 30px;
+ 	font-weight: var(--bold);
 }
 
 h2 {
-  	font-size: 24px;
-  	font-weight: var(--bold);
+ 	font-size: 24px;
+ 	font-weight: var(--bold);
 }
 
 h3 {
-  	font-size: 18px;
-  	font-weight: var(--bold);
+  font-size: 18px;
+  font-weight: var(--bold);
 }
 
 main {
@@ -62,7 +62,7 @@ a:hover, a:focus {
 }
 
 a:active {
-  	color: #b53131;
+  color: #b53131;
 }
 
 
@@ -87,7 +87,7 @@ a:active {
 }
 
 .navigation-list {
-  	list-style-type: none;
+  list-style-type: none;
 }
 
 .navigation-list li {
@@ -102,25 +102,25 @@ a:active {
 }
 
 .navigation-list__item {
-  	text-decoration: none;
+  text-decoration: none;
 }
 
 .navigation-list__item::after {
 	position: absolute;
 	left: 0px;
 	bottom: 0px;
-    width: 100%;
-    height: 2px;
-    background: var(--secondary-color);
-    content: "";
-    opacity: 0;
-    transform: translateY(-6px);
-    transition: all 0.2s;
+  width: 100%;
+  height: 2px;
+  background: var(--secondary-color);
+  content: "";
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: all 0.2s;
 }
 
 .navigation-list__item--active::after {
 	transform: translateY(0px);
-    opacity: 1;
+  opacity: 1;
 }
 
 .navigation-list__item:hover::after, .navigation-list__item:focus::after {
@@ -134,8 +134,58 @@ a:active {
 
 
 
-/* >>>Home page main elements<<< */
+/* >>>Home page elements (unique)<<< */
 
+.home-header {
+	padding: 70px;
+}
+
+.home {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 50px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.home__item:first-child {
+	flex: none;
+	width: 300px;
+	height: 105px;
+	align-self: center;
+}
+
+.home__portrait {
+	width: 250px;
+	height: auto;
+	border-radius: 50%;
+	margin: 20px auto;
+}
+
+.home__item:last-child {
+	text-align: center;
+}
+
+.home-navigation-list {
+	list-style-type: none;
+	margin-left: -54px;
+}
+
+.home-navigation-list li {
+	position: relative;
+	display: inline-block;
+	margin-left: 15px;
+	margin-top: 6px;
+}
+
+.home-navigation-list__item {
+	text-decoration: none;
+}
+
+/* Legacy home page profile */
+/*
 .profile {
 	max-width: 700px;
 	margin: 0 auto;
@@ -151,6 +201,7 @@ a:active {
 	margin-right: 40px;
 	border-radius: 50%;
 }
+*/
 
 
 
@@ -253,8 +304,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .button__secondary {
-  	background-color: var(--secondary-color);
-  	color: var(--dark-grey);
+ 	background-color: var(--secondary-color);
+ 	color: var(--dark-grey);
 }
 
 
@@ -340,17 +391,17 @@ button:hover, button:focus, .button:hover, .button:focus {
 /* Animations */
 
 @keyframes color-change {
-  	0% {
-    	fill: #edc655;
-  	} 50% {
-    	fill: #fcffad;
-  	} 100% {
-    	fill: #f76414;
-  	}
+  0% {
+   	fill: #edc655;
+  } 50% {
+   	fill: #fcffad;
+  } 100% {
+   	fill: #f76414;
+  }
 }
 
 .sun {
-  	animation: 4s color-change infinite alternate linear;
+  animation: 4s color-change infinite alternate linear;
 }
 
 @keyframes cloud-move {
@@ -366,13 +417,13 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 @keyframes cloud-move-reverse {
-  	from {
-    	transform: translate(446px, 48px);
-  	} to {
-    	transform: translate(100px, 48px);
-  	}
+  from {
+   	transform: translate(446px, 48px);
+  } to {
+   	transform: translate(100px, 48px);
+  }
 }
 
 .cloud-back {
-  	animation: 34s cloud-move-reverse infinite alternate linear;
+ 	animation: 34s cloud-move-reverse infinite alternate linear;
 }
