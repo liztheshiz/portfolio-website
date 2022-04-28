@@ -470,6 +470,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 	.contact-grid {
 		grid-template-columns: 1fr;
+		grid-gap: 0px;
 	}
 
 	.contact-grid__item {
