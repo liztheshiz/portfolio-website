@@ -324,24 +324,21 @@ a:active {
 	.contact-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 20px;
+		grid-gap: 50px;
 		margin: 0;
 	}
 
 	.contact-grid__item {
-		background-color: red;
 		width: auto;
 		min-height: auto;
 		margin: 0;
-		border-radius: 20px;
 		padding-bottom: 20px;
 	}
 }
 
 .contact-list {
-	margin: 40px auto 0px;
+	margin: 60px auto 0px;
 	line-height: 1.6;
-	background-color: orange;
 	text-align: right;
 }
 
@@ -351,7 +348,6 @@ a:active {
 	/*flex-direction: column;*/
 	/*width: 200px;*/
 	text-align: left;
-	background-color: green;
 }
 
 .user-input {
@@ -470,6 +466,18 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 	.work-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.contact-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-grid__item {
+		max-width: 200px;
+	}
+
+	.contact-list {
+		text-align: left;
 	}
 }
 
