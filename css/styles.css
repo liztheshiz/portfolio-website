@@ -154,7 +154,7 @@ a:active {
 		>>><<< */
 
 #home-header {
-	padding: 1%;
+	padding: 20px;
 }
 
 #home-main {
@@ -226,13 +226,10 @@ a:active {
 	margin-top: 6px;
 }
 
-#home-navigation-list li a {
-	font-size: 20px;
-	color: var(--primary-color);
-}
-
 .home-navigation-list__item {
 	text-decoration: none;
+	font-size: 20px;
+	color: var(--primary-color);
 }
 
 /* Homepage nav link animation */
@@ -280,7 +277,7 @@ a:active {
 		>>><<< */
 
 .about-container {
-	width: 600px;
+	max-width: 600px;
 	text-align: left;
 	margin: 0 auto;
 }
@@ -436,7 +433,11 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 @media all and (max-width: 750px) {
 	h1 {
-		font-size: 28px;
+		font-size: 26px;
+	}
+
+	h2 {
+		font-size: 22px;
 	}
 
 	.work-grid {
@@ -451,6 +452,10 @@ button:hover, button:focus, .button:hover, .button:focus {
 @media all and (min-width: 520px) and (max-width: 750px){
   main {
 		padding-top: 20px;
+	}
+
+	#home-header {
+		padding: 30px;
 	}
 
 	.work-grid {
@@ -472,6 +477,10 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 @media all and (max-width: 520px) {
+	body {
+		font-size: 14px;
+	}
+
 	main {
 		padding-top: 10px;
 	}
@@ -511,6 +520,23 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 	#home__portrait {
 		width: 200px;
+	}
+
+	#home__description {
+		font-size: 20px;
+		margin-bottom: 8px;
+	}
+
+	#home-navigation-list li {
+		margin: 5px;
+	}
+
+	.home-navigation-list__item {
+		font-size: 18px;
+	}
+
+	.bar {
+		width: 8%;
 	}
 
 	.work-grid {
