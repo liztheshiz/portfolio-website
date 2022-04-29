@@ -1,4 +1,4 @@
-/* Variables */
+/* VARIABLES */
 
 :root {
   --background-color: #ede4d3; /* tan */
@@ -16,7 +16,9 @@
 
 
 
-/* >>>General elements<<< */
+/* 	>>><<<
+		GENERAL ELEMENTS
+		>>><<< */
 
 body {
 	background-color: var(--background-color);
@@ -77,7 +79,9 @@ a:active {
 
 
 
-/* >>>Header elements<<< */
+/* 	>>><<<
+		HEADER ELEMENTS
+		>>><<< */
 
 .page-header {
 	display: flex;
@@ -145,7 +149,9 @@ a:active {
 
 
 
-/* >>>Home page elements (unique)<<< */
+/* 	>>><<<
+		HOME PAGE ELEMENTS
+		>>><<< */
 
 #home-header {
 	padding: 1%;
@@ -418,7 +424,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 @media all and (max-width: 750px) {
 	h1 {
-		font-size: 22px;
+		font-size: 28px;
 	}
 
 	.work-grid {
@@ -430,8 +436,12 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
 }
 
-@media all and (min-width: 500px) and (max-width: 750px){
-  .work-grid {
+@media all and (min-width: 520px) and (max-width: 750px){
+  main {
+		padding-top: 20px;
+	}
+
+	.work-grid {
    	grid-template-columns: 1fr 1fr;
   }
 
@@ -450,9 +460,14 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 @media all and (max-width: 520px) {
+	main {
+		padding-top: 10px;
+	}
+
 	.page-header {
 		flex-direction: column;
 		justify-content: center;
+		padding-bottom: 0px;
 	}
 
 	.page-header_item:first-child {
@@ -464,18 +479,24 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 	.page-header_item:last-child {
 		text-align: center;
+		flex: none;
+		height: 50px;
 	}
 
 	.navigation-list {
 		margin-left: -40px;
+		margin-top: 0px;
 	}
 
 	.navigation-list li {
 		margin-left: 5px;
 	}
-}
 
-@media all and (max-width: 500px) {
+	#home__logo {
+		width: 240px;
+		height: 84px;
+	}
+
 	#home__portrait {
 		width: 200px;
 	}
@@ -496,11 +517,13 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 	.contact-grid__item {
 		width: 200px;
+		padding: 0px;
 		justify-self: center;
 	}
 
 	.contact-list {
 		text-align: left;
+		margin-top: 20px;
 	}
 }
 
