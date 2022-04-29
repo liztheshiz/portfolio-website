@@ -421,17 +421,12 @@ button:hover, button:focus, .button:hover, .button:focus {
 		font-size: 22px;
 	}
 
-	#home__logo {
-		width: 100px;
-	}
-
 	.work-grid {
    	grid-gap: 10px;
   }
 
 	#your-project-here {
 		padding: 0px 0px 20px;
-		background-color: green;
   }
 }
 
@@ -446,7 +441,15 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
+	.navigation-list li {
+		font-size: 14px;
+		margin-top: 8px;
+		margin-left: 8px;
+	}
+}
+
+@media all and (max-width: 520px) {
 	.page-header {
 		flex-direction: column;
 		justify-content: center;
@@ -469,9 +472,10 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 	.navigation-list li {
 		margin-left: 5px;
-		font-size: 14px;
 	}
+}
 
+@media all and (max-width: 500px) {
 	#home__portrait {
 		width: 200px;
 	}
