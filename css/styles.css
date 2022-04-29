@@ -474,7 +474,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 	}
 
 	.contact-grid__item {
-		max-width: 200px;
+		width: 200px;
+		justify-self: center;
 	}
 
 	.contact-list {
