@@ -353,10 +353,7 @@ a:active {
 }
 
 #contact-form {
-	/*display: flex;*/
 	margin: 40px 0px 0px;
-	/*flex-direction: column;*/
-	/*width: 200px;*/
 	text-align: left;
 }
 
@@ -433,10 +430,6 @@ button:hover, button:focus, .button:hover, .button:focus {
   .work-grid {
    	grid-template-columns: 1fr 1fr;
   }
-
-  	.profile__portrait {
-		width: 200px;
-	}
 }
 
 @media all and (max-width: 500px) {
@@ -465,13 +458,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 		font-size: 14px;
 	}
 
-	.profile {
-		flex-direction: column;
-	} 
-
-	.profile__portrait {
-		margin: 0 auto;
-		width: 180px;
+	#home__portrait {
+		width: 200px;
 	}
 
 	.work-grid {
