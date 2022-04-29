@@ -154,7 +154,7 @@ a:active {
 		>>><<< */
 
 #home-header {
-	padding: 20px;
+	padding: 1%;
 }
 
 #home-main {
@@ -454,8 +454,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 		padding-top: 20px;
 	}
 
-	#home-header {
-		padding: 30px;
+	#home-main {
+		padding-top: 40px;
 	}
 
 	.work-grid {
@@ -511,6 +511,10 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 	.navigation-list li {
 		margin-left: 5px;
+	}
+
+	#home-header {
+		padding: 0.5%;
 	}
 
 	#home__logo {
