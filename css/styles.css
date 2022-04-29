@@ -271,7 +271,9 @@ a:active {
 /* >>>About page main elements<<< */
 
 .about-container {
-	text-align: center;
+	width: 400px;
+	text-align: left;
+	margin: 0 auto;
 }
 
 .about-list {
