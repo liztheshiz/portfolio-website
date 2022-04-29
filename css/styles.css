@@ -481,7 +481,7 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
 }
 
-@media all and (max-width 750px) {
+@media all and (max-width: 750px) {
 	h1 {
 		font-size: 22px;
 	}
