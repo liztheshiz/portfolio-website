@@ -275,7 +275,9 @@ a:active {
 
 
 
-/* >>>About page main elements<<< */
+/* 	>>><<<
+		ABOUT PAGE ELEMENTS
+		>>><<< */
 
 .about-container {
 	width: 600px;
@@ -293,7 +295,9 @@ a:active {
 
 
 
-/* >>>Work page main elements<<< */
+/* 	>>><<<
+		WORK PAGE ELEMENTS
+		>>><<< */
 
 /* Grid fallback for older browsers */
 .work-grid_item {
@@ -329,7 +333,9 @@ a:active {
 
 
 
-/* >>>Contact page main elements<<< */
+/* 	>>><<<
+		CONTACT PAGE ELEMENTS
+		>>><<< */
 
 .contact-grid_item {
 	display: inline-block;
@@ -374,7 +380,9 @@ a:active {
 
 
 
-/* >>>Misc elements<<< */
+/* 	>>><<<
+		MISC ELEMENTS
+		>>><<< */
 
 button, .button {
 	border: none;
@@ -406,7 +414,9 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 
 
-/* >>>Footer elements<<< */
+/* 	>>><<<
+		FOOTER ELEMENTS
+		>>><<< */
 
 .page-footer {
 	clear: both;
@@ -420,7 +430,9 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 
 
-/* Responsive elements */
+/* 	>>><<<
+		RESPONSIVE ELEMENTS
+		>>><<< */
 
 @media all and (max-width: 750px) {
 	h1 {
@@ -529,7 +541,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 
 
-/* Animations */
+/* Animations (currently unused) */
 
 @keyframes color-change {
   0% {
