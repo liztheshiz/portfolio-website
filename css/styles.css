@@ -154,7 +154,7 @@ a:active {
 		>>><<< */
 
 #home-header {
-	padding: 20px;
+	padding: 1%;
 }
 
 #home-main {
@@ -208,6 +208,7 @@ a:active {
 	font-size: 22px;
 	font-style: italic;
 	margin: 15px auto;
+	text-align: center;
 }
 
 #home__navigation {
@@ -297,7 +298,7 @@ a:active {
 		>>><<< */
 
 /* Grid fallback for older browsers */
-.work-grid_item {
+.work-grid__item {
 	display: inline-block;
 	width: 33%;
 }
@@ -312,6 +313,7 @@ a:active {
 
 	.work-grid__item {
 		background-color: var(--secondary-color);
+		position: relative;
 		width: auto;
 		min-height: auto;
 		margin: 0;
@@ -418,11 +420,22 @@ button:hover, button:focus, .button:hover, .button:focus {
 .page-footer {
 	clear: both;
 	padding-top: 2%;
+	padding-bottom: 15px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	/*background-color: var(--secondary-color);*/
+}
+
+.social-media {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-link {
+	margin-left: 10px;
 }
 
 
@@ -454,8 +467,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 		padding-top: 20px;
 	}
 
-	#home-header {
-		padding: 30px;
+	#home-main {
+		padding-top: 40px;
 	}
 
 	.work-grid {
@@ -511,6 +524,10 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 	.navigation-list li {
 		margin-left: 5px;
+	}
+
+	#home-header {
+		padding: 0.5%;
 	}
 
 	#home__logo {
