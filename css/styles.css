@@ -418,11 +418,22 @@ button:hover, button:focus, .button:hover, .button:focus {
 .page-footer {
 	clear: both;
 	padding-top: 2%;
+	padding-bottom: 15px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	/*background-color: var(--secondary-color);*/
+}
+
+.social-media {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-link {
+	margin-left: 10px;
 }
 
 
