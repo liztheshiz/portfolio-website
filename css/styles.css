@@ -297,7 +297,7 @@ a:active {
 		>>><<< */
 
 /* Grid fallback for older browsers */
-.work-grid_item {
+.work-grid__item {
 	display: inline-block;
 	width: 33%;
 }
