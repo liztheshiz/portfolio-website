@@ -26,6 +26,7 @@ body {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.4;
+	position: relative;
 }
 
 h1 {
@@ -417,12 +418,14 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .page-footer {
 	clear: both;
+	positon: absolute;
+	bottom: 0;
 	padding-top: 2%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/*background-color: var(--secondary-color);*/
+	background-color: var(--secondary-color);
 }
 
 
