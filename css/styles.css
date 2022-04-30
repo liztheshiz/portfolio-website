@@ -208,6 +208,7 @@ a:active {
 	font-size: 22px;
 	font-style: italic;
 	margin: 15px auto;
+	text-align: center;
 }
 
 #home__navigation {
@@ -312,6 +313,7 @@ a:active {
 
 	.work-grid__item {
 		background-color: var(--secondary-color);
+		position: relative;
 		width: auto;
 		min-height: auto;
 		margin: 0;
