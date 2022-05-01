@@ -53,7 +53,7 @@ main {
       opacity: 0;
   }
   100% {
-      opactiy: 1;
+      opacity: 1;
   }
 }
 
@@ -586,6 +586,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 /* Animations (currently unused) */
 
+/*
 @keyframes color-change {
   0% {
    	fill: #edc655;
@@ -623,3 +624,4 @@ button:hover, button:focus, .button:hover, .button:focus {
 .cloud-back {
  	animation: 34s cloud-move-reverse infinite alternate linear;
 }
+*/
