@@ -154,7 +154,7 @@ a:active {
 		>>><<< */
 
 #home-header {
-	padding: 1%;
+	padding: 0;
 }
 
 #home-main {
@@ -444,7 +444,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 		RESPONSIVE ELEMENTS
 		>>><<< */
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 750px), all and (max-height: 750px) {
 	h1 {
 		font-size: 26px;
 	}
@@ -457,77 +457,58 @@ button:hover, button:focus, .button:hover, .button:focus {
    	grid-gap: 10px;
   }
 
-	#your-project-here {
-		padding: 0px 0px 20px;
-  }
+  @media all and (max-width: 750px) {
+		#your-project-here {
+			padding: 0px 0px 20px;
+	  }
+	}
 }
 
-@media all and (min-width: 520px) and (max-width: 750px){
+@media all and (min-width: 520px) and (max-width: 750px), all and (max-height: 750px) {
   main {
 		padding-top: 20px;
 	}
 
-	#home-main {
-		padding-top: 40px;
+	@media all and (min-width: 520px) and (max-width: 750px) {
+		.work-grid {
+	   	grid-template-columns: 1fr 1fr;
+	  }
+
+	  #your-project-here {
+	  	grid-column: 1 / 3;
+			grid-row: 3 / 3;
+	  }
 	}
-
-	.work-grid {
-   	grid-template-columns: 1fr 1fr;
-  }
-
-  #your-project-here {
-  	grid-column: 1 / 3;
-		grid-row: 3 / 3;
-  }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 600px), all and (max-height: 650px) {
 	.navigation-list li {
 		font-size: 14px;
-		margin-top: 8px;
 		margin-left: 8px;
+	}
+
+	@media all and (max-height: 650px) {
+		.page-header_item:first-child {
+			flex: none;
+			width: 160px;
+			height: 56px;
+		}
+	}
+
+	@media all and (min-width: 520px) and (max-width: 600px) and (min-height: 650px) {
+		.navigation-list li {
+			margin-top: 8px;
+		}
 	}
 }
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 520px), all and (max-height: 650px) {
 	body {
 		font-size: 14px;
 	}
 
 	main {
 		padding-top: 10px;
-	}
-
-	.page-header {
-		flex-direction: column;
-		justify-content: center;
-		padding-bottom: 0px;
-	}
-
-	.page-header_item:first-child {
-		flex: none;
-		width: 200px;
-		height: 70px;
-		align-self: center;
-	}
-
-	.page-header_item:last-child {
-		text-align: center;
-		flex: none;
-		height: 50px;
-	}
-
-	.navigation-list {
-		margin-left: -40px;
-		margin-top: 0px;
-	}
-
-	.navigation-list li {
-		margin-left: 5px;
-	}
-
-	#home-header {
-		padding: 0.5%;
 	}
 
 	#home__logo {
@@ -552,33 +533,120 @@ button:hover, button:focus, .button:hover, .button:focus {
 		font-size: 18px;
 	}
 
-	.bar {
-		width: 8%;
+	@media all and (max-width: 520px) {
+		.page-header {
+			flex-direction: column;
+			justify-content: center;
+			padding-bottom: 0px;
+		}
+
+		.page-header_item:first-child {
+			flex: none;
+			width: 200px;
+			height: 70px;
+			align-self: center;
+		}
+
+		.page-header_item:last-child {
+			text-align: center;
+			flex: none;
+			height: 50px;
+		}
+
+		.navigation-list {
+			margin-left: -40px;
+			margin-top: 0px;
+		}
+
+		.navigation-list li {
+			margin-left: 5px;
+		}
+
+		.bar {
+			width: 8%;
+		}
+
+		.work-grid {
+			grid-template-columns: 1fr;
+		}
+
+		#your-project-here {
+	  	grid-column: 1 / 1;
+			grid-row: 5 / 5;
+	  }
+
+		.contact-grid {
+			grid-template-columns: 1fr;
+			grid-gap: 0px;
+		}
+
+		.contact-grid__item {
+			width: 200px;
+			padding: 0px;
+			justify-self: center;
+		}
+
+		.contact-list {
+			text-align: left;
+			margin-top: 20px;
+		}
 	}
 
-	.work-grid {
-		grid-template-columns: 1fr;
-	}
+	@media all and (max-height: 425px) {
+		h1 {
+			font-size: 22px;
+		}
 
-	#your-project-here {
-  	grid-column: 1 / 1;
-		grid-row: 5 / 5;
-  }
+		h2 {
+			font-size: 18px;
+		}
 
-	.contact-grid {
-		grid-template-columns: 1fr;
-		grid-gap: 0px;
-	}
+		body {
+			font-size: 12px;
+		}
 
-	.contact-grid__item {
-		width: 200px;
-		padding: 0px;
-		justify-self: center;
-	}
+		#home-main {
+			padding-top: 10px;
+		}
 
-	.contact-list {
-		text-align: left;
-		margin-top: 20px;
+		#home {
+			padding-top: 0px;
+		}
+
+		#home__logo {
+			width: 200px;
+			height: 70px;
+		}
+
+		#home__portrait {
+			width: 160px;
+			margin: 0;
+		}
+
+		#home__description {
+			font-size: 14px;
+			margin-bottom: 0;
+		}
+
+		#home-navigation-list {
+			margin-left: -40px;
+		}
+
+		#home-navigation-list li {
+			margin: 4px;
+		}
+
+		.home-navigation-list__item {
+			font-size: 14px;
+		}
+
+		.contact-list {
+			margin-top: 10px;
+		}
+
+		#contact-form {
+			margin-top: 0;
+		}
 	}
 }
 
