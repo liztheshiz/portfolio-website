@@ -313,12 +313,11 @@ a:active {
 
 	.work-grid__item {
 		background-color: var(--secondary-color);
-		position: relative;
 		width: auto;
 		min-height: auto;
 		margin: 0;
-		border-radius: 20px;
 		text-align: center;
+		border-radius: 20px;
 		padding-bottom: 20px;
 		box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
 	}
