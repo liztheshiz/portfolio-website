@@ -331,7 +331,14 @@ a:active {
         text-align: center;
         border-radius: 20px;
         padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
         box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+    }
+
+    .screenshot {
+        width: 80%;
+        border-radius: 10px;
     }
 }
 
