@@ -410,6 +410,23 @@ a:active {
 
 
 /* 	>>><<<
+		CASE STUDY ELEMENTS
+		>>><<< */
+.case-study__container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.case-study {
+    display: inline;
+}
+
+.case-study__section {
+    margin: 20px;
+}
+
+
+/* 	>>><<<
 		MISC ELEMENTS
 		>>><<< */
 
