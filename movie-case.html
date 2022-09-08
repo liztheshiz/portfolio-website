@@ -18,98 +18,100 @@
     <header class="page-header">
 
         <a role="menuitem" href="work.html" class="navigation-list__item">
-            &#8592 return to Work</a>
+            &#8592 return to full portfolio</a>
 
     </header>
 
     <main>
-        <h1>Cinema.Database: A Case Study</h1>
+        <h1 class="case-study__main-title">Cinema.Database: A Case Study</h1>
 
         <div class="case-study__container">
-            <h2>Overview</h2>
-            <div class="case-study__section">
-                <p class="case-study">Cinema.Database is a simple web app built from scratch that provides access to a
-                    small database of films, where users can register and save their own list of favorite films.</p>
+            <div class="case__img-container">
+                <img class="case__screenshot__main" src="img/movie-case/intro-image.jpeg"
+                    alt="screenshot of project homepage">
+                <!--<a href="https://www.vecteezy.com/free-photos">Free Stock photos by Vecteezy</a>-->
             </div>
             <div class="case-study__section">
-                <h3 class="case-study">Purpose and Context:</h3>
-                <p class="case-study">This project was assigned as part of my studies in CareerFoundry’s Full-Stack Web
-                    Development course. Its purpose was ultimately to gain experience in creating databases and
-                    developing with React.</p>
+                <h2>Overview</h2>
+                <p class="case-study__description">Cinema.Database is a simple web app built from scratch that provides
+                    access to a small database of films, where users can register and save their own list of favorite
+                    films.</p>
+                <img class="case__screenshot" src="img/movie-case/movie-case4.png" alt="screenshot from project">
+                <p class="case-study__body"><span class="case-study__title">Purpose and Context: </span>
+                    This project was assigned as part of my studies in CareerFoundry’s Full-Stack Web Development
+                    course. Its purpose was ultimately to gain experience in creating databases and developing with
+                    React.</p>
+                <p class="case-study__body"><span class="case-study__title">Objective: </span>
+                    The purpose of this app is to provide users with a way to view information about films and save a
+                    list of their favorites by registering their own account.</p>
+                <p class="case-study__body"><span class="case-study__title">Tools: </span>
+                    Tech stack: MongoDB, Express, React, Node (MERN); Build tool: Parcel</p>
             </div>
-            <div class="case-study__section">
-                <h3 class="case-study">Objective:</h3>
-                <p class="case-study">The purpose of this app is to provide users with a way to view information about
-                    films and save a list of their favorites by registering their own account.</p>
-            </div>
-            <div class="case-study__section">
-                <h3 class="case-study">Tools:</h3>
-                <p class="case-study">Tech stack: MongoDB, Express, React, Node (MERN); Build tool: Parcel</p>
-            </div>
+
             <h2>Method</h2>
-            <div class="case-study__section">
-                <h3 class="case-study">Server-Side:</h3>
-                <p class="case-study">I first built the structure of my server-side API using Express, planning out
-                    the endpoints I would need to fulfill each of the functionalities of my database (retrieving movie
-                    details, adding a movie to a user’s list, creating a user, etc). Once the basic functionality of
-                    these endpoints was successfully tested with mock data in Postman, I wrote the database itself in
-                    MongoDB and updated my Express API to use it, testing once again in Postman to make sure the API was
-                    communicating with the database correctly.</p>
+            <div class="case-study__grid">
+                <div class="case-study__grid__item">
+                    <h3>Server-Side</h3>
+                    <div class="case__img-container">
+                        <img class="case__image" src="img/movie-case/server.jpg" alt="image of a server">
+                    </div>
+                    <p class="case-study__body">I first built the structure of my server-side API using Express,
+                        planning out the endpoints I would need to fulfill each of the functionalities of my database
+                        (retrieving movie details, adding a movie to a user’s list, creating a user, etc). Once the
+                        basic functionality of these endpoints was successfully tested with mock data in Postman, I
+                        wrote the database itself in MongoDB and updated my Express API to use it, testing once again in
+                        Postman to make sure the API was communicating with the database correctly.</p>
+                    <p class="case-study__body">An important part of this process was adding layers of security to
+                        protect the data, like JWT authentication which required users to sign in to retrieve and write
+                        data, and password hashing that prevents anyone (even the owner of the database) from viewing
+                        user’s passwords.</p>
+                    <p class="case-study__body">The final step in creating the backend was creating the documentation so
+                        that the API could, in theory, be utilized by other developers in their projects.</p>
+                    <div class="link-container">
+                        <a href="https://cinemadatabase.herokuapp.com/" target="_blank">View the documentation
+                            here.</a>
+                    </div>
+                </div>
+
+                <div class="case-study__grid__item">
+                    <h3>Client-Side</h3>
+                    <div class="case__img-container">
+                        <img class="case__image" src="img/movie-case/client.jpg" alt="image of web app on laptop">
+                    </div>
+                    <p class="case-study__body">Cinema.Database was my first website built with React, so Ibegan by
+                        building the basic framework out to familiarize myself with React’s component structure. Once
+                        this structure was in place and its functionality tested, I began loading the data from the
+                        database using all necessary permissions. The most important measure was the use of JWT
+                        authentication when users logged in to their account, which then allowed them access to the
+                        database and the full functionality of the site.</p>
+                    <p class="case-study__body"> As a final step before deployment, I collaborated with a designer to
+                        update the original design into something more eye-catching and content appropriate. As this was
+                        a small project, instead of working with wireframes or mockups, we looked together at design
+                        ideas she had collected and I incorporated those ideas into my project (colors, fonts, layout,
+                        etc).</p>
+                </div>
             </div>
-            <div class="case-study__section">
-                <p class="case-study">An important part of this process was adding layers of security to protect the
-                    data, like JWT authentication which required users to sign in to retrieve and write data, and
-                    password hashing that prevents anyone (even the owner of the database) from viewing user’s
-                    passwords.</p>
-            </div>
-            <div class="case-study__section">
-                <p class="case-study">The final step in creating the backend was creating the documentation so that the
-                    API could, in theory, be utilized by other developers in their projects. You can view the
-                    documentation here: https://cinemadatabase.herokuapp.com/</p>
-            </div>
-            <div class="case-study__section">
-                <p>
-                <h3 class="case-study">Client-Side: </h3>
-                Cinema.Database was my first website built with React, so Ibegan by building the basic framework out
-                to familiarize myself with React’s component structure. Once this structure was in place and its
-                functionality tested, I began loading the data from the database using all necessary permissions.
-                The most important measure was the use of JWT authentication when users logged in to their account,
-                which then allowed them access to the database and the full functionality of the site.
-                </p>
-                <p>As a final step before deployment, I collaborated with a designer to update the original design into
-                    something more eye-catching and content appropriate. As this was a small project, instead of working
-                    with wireframes or mockups, we looked together at design ideas she had collected and I incorporated
-                    those ideas into my project (colors, fonts, layout, etc).</p>
-            </div>
-            <div class="case-study__section">
-                <h2>Retrospective</h2>
-                <p>The most challenging part of this project was developing with new tools (React and Parcel) and
-                    learning
-                    how best to use them as I went. While this aspect of the project was engaging and I did learn to
-                    keep
-                    production rolling while I learned, Parcel’s quirks in particular did slow down production time
-                    significantly when compared to my original expectations. From this challenge I was able to readjust
-                    my
-                    production timeline to learn how to best utilize this finicky tool - including determining if it
-                    would
-                    be worth the time to change to another build tool, which I decided against - and made sure to record
-                    my
-                    solutions for my future self or anyone else who might view my project (which you can view at the end
-                    of
-                    the ReadME on Cinema.Database’s GitHub page: https://github.com/liztheshiz/movie-client).</p>
-                <p>Cinema.Database was only the third full web app I had developed, so the scope of what I focused on
-                    learning remained limited mainly to React. Since developing this app, I have continued to learn much
-                    more about common development practices and tools, so if I were to begin this project again, I might
-                    use
-                    a different build tool like Create React App, which I learned to use on my next project, Meetup. I
-                    also
-                    might use a more formalized testing process, like unit and integration testing using Jest; while the
-                    more informal test-as-you-go process I used was still fine for a small project like this, now that I
-                    know how to create automated tests I think it would be best practice to implement them, both for
-                    general
-                    practice and to simply things if I ever wanted to increase the scope of this project or add more,
-                    complicated functionalities.</p>
-            </div>
+
+            <h2>Retrospective</h2>
+            <p class="case-study__body">The most challenging part of this project was developing with new tools (React
+                and Parcel) and learning how best to use them as I went. While this aspect of the project was engaging
+                and I did learn to keep production rolling while I learned, Parcel’s quirks in particular did slow down
+                production time significantly when compared to my original expectations. From this challenge I was able
+                to readjust my production timeline to learn how to best utilize this finicky tool - including
+                determining if it would be worth the time to change to another build tool, which I decided against - and
+                made sure to record my solutions for my future self or anyone else who might view my project (which you
+                can view at the end of the ReadMe on <a href="https://github.com/liztheshiz/movie-client"
+                    target="_blank">Cinema.Database’s GitHub page</a>.)</p>
+            <p class="case-study__body">Cinema.Database was only the third full web app I had developed, so the scope of
+                what I focused on
+                learning remained limited mainly to React. Since developing this app, I have continued to learn much
+                more about common development practices and tools, so if I were to begin this project again, I might
+                use a different build tool like Create React App, which I learned to use on my next project, Meetup. I
+                also might use a more formalized testing process, like unit and integration testing using Jest; while
+                the more informal test-as-you-go process I used was still fine for a small project like this, now that I
+                know how to create automated tests I think it would be best practice to implement them, both for general
+                practice and to simply things if I ever wanted to increase the scope of this project or add more,
+                complicated functionalities.</p>
         </div>
 
     </main>
