@@ -417,16 +417,20 @@ a:active {
     margin: 0 auto;
 }
 
+.case__img-container__main {
+    text-align: center;
+    margin: 20px;
+}
+
 .case__img-container {
     text-align: center;
     margin: 40px;
 }
 
 .case__screenshot__main {
-    max-width: 75%;
+    max-width: 700px;
     border: 3px black solid;
     border-radius: 3px;
-    margin: 30px;
 }
 
 .case-study__main-title {
@@ -455,6 +459,10 @@ a:active {
     font-size: 18px;
 }
 
+.case-study__note {
+    font-size: 15px;
+}
+
 .link-container {
     text-align: center;
     font-size: 18px;
@@ -477,6 +485,7 @@ a:active {
     float: right;
     margin: 6px 26px;
     margin-right: 50px;
+    margin-bottom: 20px;
 }
 
 .case__image {
@@ -489,6 +498,7 @@ a:active {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
+    justify-content: space-around;
     margin: 0;
 }
 
@@ -563,6 +573,59 @@ button:focus,
 		RESPONSIVE ELEMENTS
 		>>><<< */
 
+@media all and (max-width: 950px) {
+    .case-study__main-title {
+        font-size: 36px;
+    }
+
+    .case-study__description {
+        font-size: 13px;
+    }
+
+    .case-study__container h2 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .case-study__container h3 {
+        font-size: 18px;
+    }
+
+    .case-study__title {
+        font-size: 18px;
+    }
+
+    .case-study__body {
+        font-size: 15px;
+    }
+
+    .link-container {
+        font-size: 15px;
+    }
+
+    .case-study__note {
+        font-size: 13px;
+    }
+
+    .case__screenshot__main {
+        max-width: 450px;
+    }
+
+    .case__screenshot__container {
+        max-width: 100%;
+    }
+
+    .case__screenshot {
+        max-width: 300px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .case__image {
+        max-width: 200px;
+    }
+}
+
 @media all and (max-width: 750px),
 all and (max-height: 750px) {
     h1 {
@@ -580,6 +643,44 @@ all and (max-height: 750px) {
     @media all and (max-width: 750px) {
         #your-project-here {
             padding: 0px 0px 20px;
+        }
+
+        .case-study__container {
+            max-width: 90%;
+        }
+
+        .case__screenshot__main {
+            max-width: 100%;
+        }
+
+        .case__screenshot__container {
+            text-align: center;
+            margin: 0 auto;
+            padding-left: 30px;
+        }
+
+        .case__screenshot {
+            max-width: 300px;
+            float: none;
+            margin-top: 0px;
+        }
+
+        .case__img-container {
+            text-align: center;
+            margin: none;
+        }
+
+        .case__image {
+            max-width: 100%;
+        }
+
+        .case-study__grid {
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+
+        .case-study__grid__item {
+            max-width: 100%;
         }
     }
 }
@@ -712,6 +813,10 @@ all and (max-height: 650px) {
         .contact-list {
             text-align: left;
             margin-top: 20px;
+        }
+
+        .case__screenshot {
+            max-width: 100%;
         }
     }
 
