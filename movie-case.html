@@ -59,16 +59,18 @@
                     <div class="case__img-container">
                         <img class="case__image" src="img/movie-case/server.jpg" alt="image of a server">
                     </div>
-                    <p class="case-study__body">I first built the structure of my server-side API using Express,
-                        planning out the endpoints I would need to fulfill each of the functionalities of my database
-                        (retrieving movie details, adding a movie to a user’s list, creating a user, etc). Once the
-                        basic functionality of these endpoints was successfully tested with mock data in Postman, I
-                        wrote the database itself in MongoDB and updated my Express API to use it, testing once again in
-                        Postman to make sure the API was communicating with the database correctly.</p>
+                    <ol class="case-study__body">
+                        <li>Determined what functionalities of app would interact with the database (retreive movie
+                            details, add movie to list, etc)</li>
+                        <li>Built structure of server-side API using Express, writing out an endpoint for each
+                            functionality from step one</li>
+                        <li>Tested basic endpoints logic with mock data in Postman</li>
+                        <li>Wrote database itself in MongoDB and updated Express API to use it</li>
+                        <li>Tested final API in Postman</li>
+                    </ol>
                     <p class="case-study__body">An important part of this process was adding layers of security to
-                        protect the data, like JWT authentication which required users to sign in to retrieve and write
-                        data, and password hashing that prevents anyone (even the owner of the database) from viewing
-                        user’s passwords.</p>
+                        protect the data, like JWT authentication for registered users, and password hashing that
+                        prevents anyone (even the owner of the database) from viewing user’s passwords.</p>
                     <p class="case-study__body">The final step in creating the backend was creating the documentation so
                         that the API could, in theory, be utilized by other developers in their projects.</p>
                     <div class="link-container">
