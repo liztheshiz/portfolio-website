@@ -473,6 +473,13 @@ a:active {
     margin-bottom: 10px;
 }
 
+.case-study__parcel {
+    max-width: 200px;
+    float: left;
+    margin: 18px;
+    margin-bottom: 10px
+}
+
 .case-study__note {
     font-size: 15px;
 }
@@ -659,6 +666,10 @@ button:focus,
 
     .case__image {
         max-width: 200px;
+    }
+
+    .case-study__parcel {
+        max-width: 100px;
     }
 }
 
