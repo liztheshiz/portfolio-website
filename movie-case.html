@@ -61,18 +61,18 @@
                     <div class="case__img-container">
                         <img class="case__image" src="img/movie-case/server.jpg" alt="image of a server">
                     </div>
-                    <p class="case-study__body">
-                        I first built the structure of my server-side API using Express, planning out the endpoints I
-                        would need to fulfill each of the functionalities of my database (retrieving movie details,
-                        adding a movie to a user’s list, creating a user, etc). Once the basic functionality of these
-                        endpoints was successfully tested with mock data in Postman, I wrote the database itself in
-                        MongoDB and updated my Express API to use it, testing once again in Postman to make sure the API
-                        was communicating with the database correctly.</p>
-                    <p class="case-study__body">An important part of this process was adding layers of security to
-                        protect the data, like JWT authentication for registered users, and password hashing that
-                        prevents anyone (even the owner of the database) from viewing user’s passwords.</p>
-                    <p class="case-study__body">The final step in creating the backend was creating the documentation so
-                        that the API could, in theory, be utilized by other developers in their projects.</p>
+                    <p class="case-study__body">Before coding anything, I listed out all the app’s functionalities that
+                        would need to interact with the database, like retrieving movie details or adding a movie to
+                        favorites, and then I translated these functionalities into HTML endpoints to build out the
+                        structure of my Express API. This preparation step kept the initial coding efficient and
+                        comprehensive, knowing exactly where to start with my project.</p>
+                    <p class="case-study__body">I next wrote the database itself in MongoDB and updated my API to use
+                        it. An important part of this step was adding layers of security to protect the data, like JWT
+                        authentication which requires users to sign in to retrieve and write data, and password hashing
+                        that prevents anyone (even the owner of the database) from viewing a user’s password.</p>
+                    <img class="case-study__postman" src="img/movie-case/postman-icon.png" alt="Postman icon">
+                    <p class="case-study__body">All testing on the server-side was done in Postman. More on my testing
+                        methodology and what I learned in the Retrospective at the end of the page.</p>
                     <div class="link-container">
                         <a href="https://cinemadatabase.herokuapp.com/" target="_blank">View the documentation
                             here.</a>
