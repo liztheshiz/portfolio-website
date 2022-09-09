@@ -452,7 +452,9 @@ a:active {
 
 .case-study__container h2 {
     font-size: 30px;
-    margin-top: 50px;
+    margin-top: 70px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
 .case-study__container h3 {
@@ -510,6 +512,19 @@ a:active {
     grid-gap: 50px;
     justify-content: space-around;
     margin: 0;
+}
+
+.case-study__grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 0;
+}
+
+.case-study__grid2__item:first-child {
+    text-align: right;
+    font-weight: 600;
 }
 
 
