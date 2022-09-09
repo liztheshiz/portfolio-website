@@ -466,14 +466,6 @@ a:active {
     font-size: 18px;
 }
 
-.case-study__body li {
-    margin-bottom: 10px;
-}
-
-.case-study__body li::marker {
-    font-weight: 600;
-}
-
 .case-study__note {
     font-size: 15px;
 }
