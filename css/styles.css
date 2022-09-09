@@ -419,6 +419,7 @@ a:active {
 .case-study__container {
     max-width: 80%;
     margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .case__img-container__main {
