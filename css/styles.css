@@ -453,6 +453,7 @@ a:active {
 .case-study__container h2 {
     font-size: 30px;
     margin-top: 70px;
+    border-radius: 3px;
     background-color: var(--primary-color);
     color: var(--background-color);
 }
