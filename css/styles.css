@@ -546,16 +546,19 @@ a:active {
 /* Styling the area of the slides */
 #slideshow {
     overflow: hidden;
-    height: 510px;
+    height: 490px;
     width: 728px;
     margin: 0 auto;
+    margin-top: 50px;
+    border: solid 3px black;
+    border-radius: 3px;
 }
 
 /* Style each of the sides
   with a fixed width and height */
 .slide {
     float: left;
-    height: 510px;
+    height: 490px;
     width: 728px;
 }
 
@@ -568,25 +571,15 @@ a:active {
 
     /* Specify the animation with the
     duration and speed */
-    animation: slide 10s ease infinite;
+    animation: slide 30s ease infinite;
 }
 
-/* Set the background color
-of each of the slides */
-.slide:nth-child(1) {
-    background: green;
-}
-
-.slide:nth-child(2) {
-    background: pink;
-}
-
-.slide:nth-child(3) {
-    background: red;
-}
-
-.slide:nth-child(4) {
-    background: yellow;
+.slide-image {
+    width: 100%;
+    height: 100%;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-radius: 3px;
 }
 
 /* Define the animation
@@ -742,6 +735,36 @@ button:focus,
     .case-study__parcel {
         max-width: 100px;
     }
+
+    #slideshow {
+        height: 340px;
+        width: 500px;
+        margin-top: 50px;
+    }
+
+    .slide {
+        height: 340px;
+        width: 500px;
+    }
+
+    @keyframes slide {
+
+        20% {
+            margin-left: 0px;
+        }
+
+        40% {
+            margin-left: calc(-500px * 1);
+        }
+
+        60% {
+            margin-left: calc(-500px * 2);
+        }
+
+        80% {
+            margin-left: calc(-500px * 3);
+        }
+    }
 }
 
 @media all and (max-width: 750px),
@@ -799,6 +822,36 @@ all and (max-height: 750px) {
 
         .case-study__grid__item {
             max-width: 100%;
+        }
+
+        #slideshow {
+            height: 200px;
+            width: 300px;
+            margin-top: 50px;
+        }
+
+        .slide {
+            height: 200px;
+            width: 300px;
+        }
+
+        @keyframes slide {
+
+            20% {
+                margin-left: 0px;
+            }
+
+            40% {
+                margin-left: calc(-300px * 1);
+            }
+
+            60% {
+                margin-left: calc(-300px * 2);
+            }
+
+            80% {
+                margin-left: calc(-300px * 3);
+            }
         }
     }
 }
@@ -1022,6 +1075,38 @@ all and (max-height: 650px) {
 
         #contact-form {
             margin-top: 0;
+        }
+    }
+}
+
+@media all and (max-width: 360px) {
+    #slideshow {
+        height: 190px;
+        width: 280px;
+        margin-top: 50px;
+    }
+
+    .slide {
+        height: 190px;
+        width: 280px;
+    }
+
+    @keyframes slide {
+
+        20% {
+            margin-left: 0px;
+        }
+
+        40% {
+            margin-left: calc(-280px * 1);
+        }
+
+        60% {
+            margin-left: calc(-280px * 2);
+        }
+
+        80% {
+            margin-left: calc(-280px * 3);
         }
     }
 }
