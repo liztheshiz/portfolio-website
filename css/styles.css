@@ -168,7 +168,7 @@ a:active {
 
 #home {
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 160px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,8 +177,8 @@ a:active {
 
 #home__logo {
     flex: none;
-    width: 300px;
-    height: 105px;
+    width: 600px;
+    height: 210px;
     align-self: center;
     animation: 1s ease-in 0.3s 1 fadeIn backwards;
 }
@@ -194,8 +194,8 @@ a:active {
 }
 
 #home__description {
-    font-size: 22px;
-    margin: 15px auto;
+    font-size: 50px;
+    margin: 0 auto;
     text-align: center;
     color: white;
     animation: 1s ease-in 0.6s 1 fadeIn backwards;
@@ -203,6 +203,9 @@ a:active {
 
 .work-button {
     background: none;
+    font-size: 30px;
+    padding: 12px 26px;
+    margin-top: 50px;
     border: 1px solid white;
     border-radius: 50px;
     transition: all 0.5s ease 0s;
@@ -236,9 +239,8 @@ a:active {
 
 .email {
     color: white;
+    font-size: 18px;
 }
-
-
 
 /* 	>>><<<
 		ABOUT PAGE ELEMENTS
@@ -607,13 +609,14 @@ button:focus,
 
 .page-footer {
     clear: both;
-    padding-top: 2%;
     padding-bottom: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*background-color: var(--secondary-color);*/
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .social-media {
@@ -624,6 +627,10 @@ button:focus,
 
 .footer-link {
     margin-left: 10px;
+}
+
+.footer-link__image {
+    width: 30px;
 }
 
 
