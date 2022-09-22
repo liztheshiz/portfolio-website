@@ -346,28 +346,6 @@ all and (max-height: 650px) {
         padding-top: 10px;
     }
 
-    #home__logo {
-        width: 240px;
-        height: 84px;
-    }
-
-    #home__portrait {
-        width: 200px;
-    }
-
-    #home__description {
-        font-size: 20px;
-        margin-bottom: 8px;
-    }
-
-    #home-navigation-list li {
-        margin: 5px;
-    }
-
-    .home-navigation-list__item {
-        font-size: 18px;
-    }
-
     @media all and (max-width: 520px) {
         .page-header {
             flex-direction: column;
@@ -395,10 +373,6 @@ all and (max-height: 650px) {
 
         .navigation-list li {
             margin-left: 5px;
-        }
-
-        .bar {
-            width: 8%;
         }
 
         .contact-grid {
@@ -429,41 +403,6 @@ all and (max-height: 650px) {
 
         body {
             font-size: 12px;
-        }
-
-        #home-main {
-            padding-top: 10px;
-        }
-
-        #home {
-            padding-top: 0px;
-        }
-
-        #home__logo {
-            width: 200px;
-            height: 70px;
-        }
-
-        #home__portrait {
-            width: 160px;
-            margin: 0;
-        }
-
-        #home__description {
-            font-size: 14px;
-            margin-bottom: 0;
-        }
-
-        #home-navigation-list {
-            margin-left: -40px;
-        }
-
-        #home-navigation-list li {
-            margin: 4px;
-        }
-
-        .home-navigation-list__item {
-            font-size: 14px;
         }
 
         .contact-list {
