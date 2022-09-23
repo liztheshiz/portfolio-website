@@ -12,32 +12,76 @@
     .work-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 20px;
-        margin: 0;
+        grid-gap: 50px;
+        justify-content: center;
+        margin: 40px;
     }
 
     .work-grid__item {
-        background-color: var(--secondary-color);
-        width: auto;
+        background-size: cover;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
         min-height: auto;
         margin: 0;
         text-align: center;
-        border-radius: 20px;
+        border-radius: 2px;
         padding-bottom: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
-        box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+        text-decoration: none;
+        border: 1px solid black;
+        transition: all 0.3s;
+    }
+
+    .work-grid__item:hover,
+    .work-grid__item:focus {
+        background-color: white;
     }
 
     .screenshot {
-        width: 80%;
-        border-radius: 10px;
-        transition: all 0.4s;
+        width: 100%;
+        margin: 0;
     }
 
-    .screenshot:hover,
-    .screenshot:focus {
+    .work-grid__item__section {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        color: black;
+        border-top: 1px solid black;
+    }
+
+    .work-grid__item__title {
+        margin: 0;
+        margin-top: 16px;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .work-grid__item__description {
+        margin: 12px auto 8px;
+    }
+
+    .work-buttons {
+        display: flex;
+        flex-direction: row;
+        width: 100px;
+        justify-content: space-evenly;
+    }
+
+    .grid-button {
+        width: 30px;
+    }
+
+    .word-grid__item:hover,
+    .word-grid__item:focus {
         box-shadow: rgba(181, 145, 67, 1) 0px 8px 24px;
+        width: 84%;
     }
 
     #your-project-here {
