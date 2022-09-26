@@ -25,11 +25,12 @@
 		>>><<< */
 
 body {
-    background-color: var(--background-color);
+    background-image: url('../img/LS_background_image.jpg');
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.4;
+    margin: 0;
 }
 
 h1 {
@@ -48,7 +49,7 @@ h3 {
 }
 
 main {
-    padding: 40px 40px 20px;
+    padding: 80px 80px 20px;
     /*animation: 0.4s ease-in 0s 1 fadeIn backwards;*/
 }
 
@@ -276,6 +277,11 @@ button:focus,
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+.email {
+    color: white;
+    font-size: 18px;
 }
 
 .social-media {
