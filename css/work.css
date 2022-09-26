@@ -11,19 +11,18 @@
 @supports (display: grid) {
     .work-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 50px;
-        justify-content: center;
-        margin: 40px;
+        grid-template-columns: 30% 30% 30%;
+        grid-gap: 20px;
+        justify-content: space-between;
+        margin: 0;
     }
 
     .work-grid__item {
-        background-size: cover;
         padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 400px;
+        width: 100%;
         min-height: auto;
         margin: 0;
         text-align: center;
@@ -59,34 +58,8 @@
     .work-grid__item__title {
         margin: 0;
         margin-top: 16px;
-        font-weight: 400;
-        font-size: 20px;
-    }
-
-    .work-grid__item__description {
-        margin: 12px auto 8px;
-    }
-
-    .work-buttons {
-        display: flex;
-        flex-direction: row;
-        width: 100px;
-        justify-content: space-evenly;
-    }
-
-    .grid-button {
-        width: 30px;
-    }
-
-    .word-grid__item:hover,
-    .word-grid__item:focus {
-        box-shadow: rgba(181, 145, 67, 1) 0px 8px 24px;
-        width: 84%;
-    }
-
-    #your-project-here {
-        grid-column: 2 / 2;
-        grid-row: 3 / 3;
+        font-weight: 500;
+        font-size: 16px;
     }
 }
 
@@ -115,20 +88,10 @@
     .work-grid {
         grid-template-columns: 1fr 1fr;
     }
-
-    #your-project-here {
-        grid-column: 1 / 3;
-        grid-row: 4 / 4;
-    }
 }
 
 @media all and (max-width: 520px) {
     .work-grid {
         grid-template-columns: 1fr;
-    }
-
-    #your-project-here {
-        grid-column: 1 / 1;
-        grid-row: 7 / 7;
     }
 }

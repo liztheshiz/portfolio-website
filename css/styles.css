@@ -95,19 +95,37 @@ a:active {
 .page-header {
     display: flex;
     width: 100%;
-    padding: 14px;
+    height: 80px;
+    padding: 0 80px;
     border-bottom: 1px solid gray;
     background-color: white;
 }
 
-.page-header_item {
-    flex: 0 1 200px;
-    max-height: 70px;
+.page-header__item {
+    height: 100%;
+    margin: 0;
 }
 
-.page-header_item:last-child {
+.page-header__home {
+    text-decoration: none;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.page-header__home p {
+    color: black;
+    font-family: 'Forum', serif;
+    font-size: 40px;
+    margin: 0;
+}
+
+.page-header__item:last-child {
     flex-grow: 1;
     text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
 
 .navigation-list {
@@ -118,7 +136,6 @@ a:active {
     position: relative;
     display: inline-block;
     margin-left: 15px;
-    margin-top: 6px;
 }
 
 .navigation-list li a {
@@ -127,7 +144,7 @@ a:active {
 
 .navigation-list__item {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* Nav link animation */
