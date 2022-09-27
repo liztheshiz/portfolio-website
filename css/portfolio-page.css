@@ -1,0 +1,102 @@
+main {
+    padding: 0;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+    margin: 0;
+    padding: 80px 160px 40px 160px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+.portfolio-grid h1 {
+    font-weight: normal;
+    font-family: 'Forum', serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.portfolio-grid__item {
+    min-height: auto;
+    margin: 0;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.portfolio-grid__item:first-child {
+    text-align: right;
+}
+
+.portfolio-grid__item:last-child {
+    text-align: left;
+}
+
+.screenshot {
+    max-width: 100%;
+}
+
+.porfolio-grid__item__header {
+    display: flex;
+    align-items: center;
+}
+
+.portfolio-button {
+    margin-left: 50px;
+    margin-top: 12px;
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus {
+    opacity: 75%;
+}
+
+.portfolio-button:last-child {
+    margin-left: 16px;
+}
+
+.portfolio-button--link {
+    width: 40px;
+}
+
+.portfolio-button--github {
+    width: 35px;
+}
+
+.line-vertical {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    background: black;
+    height: 100%;
+}
+
+.arrow {
+    position: absolute;
+    font-size: 60px;
+    bottom: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.arrow:visited {
+    color: black;
+}
+
+.arrow:hover,
+.arrow:focus {
+    opacity: 75%;
+}
+
+.left-arrow {
+    left: 80px;
+}
+
+.right-arrow {
+    right: 80px;
+}
