@@ -34,10 +34,15 @@ body {
 }
 
 .page-body {
-    background-image: url('../img/footer_1920_beartooth.png'), url('../img/LS_background_image.jpg');
+    /*background-image: url('../img/footer_1920_beartooth.png'), url('../img/LS_background_image.jpg');
     background-position: bottom, center;
+    background-position-y: 130%;
     background-repeat: no-repeat, repeat;
-    background-size: contain, cover;
+    background-size: contain, cover;*/
+
+    /* this is for the footer */
+    position: relative;
+    min-height: 100vh;
 }
 
 h1 {
@@ -64,6 +69,7 @@ main {
 
 .page-main {
     animation: 0.4s ease-in 0s 1 fadeIn backwards;
+    padding-bottom: 20%;
 }
 
 @keyframes fadeIn {
@@ -312,13 +318,25 @@ button:focus,
 		FOOTER ELEMENTS
 		>>><<< */
 
+.footer-mountains {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    transform: translateY(-90%);
+}
+
 .page-footer {
-    margin-top: 200px;
-    margin-bottom: 20px;
+    /*margin-top: 200px;
+    margin-bottom: 20px;*/
+    clear: both;
+    padding-bottom: 15px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 0;
     width: 100%;
 }
 
