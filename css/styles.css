@@ -328,15 +328,14 @@ button:focus,
 .page-footer {
     /*margin-top: 200px;
     margin-bottom: 20px;*/
-    clear: both;
-    padding-bottom: 15px;
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
     bottom: 0;
+    margin: 0;
+    padding-bottom: 15px;
     width: 100%;
 }
 
