@@ -33,6 +33,13 @@ body {
     margin: 0;
 }
 
+.page-body {
+    background-image: url('../img/footer_1920_beartooth.png'), url('../img/LS_background_image.jpg');
+    background-position: bottom, center;
+    background-repeat: no-repeat, repeat;
+    background-size: contain, auto;
+}
+
 h1 {
     font-size: 30px;
     font-weight: var(--bold);
@@ -49,7 +56,7 @@ h3 {
 }
 
 main {
-    padding: 80px 80px 20px;
+    padding: 80px 80px 0 80px;
     /*animation: 0.4s ease-in 0s 1 fadeIn backwards;*/
 }
 
@@ -286,9 +293,8 @@ button:focus,
 		>>><<< */
 
 .page-footer {
-    clear: both;
-    padding-bottom: 15px;
-    margin-top: 40px;
+    margin-top: 200px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
