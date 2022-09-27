@@ -37,7 +37,7 @@ body {
     background-image: url('../img/footer_1920_beartooth.png'), url('../img/LS_background_image.jpg');
     background-position: bottom, center;
     background-repeat: no-repeat, repeat;
-    background-size: contain, auto;
+    background-size: contain, cover;
 }
 
 h1 {
