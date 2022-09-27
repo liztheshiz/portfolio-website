@@ -200,12 +200,13 @@ a:active {
     margin: 0 auto;
 }
 
-.about-list {
-    list-style-type: none;
+.resume-button {
+    display: flex;
+    align-items: center;
 }
 
-.about-list li {
-    margin-left: -40px;
+.download-icon {
+    width: 20px;
 }
 
 
