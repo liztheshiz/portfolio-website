@@ -41,9 +41,10 @@ body {
 }
 
 h1 {
-    font-family: 'Forum', serif;
-    font-size: 30px;
     font-weight: normal;
+    font-family: 'Forum', serif;
+    font-size: 40px;
+    letter-spacing: 2px;
 }
 
 h2 {

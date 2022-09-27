@@ -14,13 +14,6 @@ main {
     border-bottom: 1px solid black;
 }
 
-.portfolio-grid h1 {
-    font-weight: normal;
-    font-family: 'Forum', serif;
-    font-size: 40px;
-    letter-spacing: 2px;
-}
-
 .portfolio-grid__item {
     min-height: auto;
     margin: 0;
