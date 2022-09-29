@@ -61,11 +61,13 @@
     animation: 1s ease-in 1s 1 fadeIn backwards;
 }
 
-.work-button:hover {
+.work-button:hover,
+.work-button:focus {
     color: black;
 }
 
-.work-button:hover::before {
+.work-button:hover::before,
+.work-button:focus::before {
     color: black;
     position: absolute;
     top: 0;
@@ -142,10 +144,28 @@
 	RESPONSIVE ELEMENTS
 	>>><<< */
 
-@media all and (min-aspect-ratio: 33/20) {}
-
 /* WIDTH */
 @media all and (min-width: 1441px) {
+    #home__logo {
+        font-size: 266px;
+        bottom: 790px;
+    }
+
+    #home__description {
+        font-size: 96px;
+        bottom: 640px;
+    }
+
+    .work-button__container {
+        bottom: 500px;
+    }
+
+    .work-button {
+        font-size: 44px;
+        padding: 18px 36px;
+        border-width: 2px;
+    }
+
     #clouds {
         width: 5120px;
     }
@@ -203,6 +223,17 @@
     }
 }
 
+@media all and (max-width: 319px) {
+    #home__logo {
+        font-size: 60px;
+        bottom: 482px;
+    }
+
+    #home__description {
+        font-size: 24px;
+    }
+}
+
 /* HEIGHT */
 @media all and (min-height: 854px) {
     #clouds {
@@ -234,11 +265,23 @@
         }
 
         #home__description {
-            top: 48%;
+            top: 46%;
         }
 
         .work-button__container {
-            top: 59%;
+            top: 57%;
+        }
+    }
+
+    @media all and (max-width: 422px) {
+        #home__logo {
+            top: 28.2%;
+        }
+    }
+
+    @media all and (max-width: 319px) {
+        #home__logo {
+            top: 28.8%;
         }
     }
 }
@@ -266,58 +309,126 @@
         }
 
         #home__description {
-            top: 50%;
+            top: 45%;
         }
 
         .work-button__container {
-            top: 60%;
+            top: 58%;
+        }
+    }
+
+    @media all and (max-width: 422px) {
+        #home__logo {
+            top: 25.4%;
+        }
+    }
+
+    @media all and (max-width: 319px) {
+        #home__logo {
+            top: 26.4%;
         }
     }
 }
 
-@media all and (max-height: 600px) and (max-width: 1080px) {
-    /*#home__logo {
-        font-size: 130px;
-    }
-
-    #home__description {
-        font-size: 45px;
-    }
-
-    .work-button {
-        font-size: 20px;
-    }
-
-    .work-button__container {
-        top: 63%;
-    }
-
-    .mountain {
-        top: 15%;
-        width: 1200px;
-        transform: translateX(-60px);
-    }*/
-
+@media all and (max-height: 600px) and (max-width: 1078px) {
     #home__logo {
-        font-size: 130px;
-        top: 9%;
+        top: 17%;
     }
 
     #home__description {
-        font-size: 45px;
-    }
-
-    .work-button {
-        font-size: 20px;
+        top: 44%;
     }
 
     .work-button__container {
-        top: 63%;
+        top: 58%;
     }
 
     .mountain {
         top: 10%;
         width: 1200px;
         transform: translateX(-60px);
+    }
+
+    /* Only change font size if still in large format @761px min */
+    @media all and (min-width: 761px) {
+        #home__logo {
+            top: 9%;
+            font-size: 130px;
+        }
+
+        #home__description {
+            font-size: 45px;
+        }
+
+        .work-button__container {
+            top: 63%;
+        }
+
+        .work-button {
+            font-size: 20px;
+        }
+    }
+
+    @media all and (max-width: 422px) {
+        #home__logo {
+            top: 21%;
+        }
+    }
+
+    @media all and (max-width: 319px) {
+        #home__logo {
+            top: 22.3%;
+        }
+    }
+}
+
+@media all and (max-height: 456px) and (max-width: 1078px) {
+    #home__logo {
+        top: 12.8%;
+    }
+
+    .work-button__container {
+        top: 62%;
+    }
+
+    .mountain {
+        top: 4%;
+        width: 1200px;
+        transform: translateX(-60px);
+    }
+
+    @media all and (min-width: 761px) {
+        #home__logo {
+            font-size: 110px;
+            top: 8%;
+        }
+
+        #home__description {
+            font-size: 36px;
+        }
+
+        .work-button {
+            font-size: 16px;
+        }
+
+        .work-button__container {
+            top: 63%;
+        }
+    }
+
+    @media all and (max-width: 422px) {
+        #home__logo {
+            top: 18%;
+        }
+
+        .work-button__container {
+            top: 58%;
+        }
+    }
+
+    @media all and (max-width: 319px) {
+        #home__logo {
+            top: 20.1%;
+        }
     }
 }
