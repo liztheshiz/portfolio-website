@@ -38,6 +38,15 @@ main {
     align-items: center;
 }
 
+.portfolio-title {
+    text-align: left;
+}
+
+.github-button {
+    display: block;
+    margin-top: 20px;
+}
+
 .portfolio-button {
     margin-left: 50px;
     margin-top: 12px;
