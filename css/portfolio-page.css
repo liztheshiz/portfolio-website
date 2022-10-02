@@ -5,13 +5,12 @@ main {
 .portfolio-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 80px;
+    grid-gap: 0px;
     margin: 0;
     padding: 80px 160px 40px 160px;
     justify-content: center;
     align-items: center;
     position: relative;
-    border-bottom: 1px solid black;
 }
 
 .portfolio-grid__item {
@@ -22,11 +21,13 @@ main {
 }
 
 .portfolio-grid__item:first-child {
+    padding-right: 40px;
     text-align: right;
 }
 
-.portfolio-grid__item:last-child {
-    text-align: left;
+.porfolio-grid__item__text {
+    padding-left: 40px;
+    border-left: 1px solid black;
 }
 
 .screenshot {
@@ -69,19 +70,19 @@ main {
     width: 30px;
 }
 
-.line-vertical {
+/*.line-vertical {
     position: absolute;
-    top: 0;
+    top: 80px;
     left: 50%;
     width: 1px;
     background: black;
-    height: 100%;
-}
+    height: 80%;
+}*/
 
 .arrow {
     position: absolute;
     font-size: 60px;
-    bottom: 20px;
+    bottom: 80px;
     color: black;
     text-decoration: none;
 }
