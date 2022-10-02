@@ -1,8 +1,28 @@
 /* 	>>><<<
 	CASE STUDY ELEMENTS
 	>>><<< */
+.case-study__header {
+    position: absolute;
+    top: 0;
+    padding: 40px;
+}
+
+.case-study__return {
+    position: absolute;
+    top: 40px;
+    padding-left: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.case-study__return:hover,
+.case-study__return:focus {
+    opacity: 90%;
+}
+
 .case-study__main {
-    padding: 30px;
+    padding: 80px 30px 20% 30px;
 }
 
 .case-study__container {
@@ -28,7 +48,8 @@
 
 .case-study__main-title {
     margin-bottom: 40px;
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: 600;
 }
 
 .case-study__description {

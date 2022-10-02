@@ -32,6 +32,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
+    padding: 0;
 }
 
 .page-body {
@@ -334,9 +335,8 @@ button:focus,
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
     margin: 0;
-    padding-bottom: 15px;
     width: 100%;
 }
 
