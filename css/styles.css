@@ -3,7 +3,8 @@
 :root {
     --background-color: #ede4d3;
     /* tan */
-    --primary-color: #782323;
+    --primary-color: #597052;
+    /*--primary-color: #782323;*/
     /* dark red */
     --secondary-color: #c8d3aa;
     /* orange */
@@ -89,7 +90,7 @@ main h3 {
 }
 
 a {
-    color: #8b2424;
+    color: #44573e;
 }
 
 a:visited {
@@ -102,7 +103,7 @@ a:focus {
 }
 
 a:active {
-    color: #b53131;
+    color: #628558;
 }
 
 
