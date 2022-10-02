@@ -11,9 +11,9 @@
 @supports (display: grid) {
     .work-grid {
         display: grid;
-        grid-template-columns: 32% 32% 32%;
+        grid-template-columns: 28% 28% 28%;
         grid-gap: 20px;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: 0;
     }
 
