@@ -46,15 +46,19 @@ main {
 .github-button {
     display: block;
     margin-top: 20px;
+    position: relative;
 }
 
 .portfolio-button--github {
     width: 30px;
+    position: relative;
+    transition: all ease-in 0.2s;
 }
 
 .portfolio-button--github:hover,
 .portfolio-button--github:focus {
-    opacity: 75%;
+    opacity: 80%;
+    transform: scale(1.1);
 }
 
 /*.line-vertical {
@@ -72,6 +76,7 @@ main {
     bottom: 80px;
     color: black;
     text-decoration: none;
+    transition: all ease-in 0.2s;
 }
 
 .arrow:visited {
@@ -81,6 +86,7 @@ main {
 .arrow:hover,
 .arrow:focus {
     opacity: 75%;
+    transform: scale(1.1);
 }
 
 .left-arrow {
