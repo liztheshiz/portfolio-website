@@ -7,7 +7,7 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-gap: 0px;
     margin: 0;
-    padding: 80px 160px 40px 160px;
+    padding: var(--margin) var(--double-margin) var(--half-margin) var(--double-margin);
     justify-content: center;
     align-items: center;
     position: relative;
@@ -63,7 +63,7 @@ main {
 
 /*.line-vertical {
     position: absolute;
-    top: 80px;
+    top: var(--margin);
     left: 50%;
     width: 1px;
     background: black;
@@ -90,9 +90,9 @@ main {
 }
 
 .left-arrow {
-    left: 80px;
+    left: var(--margin);
 }
 
 .right-arrow {
-    right: 80px;
+    right: var(--margin);
 }
