@@ -48,26 +48,13 @@ main {
     margin-top: 20px;
 }
 
-.portfolio-button {
-    margin-left: 50px;
-    margin-top: 12px;
-}
-
-.portfolio-button:hover,
-.portfolio-button:focus {
-    opacity: 75%;
-}
-
-.portfolio-button:last-child {
-    margin-left: 16px;
-}
-
-.portfolio-button--link {
-    width: 40px;
-}
-
 .portfolio-button--github {
     width: 30px;
+}
+
+.portfolio-button--github:hover,
+.portfolio-button--github:focus {
+    opacity: 75%;
 }
 
 /*.line-vertical {
