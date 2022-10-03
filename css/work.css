@@ -12,8 +12,8 @@
     .work-grid {
         display: grid;
         grid-template-columns: 28% 28% 28%;
-        grid-gap: 20px;
-        justify-content: space-around;
+        grid-gap: 40px;
+        justify-content: center;
         margin: 0;
     }
 
