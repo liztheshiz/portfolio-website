@@ -1,17 +1,13 @@
 /* VARIABLES */
-
 :root {
-    --background-color: #ede4d3;
-    /* tan */
+    --background-color: #f0eae6;
+    /* previous: #ede4d3; */
     --primary-color: #597052;
-    /*--primary-color: #782323;*/
-    /* dark red */
+    /* previous: maroon #782323; */
     --secondary-color: #c8d3aa;
-    /* orange */
     --dark-grey: #2b2b2b;
-    /* dark grey */
 
-    --bold: 700;
+    --margin: 80px;
 }
 
 
@@ -22,11 +18,12 @@
 
 
 /* 	>>><<<
-		GENERAL ELEMENTS
-		>>><<< */
+	GENERAL ELEMENTS
+	>>><<< */
 
 body {
     background-image: url('../img/LS_background_image.jpg');
+    background-color: var(--background-color);
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -36,12 +33,6 @@ body {
 }
 
 .page-body {
-    /*background-image: url('../img/footer_1920_beartooth.png'), url('../img/LS_background_image.jpg');
-    background-position: bottom, center;
-    background-position-y: 130%;
-    background-repeat: no-repeat, repeat;
-    background-size: contain, cover;*/
-
     /* this is for the footer */
     position: relative;
     min-height: 100vh;
@@ -62,7 +53,7 @@ h2 {
 
 h3 {
     font-size: 18px;
-    font-weight: var(--bold);
+    font-weight: bold;
 }
 
 main {
@@ -70,7 +61,7 @@ main {
 }
 
 .page-main {
-    animation: 0.4s ease-in 0s 1 fadeIn backwards;
+    animation: 0.6s ease-in fadeIn;
     padding-bottom: 20%;
 }
 
@@ -110,8 +101,8 @@ a:active {
 
 
 /* 	>>><<<
-		HEADER ELEMENTS
-		>>><<< */
+	HEADER ELEMENTS
+	>>><<< */
 
 .page-header {
     display: flex;
@@ -199,8 +190,8 @@ a:active {
 
 
 /* 	>>><<<
-		ABOUT PAGE ELEMENTS
-		>>><<< */
+	ABOUT PAGE ELEMENTS
+	>>><<< */
 
 .about-container {
     max-width: 60%;
@@ -222,8 +213,8 @@ a:active {
 
 
 /* 	>>><<<
-		CONTACT PAGE ELEMENTS
-		>>><<< */
+	CONTACT PAGE ELEMENTS
+	>>><<< */
 
 .contact-grid_item {
     display: inline-block;
@@ -269,8 +260,8 @@ a:active {
 
 
 /* 	>>><<<
-		MISC ELEMENTS
-		>>><<< */
+	BUTTONS
+	>>><<< */
 
 button,
 .button {
@@ -317,8 +308,8 @@ button:focus,
 
 
 /* 	>>><<<
-		FOOTER ELEMENTS
-		>>><<< */
+	FOOTER ELEMENTS
+	>>><<< */
 
 .footer-mountains {
     width: 100%;
@@ -328,8 +319,6 @@ button:focus,
 }
 
 .page-footer {
-    /*margin-top: 200px;
-    margin-bottom: 20px;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -362,8 +351,8 @@ button:focus,
 
 
 /* 	>>><<<
-		RESPONSIVE ELEMENTS
-		>>><<< */
+	RESPONSIVE ELEMENTS
+	>>><<< */
 
 @media all and (max-width: 750px),
 all and (max-height: 750px) {
@@ -483,33 +472,3 @@ all and (max-height: 650px) {
         }
     }
 }
-
-
-
-/* Animations (currently unused) */
-
-/*
-@keyframes cloud-move {
-	from {
-		transform: translate(0, 50px);
-	} to {
-		transform: translate(200px, 50px);
-	}
-}
-
-.cloud-front {
-	animation: 30s cloud-move infinite alternate linear;
-}
-
-@keyframes cloud-move-reverse {
-  from {
-   	transform: translate(446px, 48px);
-  } to {
-   	transform: translate(100px, 48px);
-  }
-}
-
-.cloud-back {
- 	animation: 34s cloud-move-reverse infinite alternate linear;
-}
-*/
