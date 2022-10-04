@@ -37,7 +37,11 @@ main {
 }
 
 .multi-screenshot {
-    margin-top: 40px;
+    margin-top: 60px;
+}
+
+.mobile-screenshot {
+    max-width: 70%;
 }
 
 .porfolio-grid__item__header {
