@@ -40,10 +40,6 @@ main {
     margin-top: 60px;
 }
 
-.mobile-screenshot {
-    max-width: 70%;
-}
-
 .porfolio-grid__item__header {
     display: flex;
     align-items: center;
