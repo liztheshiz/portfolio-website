@@ -19,7 +19,7 @@
 #home__logo {
     z-index: -2;
     position: absolute;
-    bottom: 445px;
+    bottom: 438px;
     flex: none;
     font-family: 'Forum', serif;
     margin: 0;
@@ -43,7 +43,7 @@
 
 .work-button__container {
     position: absolute;
-    bottom: 270px;
+    bottom: 280px;
     text-align: center;
 }
 
@@ -59,6 +59,7 @@
     transition: all 0.5s ease 0s;
     mix-blend-mode: screen;
     animation: 1s ease-in 1s 1 fadeIn backwards;
+    position: relative;
 }
 
 .work-button:hover,
@@ -144,41 +145,124 @@
 	RESPONSIVE ELEMENTS
 	>>><<< */
 
+/* Default settings are for screen sizes with 
+ * width: 761px-1440px
+ * height: 785px-853px */
+
 /* WIDTH */
+/* Large screens (monitors) */
 @media all and (min-width: 1441px) {
     #home__logo {
-        font-size: 266px;
-        bottom: 790px;
+        font-size: 207px;
+        bottom: 609px;
     }
 
     #home__description {
-        font-size: 96px;
-        bottom: 640px;
-    }
-
-    .work-button__container {
+        font-size: 74px;
         bottom: 500px;
     }
 
+    .work-button__container {
+        bottom: 386px;
+    }
+
     .work-button {
-        font-size: 44px;
-        padding: 18px 36px;
+        font-size: 36px;
+        padding: 13px 26px;
         border-width: 2px;
     }
 
+    #clouds {
+        width: 4000px;
+    }
+
+    .mountain {
+        width: 2000px
+    }
+
+    @media all and (max-height: 1100px) {
+        #home__logo {
+            top: 16.7%;
+        }
+
+        #home__description {
+            top: 45.5%;
+        }
+
+        .work-button__container {
+            top: 60%;
+        }
+
+        .mountain {
+            top: 17%;
+        }
+    }
+}
+
+/* Largest screens (4k monitors) */
+/* Need to adjust for small height w large width here! */
+@media all and (min-width: 2000px) {
     #clouds {
         width: 5120px;
     }
 
     .mountain {
-        width: 2560px
+        width: 2560px;
+    }
+
+    @media all and (max-height: 1420px) {
+        #home__logo {
+            font-size: 266px;
+            top: 24.8%;
+        }
+
+        #home__description {
+            font-size: 96px;
+            top: 55%;
+        }
+
+        .work-button__container {
+            top: 70%;
+        }
+
+        .work-button {
+            font-size: 44px;
+            padding: 18px 36px;
+            border-width: 2px;
+        }
+
+        .mountain {
+            top: 25%;
+        }
+    }
+
+    @media all and (min-height: 1421px) {
+        #home__logo {
+            font-size: 266px;
+            bottom: 790px;
+        }
+
+        #home__description {
+            font-size: 96px;
+            bottom: 640px;
+        }
+
+        .work-button__container {
+            bottom: 500px;
+        }
+
+        .work-button {
+            font-size: 44px;
+            padding: 18px 36px;
+            border-width: 2px;
+        }
     }
 }
 
 @media all and (max-width: 760px) {
     #home__logo {
         font-size: 90px;
-        bottom: 467px;
+        bottom: 463px;
     }
 
     #home__description {
@@ -237,13 +321,13 @@
 /* HEIGHT */
 @media all and (min-height: 854px) {
     #clouds {
-        top: -40px;
+        top: -90px;
     }
 }
 
 @media all and (max-height: 794px) {
     #home__logo {
-        top: 17.5%;
+        top: 16.5%;
     }
 
     #home__description {
@@ -261,7 +345,7 @@
     /* Position adjusted for font size change @760px width */
     @media all and (max-width: 760px) {
         #home__logo {
-            top: 26%;
+            top: 25%;
         }
 
         #home__description {
@@ -288,7 +372,7 @@
 
 @media all and (max-height: 700px) {
     #home__logo {
-        top: 13.5%;
+        top: 12.3%;
     }
 
     #home__description {
@@ -305,7 +389,7 @@
 
     @media all and (max-width: 760px) {
         #home__logo {
-            top: 23%;
+            top: 22.1%;
         }
 
         #home__description {
@@ -319,20 +403,20 @@
 
     @media all and (max-width: 422px) {
         #home__logo {
-            top: 25.4%;
+            top: 24.9%;
         }
     }
 
     @media all and (max-width: 319px) {
         #home__logo {
-            top: 26.4%;
+            top: 25.9%;
         }
     }
 }
 
 @media all and (max-height: 600px) and (max-width: 1078px) {
     #home__logo {
-        top: 17%;
+        top: 15.9%;
     }
 
     #home__description {
@@ -352,7 +436,7 @@
     /* Only change font size if still in large format @761px min */
     @media all and (min-width: 761px) {
         #home__logo {
-            top: 9%;
+            top: 8.2%;
             font-size: 130px;
         }
 
@@ -371,20 +455,20 @@
 
     @media all and (max-width: 422px) {
         #home__logo {
-            top: 21%;
+            top: 20%;
         }
     }
 
     @media all and (max-width: 319px) {
         #home__logo {
-            top: 22.3%;
+            top: 21.7%;
         }
     }
 }
 
 @media all and (max-height: 456px) and (max-width: 1078px) {
     #home__logo {
-        top: 12.8%;
+        top: 11.7%;
     }
 
     .work-button__container {
@@ -400,15 +484,11 @@
     @media all and (min-width: 761px) {
         #home__logo {
             font-size: 110px;
-            top: 8%;
+            top: 6.9%;
         }
 
         #home__description {
             font-size: 36px;
-        }
-
-        .work-button {
-            font-size: 16px;
         }
 
         .work-button__container {
@@ -418,7 +498,7 @@
 
     @media all and (max-width: 422px) {
         #home__logo {
-            top: 18%;
+            top: 17.1%;
         }
 
         .work-button__container {
@@ -428,7 +508,7 @@
 
     @media all and (max-width: 319px) {
         #home__logo {
-            top: 20.1%;
+            top: 19.6%;
         }
     }
 }
