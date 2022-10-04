@@ -47,7 +47,7 @@ function showErrorMessage(input, message) {
     // Remove existing error
     let error = container.querySelector('.error-message');
     if (error) {
-        container.removeChild(error);
+        error.remove();
     }
 
     // Adds error message if the message isn't empty
@@ -56,7 +56,7 @@ function showErrorMessage(input, message) {
         let error = document.createElement('div');
         error.classList.add('error-message');
         error.innerText = message;
-        container.appendChild(error);
+        input.after(error);
     }
 }
 // <<< FUNCTIONS
