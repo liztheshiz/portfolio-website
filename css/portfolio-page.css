@@ -27,11 +27,17 @@ main {
 
 .porfolio-grid__item__text {
     padding-left: 40px;
-    border-left: 1px solid black;
+    /* border-left: 1px solid black; */
 }
 
 .screenshot {
     max-width: 100%;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.multi-screenshot {
+    margin-top: 40px;
 }
 
 .porfolio-grid__item__header {
@@ -61,14 +67,14 @@ main {
     transform: scale(1.1);
 }
 
-/*.line-vertical {
+.line-vertical {
     position: absolute;
     top: var(--margin);
     left: 50%;
     width: 1px;
     background: black;
-    height: 80%;
-}*/
+    height: 75%;
+}
 
 .arrow {
     position: absolute;
