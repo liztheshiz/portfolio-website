@@ -29,7 +29,7 @@ body {
     background-color: var(--background-color);
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -192,22 +192,39 @@ a:active {
 	ABOUT PAGE ELEMENTS
 	>>><<< */
 
-.about-container {
-    max-width: 60%;
-    text-align: left;
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 80%;
+    grid-gap: 40px;
     margin: 0 auto;
 }
 
-.resume-button__container {
-    text-align: center;
+#liz-photo {
+    max-width: 100%;
 }
 
-.resume-button {
-    color: white;
+.about-container {
+    text-align: left;
+}
+
+.about-grid__item {
+    padding: 0;
+}
+
+.about-title {
+    text-align: left;
+    margin-top: -10px;
+}
+
+.resume-link {
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .download-icon {
     width: 16px;
+    margin-bottom: -2.5px;
 }
 
 
