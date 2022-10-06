@@ -10,6 +10,7 @@
     --margin: 80px;
     --double-margin: 160px;
     --half-margin: 40px;
+    --threequarter-margin: 60px;
 }
 
 
@@ -356,35 +357,38 @@ button:focus,
 	RESPONSIVE ELEMENTS
 	>>><<< */
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 980px) {
     .page-header {
-        flex-direction: column;
-        justify-content: center;
-        padding-bottom: 0px;
+        padding: 0 var(--half-margin);
+    }
+}
+
+@media all and (max-width: 760px),
+(max-height: 600px) {
+    .email {
+        font-size: 14px;
     }
 
-    .page-header_item:first-child {
-        flex: none;
-        width: 200px;
-        height: 70px;
-        align-self: center;
+    .footer-link__image {
+        width: 24px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .page-header {
+        height: var(--threequarter-margin);
     }
 
-    .page-header_item:last-child {
-        text-align: center;
-        flex: none;
-        height: 50px;
+    .page-header__home p {
+        font-size: 30px;
     }
 
-    .navigation-list {
-        margin-left: -40px;
-        margin-top: 0px;
+    .navigation-list__item {
+        font-size: 14px;
     }
+}
 
-    .navigation-list li {
-        margin-left: 5px;
-    }
-
+@media all and (max-width: 520px) {
     .contact-grid {
         grid-template-columns: 1fr;
         grid-gap: 0px;
@@ -409,5 +413,76 @@ button:focus,
 
     #contact-form {
         margin-top: 0;
+    }
+}
+
+@media all and (max-width: 474px) {
+    .page-header {
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 0px;
+        height: 110px;
+    }
+
+    .page-header__item {
+        height: 40%;
+    }
+
+    .page-header__home {
+        justify-content: center;
+        margin-top: 6px;
+    }
+
+    .page-header__home p {
+        font-size: 40px;
+    }
+
+    .page-header__item:last-child {
+        text-align: center;
+        justify-content: center;
+        flex-grow: 0;
+        align-items: center;
+    }
+
+    .navigation-list {
+        margin: 6px 0 0 -10px;
+        padding: 0;
+    }
+
+    .navigation-list__item {
+        font-size: 16px;
+    }
+
+    .navigation-list li {
+        margin-left: 8px;
+    }
+}
+
+@media all and (max-height: 320px),
+(max-width: 422px) {
+    .email {
+        font-size: 10px;
+    }
+
+    .footer-link__image {
+        width: 18px;
+    }
+}
+
+@media all and (max-width: 319px) {
+    .page-header {
+        height: 100px;
+    }
+
+    .page-header__home p {
+        font-size: 30px;
+    }
+
+    .navigation-list {
+        margin-top: 2px;
+    }
+
+    .navigation-list__item {
+        font-size: 14px;
     }
 }
