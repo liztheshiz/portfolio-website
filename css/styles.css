@@ -219,6 +219,10 @@ a:active {
 	CONTACT PAGE ELEMENTS
 	>>><<< */
 
+.contact-writeup {
+    text-align: center;
+}
+
 .contact-grid_item {
     display: inline-block;
     width: 50%;
