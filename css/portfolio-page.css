@@ -7,7 +7,7 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-gap: 0px;
     margin: 0;
-    padding: var(--margin) var(--double-margin) var(--half-margin) var(--double-margin);
+    padding: 0 var(--half-margin) 0 var(--half-margin);
     justify-content: center;
     align-items: center;
     position: relative;
@@ -27,7 +27,8 @@ main {
 
 .porfolio-grid__item__text {
     padding-left: 40px;
-    /* border-left: 1px solid black; */
+    padding-bottom: 5px;
+    border-left: 1px solid black;
 }
 
 .screenshot {
@@ -67,19 +68,19 @@ main {
     transform: scale(1.1);
 }
 
-.line-vertical {
+/*.line-vertical {
     position: absolute;
     top: var(--margin);
     left: 50%;
     width: 1px;
     background: black;
     height: 75%;
-}
+}*/
 
 .arrow {
     position: absolute;
     font-size: 60px;
-    bottom: 80px;
+    bottom: 0;
     color: black;
     text-decoration: none;
     transition: all ease-in 0.2s;
@@ -96,9 +97,9 @@ main {
 }
 
 .left-arrow {
-    left: var(--margin);
+    left: 0;
 }
 
 .right-arrow {
-    right: var(--margin);
+    right: 0;
 }
