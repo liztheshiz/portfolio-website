@@ -194,7 +194,7 @@ a:active {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
     max-width: 80%;
     grid-gap: 40px;
     margin: 0 auto;
@@ -231,10 +231,6 @@ a:active {
 /* 	>>><<<
 	CONTACT PAGE ELEMENTS
 	>>><<< */
-
-.contact-writeup {
-    text-align: center;
-}
 
 .contact-grid_item {
     display: inline-block;
