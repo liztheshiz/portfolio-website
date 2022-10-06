@@ -8,9 +8,10 @@
     --dark-grey: #2b2b2b;
 
     --margin: 80px;
-    --double-margin: 160px;
     --half-margin: 40px;
     --threequarter-margin: 60px;
+    --double-margin: 160px;
+    --triple-margin: 240px;
 }
 
 
@@ -369,6 +370,33 @@ button:focus,
 /* 	>>><<<
 	RESPONSIVE ELEMENTS
 	>>><<< */
+
+@media all and (min-width: 1500px) {
+    .page-main {
+        padding: var(--double-margin) var(--double-margin) 20% var(--double-margin);
+    }
+}
+
+@media all and (min-width: 1660px) {
+    .page-main {
+        padding-left: 14%;
+        padding-right: 14%;
+    }
+}
+
+@media all and (min-width: 1860px) {
+    .page-main {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+@media all and (min-width: 2170px) {
+    .page-main {
+        padding-left: 24%;
+        padding-right: 24%;
+    }
+}
 
 @media all and (max-width: 830px) {
     .page-header {
