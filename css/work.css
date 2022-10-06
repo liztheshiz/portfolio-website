@@ -1,6 +1,6 @@
 /* 	>>><<<
-		WORK PAGE ELEMENTS
-		>>><<< */
+	WORK PAGE ELEMENTS
+	>>><<< */
 
 /* Grid fallback for older browsers */
 .work-grid__item {
@@ -93,7 +93,8 @@
         margin: 0;
         margin-top: 16px;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 18px;
+        letter-spacing: 3px;
     }
 }
 
@@ -102,22 +103,91 @@
 	RESPONSIVE ELEMENTS
 	>>><<< */
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 1300px) {
     .work-grid {
-        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
-    #your-project-here {
-        padding: 0px 0px 20px;
+    .work-grid__item__title {
+        font-size: 16px;
+        margin-top: 14px;
+        margin-bottom: -6px;
+    }
+}
+
+@media all and (max-width: 1100px) {
+    .work-grid__item__title {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 980px) {
+    .work-grid {
+        grid-template-columns: 44% 44%;
     }
 
+    .work-grid__item__title {
+        font-size: 16px;
+        margin-top: 14px;
+        margin-bottom: -3px;
+    }
+}
+
+@media all and (max-width: 830px) {
     .work-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .work-grid__item__title {
+        font-size: 14px;
+        margin-top: 13px;
+        margin-bottom: -5px;
+    }
+}
+
+@media all and (max-width: 760px) {
+    .work-grid {
+        grid-gap: 25px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .work-grid__item__title {
+        font-size: 12px;
+        margin-top: 12px;
+        margin-bottom: -7px;
     }
 }
 
 @media all and (max-width: 520px) {
     .work-grid {
+        grid-template-columns: 90%;
+        grid-gap: 40px;
+    }
+
+    .work-grid__item__title {
+        font-size: 14px;
+        margin-top: 13px;
+        margin-bottom: -5px;
+    }
+}
+
+@media all and (max-width: 474px) {
+    .work-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width: 370px) {
+    .work-grid {
+        grid-gap: 25px;
+    }
+}
+
+@media all and (max-width: 324px) {
+    .work-grid__item__title {
+        font-size: 12px;
+        margin-top: 12px;
+        margin-bottom: -7px;
     }
 }

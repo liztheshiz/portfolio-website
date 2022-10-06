@@ -357,9 +357,19 @@ button:focus,
 	RESPONSIVE ELEMENTS
 	>>><<< */
 
-@media all and (max-width: 980px) {
+@media all and (max-width: 830px) {
+    .page-header {
+        padding: 0 var(--threequarter-margin);
+    }
+}
+
+@media all and (max-width: 760px) {
     .page-header {
         padding: 0 var(--half-margin);
+    }
+
+    .page-main {
+        padding: var(--threequarter-margin) var(--threequarter-margin) 20% var(--threequarter-margin);
     }
 }
 
@@ -386,9 +396,17 @@ button:focus,
     .navigation-list__item {
         font-size: 14px;
     }
+
+    .page-main {
+        padding: var(--half-margin) var(--half-margin) 20% var(--half-margin);
+    }
 }
 
 @media all and (max-width: 520px) {
+    .page-main {
+        padding: var(--threequarter-margin) var(--threequarter-margin) 20% var(--threequarter-margin);
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
         grid-gap: 0px;
@@ -466,6 +484,12 @@ button:focus,
 
     .footer-link__image {
         width: 18px;
+    }
+}
+
+@media all and (max-width: 370px) {
+    .page-main {
+        padding: var(--half-margin) var(--half-margin) 20% var(--half-margin);
     }
 }
 
