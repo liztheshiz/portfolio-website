@@ -194,45 +194,6 @@ a:active {
 }
 
 
-/* 	>>><<<
-	ABOUT PAGE ELEMENTS
-	>>><<< */
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    max-width: 80%;
-    grid-gap: 40px;
-    margin: 0 auto;
-}
-
-#liz-photo {
-    max-width: 100%;
-}
-
-.about-container {
-    text-align: left;
-}
-
-.about-grid__item {
-    padding: 0;
-}
-
-.about-title {
-    text-align: left;
-    margin-top: -10px;
-}
-
-.resume-link {
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.download-icon {
-    width: 16px;
-    margin-bottom: -2.5px;
-}
-
 
 /* 	>>><<<
 	CONTACT PAGE ELEMENTS
