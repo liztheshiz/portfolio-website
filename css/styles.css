@@ -535,6 +535,10 @@ button:focus,
 }
 
 @media all and (max-width: 370px) {
+    body {
+        font-size: 12px;
+    }
+
     .page-main {
         padding: var(--half-margin) var(--half-margin) 20% var(--half-margin);
     }
