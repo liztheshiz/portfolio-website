@@ -373,7 +373,7 @@ button:focus,
 
 @media all and (min-width: 1500px) {
     .page-main {
-        padding: var(--double-margin) var(--double-margin) 20% var(--double-margin);
+        padding: var(--margin) var(--double-margin) 20% var(--double-margin);
     }
 }
 
