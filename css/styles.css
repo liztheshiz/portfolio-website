@@ -398,6 +398,12 @@ button:focus,
     }
 }
 
+@media all and (max-width: 1300px) {
+    body {
+        font-size: 13px;
+    }
+}
+
 @media all and (max-width: 830px) {
     .page-header {
         padding: 0 var(--threequarter-margin);

@@ -103,3 +103,96 @@ main {
 .right-arrow {
     right: 0;
 }
+
+
+
+/* 	>>><<<
+	RESPONSIVE ELEMENTS
+	>>><<< */
+
+@media all and (max-width: 1300px) {
+    .portfolio-button--github {
+        width: 26px;
+    }
+
+    .arrow {
+        font-size: 50px;
+    }
+}
+
+@media all and (max-width: 1100px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid__item:first-child {
+        grid-row: 2;
+        padding: 10px 24% 0 24%;
+    }
+
+    .porfolio-grid__item__text {
+        border: none;
+        padding-left: var(--margin);
+        padding-right: var(--margin);
+    }
+
+    .github-button {
+        text-align: center;
+    }
+
+    .arrow {
+        top: 0;
+    }
+}
+
+@media all and (max-width: 960px) {
+    .portfolio-grid__item:first-child {
+        padding-left: 18%;
+        padding-right: 18%;
+    }
+}
+
+@media all and (max-width: 860px) {
+    .porfolio-grid__item__text {
+        padding-left: var(--half-margin);
+        padding-right: var(--half-margin);
+    }
+}
+
+@media all and (max-width: 760px) {
+    .portfolio-grid {
+        padding: 0;
+    }
+
+    .portfolio-grid__item:first-child {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .portfolio-title {
+        font-size: 34px;
+    }
+}
+
+@media all and (max-width: 520px) {
+    .porfolio-grid__item__text {
+        padding: 0;
+    }
+
+    .portfolio-grid__item:first-child {
+        padding: 0;
+    }
+}
+
+@media all and (max-width: 420px) {
+    .portfolio-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .portfolio-link {
+        align-self: center;
+    }
+}
