@@ -68,15 +68,6 @@ main {
     transform: scale(1.1);
 }
 
-/*.line-vertical {
-    position: absolute;
-    top: var(--margin);
-    left: 50%;
-    width: 1px;
-    background: black;
-    height: 75%;
-}*/
-
 .arrow {
     position: absolute;
     font-size: 60px;
@@ -168,6 +159,19 @@ main {
         padding-left: 15%;
         padding-right: 15%;
     }
+
+    .arrow {
+        top: -50px;
+        font-size: 44px;
+    }
+
+    .left-arrow {
+        left: -30px;
+    }
+
+    .right-arrow {
+        right: -30px;
+    }
 }
 
 @media all and (max-width: 600px) {
@@ -193,6 +197,6 @@ main {
     }
 
     .portfolio-link {
-        align-self: center;
+        text-align: center;
     }
 }
