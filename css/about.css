@@ -48,4 +48,59 @@
 	RESPONSIVE ELEMENTS
 	>>><<< */
 
-@media all and (max-width: 760px) {}
+@media all and (min-width: 1860px) and (max-width: 1980px) {
+    #liz-photo {
+        width: 120%;
+        transform: translateX(-60px);
+    }
+}
+
+@media all and (min-width: 2170px) and (max-width: 2290px) {
+    #liz-photo {
+        width: 120%;
+        transform: translateX(-80px);
+    }
+}
+
+@media all and (max-width: 1374px) and (min-width: 1301px) {
+    #liz-photo {
+        width: 116%;
+        transform: translateX(-60px);
+    }
+}
+
+@media all and (max-width: 1220px) and (min-width: 1111px) {
+    #liz-photo {
+        width: 116%;
+        transform: translateX(-50px);
+    }
+}
+
+@media all and (max-width: 1110px) {
+    .about-grid {
+        display: block;
+        position: relative;
+    }
+
+    .about-grid__item:first-child {
+        height: 100%;
+        float: left;
+        display: flex;
+        align-items: flex-end;
+        shape-outside: inset(calc(100% - 310px) 0 0);
+        background-color: palegoldenrod;
+    }
+
+    #liz-photo {
+        height: 300px;
+        margin: 0 20px 0 0;
+    }
+}
+
+@media all and (max-width: 880px) {
+    #liz-photo {
+        width: 240px;
+    }
+}
+
+@media all and (max-width: 820px) {}
