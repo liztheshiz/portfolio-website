@@ -172,12 +172,6 @@ main {
     }
 }
 
-@media all and (max-width: 600px) {
-    .portfolio-title {
-        font-size: 34px;
-    }
-}
-
 @media all and (max-width: 520px) {
     .porfolio-grid__item__text {
         padding: 0;
@@ -190,7 +184,6 @@ main {
 
 @media all and (max-width: 420px) {
     .portfolio-title {
-        font-size: 28px;
         text-align: center;
     }
 

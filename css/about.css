@@ -69,11 +69,17 @@
     }
 }
 
-@media all and (max-width: 1220px) and (min-width: 1111px) {
-    #liz-photo {
-        width: 116%;
-        transform: translateX(-50px);
+@media all and (max-width: 1220px) {
+    .about-grid {
+        max-width: 90%;
     }
+
+    /*@media all and (min-width: 1111px) {
+        #liz-photo {
+            width: 116%;
+            transform: translateX(-50px);
+        }
+    }*/
 }
 
 @media all and (max-width: 1110px) {
@@ -82,25 +88,98 @@
         position: relative;
     }
 
-    .about-grid__item:first-child {
+    /*.about-grid__item:first-child {
         height: 100%;
         float: left;
         display: flex;
         align-items: flex-end;
         shape-outside: inset(calc(100% - 310px) 0 0);
         background-color: palegoldenrod;
+    }*/
+
+    .about-grid__item:first-child {
+        height: 100%;
+        float: left;
+        display: flex;
+        align-items: flex-end;
     }
 
     #liz-photo {
-        height: 300px;
-        margin: 0 20px 0 0;
+        height: 330px;
+        margin: 10px 20px 0 0;
     }
 }
 
-@media all and (max-width: 880px) {
+@media all and (max-width: 810px) {
+    .about-grid {
+        max-width: 100%;
+    }
+}
+
+@media all and (max-width: 646px) {
     #liz-photo {
-        width: 240px;
+        height: 260px;
     }
 }
 
-@media all and (max-width: 820px) {}
+@media all and (max-width: 600px) {
+    @media all and (min-width: 521px) {
+        .about-grid {
+            padding: 20px 20px 0 20px;
+        }
+
+        #liz-photo {
+            margin-top: 0px;
+        }
+    }
+
+    .resume-link {
+        font-size: 14px;
+    }
+
+    .download-icon {
+        width: 14px;
+    }
+}
+
+@media all and (max-width: 520px) {
+    #liz-photo {
+        width: 166px;
+        height: 166px;
+        object-position: 50% 20%;
+    }
+
+    .resume-link {
+        margin-bottom: 30px;
+    }
+}
+
+@media all and (max-width: 455px) {
+    .about-grid__item:first-child {
+        float: none;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    #liz-photo {
+        margin: 0;
+    }
+
+    #about-header {
+        text-align: center;
+    }
+
+    .about-container h1 {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 420px) {
+    .resume-link {
+        font-size: 12px;
+    }
+
+    .download-icon {
+        width: 12px;
+    }
+}

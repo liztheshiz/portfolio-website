@@ -398,6 +398,10 @@ button:focus,
 }
 
 @media all and (max-width: 600px) {
+    h1 {
+        font-size: 34px;
+    }
+
     .page-header {
         height: var(--threequarter-margin);
     }
@@ -486,6 +490,12 @@ button:focus,
 
     .navigation-list li {
         margin-left: 8px;
+    }
+}
+
+@media all and (max-width: 420px) {
+    h1 {
+        font-size: 28px;
     }
 }
 
