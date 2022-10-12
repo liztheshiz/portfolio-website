@@ -351,6 +351,50 @@
     .mountain {
         transform: translateX(56px);
     }
+
+    @media all and (min-width: 700px) and (min-height: 900px) {
+        #home__logo {
+            font-size: 110px;
+            top: 30.3%;
+        }
+
+        #home__description {
+            font-size: 42px;
+            top: 47%;
+        }
+
+        .work-button__container {
+            top: 57%;
+        }
+
+        .work-button {
+            font-size: 22px;
+        }
+
+        .mountain {
+            top: 20%;
+            width: 2200px;
+        }
+
+        @media all and (min-height: 1260px) {
+            #home__logo {
+                top: 31.1%;
+            }
+
+            #home__description {
+                top: 46%;
+            }
+
+            .work-button__container {
+                top: 55%;
+            }
+
+            .mountain {
+                top: 20%;
+                width: 2400px;
+            }
+        }
+    }
 }
 
 @media all and (max-width: 422px) {
