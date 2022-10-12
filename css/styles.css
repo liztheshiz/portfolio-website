@@ -339,16 +339,10 @@ button:focus,
 	RESPONSIVE ELEMENTS
 	>>><<< */
 
-@media all and (min-width: 1500px) {
+@media all and (min-width: 2170px) {
     .page-main {
-        padding: var(--margin) var(--double-margin) 20% var(--double-margin);
-    }
-}
-
-@media all and (min-width: 1660px) {
-    .page-main {
-        padding-left: 14%;
-        padding-right: 14%;
+        padding-left: 24%;
+        padding-right: 24%;
     }
 }
 
@@ -361,14 +355,18 @@ button:focus,
     @media all and (min-height: 1110px) {}
 }
 
-@media all and (min-width: 2170px) {
+@media all and (min-width: 1660px) {
     .page-main {
-        padding-left: 24%;
-        padding-right: 24%;
+        padding-left: 14%;
+        padding-right: 14%;
     }
 }
 
-@media all and (max-width: 1420px) and (min-width: 981px) and (max-aspect-ratio: 6/5) {}
+@media all and (min-width: 1500px) {
+    .page-main {
+        padding: var(--margin) var(--double-margin) 20% var(--double-margin);
+    }
+}
 
 @media all and (max-width: 1300px) {
     body {
@@ -429,8 +427,8 @@ button:focus,
     }
 }
 
-@media all and (max-height: 320px),
-(max-width: 520px) {
+@media all and (max-width: 520px),
+(max-height: 320px) {
     .email {
         font-size: 10px;
     }
@@ -459,16 +457,6 @@ button:focus,
             text-align: left;
             margin-top: 20px;
         }
-    }
-}
-
-@media all and (max-height: 425px) {
-    .contact-list {
-        margin-top: 10px;
-    }
-
-    #contact-form {
-        margin-top: 0;
     }
 }
 
@@ -549,5 +537,16 @@ button:focus,
 
     .navigation-list__item {
         font-size: 14px;
+    }
+}
+
+/* HEIGHT */
+@media all and (max-height: 425px) {
+    .contact-list {
+        margin-top: 10px;
+    }
+
+    #contact-form {
+        margin-top: 0;
     }
 }

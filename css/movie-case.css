@@ -154,7 +154,7 @@
 
 /* SLIDESHOW */
 
-/* Styling the area of the slides */
+/* Styling for area of the slideshow */
 #slideshow {
     overflow: hidden;
     height: 490px;
@@ -165,23 +165,20 @@
     border-radius: 3px;
 }
 
-/* Style each of the sides
-          with a fixed width and height */
+/* Fixed width and height for each slide */
 .slide {
     float: left;
     height: 490px;
     width: 728px;
 }
 
-/* Add animation to the slides */
+/* Adding animation to the slides */
 .slide-wrapper {
 
-    /* Calculate the total width on the
-            basis of number of slides */
+    /* Total width calculated based on number of slides and width of slides*/
     width: calc(728px * 4);
 
-    /* Specify the animation with the
-            duration and speed */
+    /* Duration and speed of slide animation */
     animation: slide 30s ease infinite;
 }
 
@@ -193,12 +190,10 @@
     border-radius: 3px;
 }
 
-/* Define the animation
-          for the slideshow */
+/* Slideshow animation */
 @keyframes slide {
 
-    /* Calculate the margin-left for
-            each of the slides */
+    /* Margin-left for each slide calculated by width of slides */
     20% {
         margin-left: 0px;
     }
