@@ -104,6 +104,12 @@
     }
 }
 
+@media all and (max-width: 912px) and (min-width: 475px) and (min-height: 1024px) {
+    .about-grid {
+        margin-top: 10%;
+    }
+}
+
 @media all and (max-width: 810px) {
     .about-grid {
         max-width: 100%;
