@@ -298,7 +298,7 @@ button:focus,
     width: 100%;
     z-index: -1;
     position: absolute;
-    transform: translateY(-90%);
+    transform: translateY(-84%);
 }
 
 .page-footer {
@@ -355,6 +355,8 @@ button:focus,
         padding-left: 20%;
         padding-right: 20%;
     }
+
+    @media all and (min-height: 1110px) {}
 }
 
 @media all and (min-width: 2170px) {
@@ -363,6 +365,8 @@ button:focus,
         padding-right: 24%;
     }
 }
+
+@media all and (max-width: 1420px) and (min-width: 981px) and (max-aspect-ratio: 6/5) {}
 
 @media all and (max-width: 1300px) {
     body {
@@ -419,25 +423,36 @@ button:focus,
     }
 }
 
-@media all and (max-width: 520px) {
-    .page-main {
-        padding: var(--threequarter-margin) var(--threequarter-margin) 20% var(--threequarter-margin);
+@media all and (max-height: 320px),
+(max-width: 520px) {
+    .email {
+        font-size: 10px;
     }
 
-    .contact-grid {
-        grid-template-columns: 1fr;
-        grid-gap: 0px;
+    .footer-link__image {
+        width: 18px;
     }
 
-    .contact-grid__item {
-        width: 200px;
-        padding: 0px;
-        justify-self: center;
-    }
+    @media all and (max-width: 520px) {
+        .page-main {
+            padding: var(--threequarter-margin) var(--threequarter-margin) 20% var(--threequarter-margin);
+        }
 
-    .contact-list {
-        text-align: left;
-        margin-top: 20px;
+        .contact-grid {
+            grid-template-columns: 1fr;
+            grid-gap: 0px;
+        }
+
+        .contact-grid__item {
+            width: 200px;
+            padding: 0px;
+            justify-self: center;
+        }
+
+        .contact-list {
+            text-align: left;
+            margin-top: 20px;
+        }
     }
 }
 
@@ -499,17 +514,6 @@ button:focus,
     }
 }
 
-@media all and (max-height: 320px),
-(max-width: 422px) {
-    .email {
-        font-size: 10px;
-    }
-
-    .footer-link__image {
-        width: 18px;
-    }
-}
-
 @media all and (max-width: 370px) {
     body {
         font-size: 12px;
@@ -517,6 +521,10 @@ button:focus,
 
     .page-main {
         padding: var(--half-margin) var(--half-margin) 20% var(--half-margin);
+    }
+
+    .page-footer {
+        bottom: 4px;
     }
 }
 

@@ -43,10 +43,51 @@
     margin-bottom: -2.5px;
 }
 
+.footer-mountains {
+    transform: translateY(-76%);
+}
+
 
 /* 	>>><<<
 	RESPONSIVE ELEMENTS
 	>>><<< */
+
+/* ABOUT-SPECIFIC FOOTER PLACEMENT LOGIC */
+@media all and (min-width: 2300px) and (max-aspect-ratio: 25/14),
+(min-width: 1900px) and (max-aspect-ratio: 32/19),
+(min-width: 1536px) and (max-aspect-ratio: 16/11),
+(min-width: 1090px) and (max-aspect-ratio: 16/12),
+(max-width: 1089px) and (max-aspect-ratio: 1/1) {
+    .footer-mountains {
+        bottom: 0;
+        transform: translateY(10%);
+    }
+
+    .page-footer {
+        bottom: 20px;
+    }
+
+    @media all and (min-width: 2300px) and (max-aspect-ratio: 25/14),
+    (min-width: 1900px) and (max-aspect-ratio: 32/19),
+    (min-width: 1536px) and (max-aspect-ratio: 16/11) {
+        .footer-mountains {
+            transform: translateY(0);
+        }
+    }
+
+    @media all and (max-width: 1089px) and (max-aspect-ratio: 1/1) {
+        .footer-mountains {
+            transform: translateY(18%);
+        }
+
+        .page-footer {
+            bottom: 0px;
+            transform: translateY(16px);
+        }
+    }
+}
+
+
 
 @media all and (min-width: 1860px) and (max-width: 1980px) {
     #liz-photo {
@@ -110,6 +151,12 @@
     }
 }
 
+@media all and (max-width: 1089px) {
+    .page-footer {
+        transform: translateY(16px);
+    }
+}
+
 @media all and (max-width: 810px) {
     .about-grid {
         max-width: 100%;
@@ -151,6 +198,10 @@
 
     .resume-link {
         margin-bottom: 30px;
+    }
+
+    .page-footer {
+        transform: translateY(6px);
     }
 }
 
