@@ -10,99 +10,104 @@
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Work+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/work.css">
 </head>
 
-<body>
+<body class="page-body">
     <header class="page-header">
-        <img class="page-header_item" src="img/portfolio-logo.png" alt="">
-
-        <nav class="page-header_item">
+        <a class="page-header__item page-header__home" href="index.html">
+            <p>LIZ STONE</p>
+        </a>
+        <nav class="page-header__item">
             <ul role="menubar" class="navigation-list">
-                <li role="presentation">
-                    <a role="menuitem" href="index.html" class="navigation-list__item">Home</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" href="about.html" class="navigation-list__item">About</a>
-                </li>
                 <li role="presentation">
                     <a role="menuitem" href="work.html"
                         class="navigation-list__item navigation-list__item--active">Work</a>
                 </li>
                 <li role="presentation">
-                    <a role="menuitem" href="contact.html" class="navigation-list__item">Contact</a>
+                    <a role="menuitem" href="about.html" class="navigation-list__item">About</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="page-main">
         <section>
-            <h1>Work</h1>
             <div class="work-grid">
-                <div class="work-grid__item work-grid__app">
-                    <h2>D&ampD Spellbook App</h2>
-                    <a href="https://liztheshiz.github.io/dnd-spellbook-app/" target="_blank"><img class="screenshot"
-                            src="img/dnd-spellbook.png" alt="app screenshot"></a>
-                    <p>A simple interactive display for D&ampD 5e spells.</p>
-                    <a href="https://github.com/liztheshiz/dnd-spellbook-app" target="_blank"><img
-                            src="img/github-icon.svg" alt="Github icon"></a>
-                </div>
-                <div class="work-grid__item work-grid__app">
-                    <h2>Cinema.Database</h2>
-                    <a href="https://cinemadatabase.netlify.app/" target="_blank"><img class="screenshot"
-                            src="img/cinemadatabase.png" alt="app screenshot"></a>
-                    <p>A website for viewing movie information and saving your own customized profile.</p>
-                    <a href="movie-case.html">Click here to view a detailed case study</a>
-                    <a href="https://github.com/liztheshiz/movie-client" target="_blank"><img src="img/github-icon.svg"
-                            alt="Github icon"></a>
-                </div>
-                <div class="work-grid__item work-grid__app">
-                    <h2>Meetup</h2>
-                    <a href="https://liztheshiz.github.io/meetup/" target="_blank"><img class="screenshot"
-                            src="img/meetup.png" alt="app screenshot"></a>
-                    <p>An app that uses Google Calendar to show upcoming web dev events.</p>
-                    <a href="https://github.com/liztheshiz/meetup" target="_blank"><img src="img/github-icon.svg"
-                            alt="Github icon"></a>
-                </div>
-                <div class="work-grid__item">
-                    <h2>Ruby Heart</h2>
-                    <p>Original soundtrack</p>
-                    <a href="https://www.yichimarkding.com/portfolio/rubyheart" target="_blank">Watch Ruby Heart</a>
-                    <span>or</span>
-                    <a href="https://soundcloud.com/liztone/ruby-heart" target="_blank">listen to the soundtrack</a>
-                </div>
-                <div class="work-grid__item">
-                    <h2>Plan Bee</h2>
-                    <p>Original soundtrack + sound design</p>
-                    <a href="https://cloudlight-games.itch.io/plan-bee?fbclid=IwAR0yMiLhL6K14kc0FN0qiXJvsCITyx13kfwZdFTNnQdykKo3sbcfKjYa4iU"
-                        target="_blank">Play the game</a>
-                </div>
-                <div class="work-grid__item">
-                    <h2>Cave</h2>
-                    <p>Game design + development (in progress)</p>
-                    <a href="https://soundcloud.com/liztone/sets/cave" target="_blank">Listen to the original soundtrack
-                        now!</a>
-                </div>
-                <div id="your-project-here" class="work-grid__item">
-                    <h2>Your project here!</h2>
-                    <p>Like what you see?</p>
-                    <a href="contact.html">Get in touch with me.</a>
-                </div>
+                <a class="work-grid__item" href="portfolio-pages/dnd.html">
+                    <div class="screenshot-container">
+                        <img class="dnd screenshot" src="img/grid/dnd-spellbook__bw.png" alt="app screenshot">
+                        <img class="dnd screenshot screenshot--hover" src="img/grid/dnd-spellbook.png"
+                            alt="app screenshot">
+                    </div>
+
+                    <span class="work-grid__item__section">
+                        <h2 class="work-grid__item__title">D&ampD SPELLBOOK APP</h2>
+                    </span>
+                </a>
+                <a class="work-grid__item" href="portfolio-pages/cinema-database.html">
+                    <div class="screenshot-container">
+                        <img class="cinemadatabase screenshot" src="img/grid/cinemadatabase__bw.jpeg"
+                            alt="app screenshot">
+                        <img class="cinemadatabase screenshot screenshot--hover" src="img/movie-case/intro-image.jpg"
+                            alt="app screenshot">
+                    </div>
+                    <span class="work-grid__item__section">
+                        <h2 class="work-grid__item__title">CINEMA.DATABASE</h2>
+                    </span>
+                </a>
+                <a class="work-grid__item" href="portfolio-pages/meetup.html">
+                    <div class="screenshot-container">
+                        <img class="screenshot" src="img/grid/meetup__bw.png" alt="app screenshot">
+                        <img class="screenshot screenshot--hover" src="img/grid/meetup.png" alt="app screenshot">
+                    </div>
+                    <span class="work-grid__item__section">
+                        <h2 class="work-grid__item__title">MEETUP</h2>
+                    </span>
+                </a>
+                <a class="work-grid__item" href="portfolio-pages/chat-app.html">
+                    <div class="screenshot-container">
+                        <img class="screenshot" src="img/grid/chat-app__bw.png" alt="colorized app screenshot">
+                        <img class="screenshot screenshot--hover" src="img/grid/chat-app.png" alt="app screenshot">
+                    </div>
+                    <span class="work-grid__item__section">
+                        <h2 class="work-grid__item__title">CHAT APP</h2>
+                    </span>
+                </a>
+                <a class="work-grid__item" href="portfolio-pages/portfolio.html">
+                    <div class="screenshot-container">
+                        <img class="screenshot" src="img/grid/portfolio2__bw.png" alt="app screenshot">
+                        <img class="screenshot screenshot--hover" src="img/grid/portfolio2.png" alt="app screenshot">
+                    </div>
+                    <span class="work-grid__item__section">
+                        <h2 class="work-grid__item__title">PORTFOLIO WEBSITE</h2>
+                    </span>
+                </a>
+                <a class="work-grid__item" href="portfolio-pages/myflix.html">
+                    <div class="screenshot-container">
+                        <img class="screenshot" src="img/screenshots/myflix__bw.png" alt="app screenshot">
+                        <img class="screenshot screenshot--hover" src="img/screenshots/myflix.png" alt="app screenshot">
+                    </div>
+                    <span class="work-grid__item__section">
+                        <h2 class="work-grid__item__title">MYFLIX</h2>
+                    </span>
+                </a>
             </div>
         </section>
     </main>
 
+    <img id="footer-mountains--work" class="footer-mountains" src="img/footer_1920_beartooth.png">
+
     <footer class="page-footer">
-        <p>Find me on</p>
+        <p class="email">lizzystone13@gmail.com</p>
         <div class="social-media">
             <a href="https://linkedin.com/in/liz-stone-793106a4" target="_blank" class="footer-link"><img
-                    src="img/linkedin-icon.svg" alt="LinkedIn icon"></a>
-            <a href="https://github.com/liztheshiz" target="_blank" class="footer-link"><img src="img/github-icon.svg"
-                    alt="Github icon"></a>
-            <a href="https://soundcloud.com/liztone" target="_blank" class="footer-link"><img
-                    src="img/soundcloud-icon.svg" alt="Soundcloud icon"></a>
+                    class="footer-link__image" src="img/linkedin-icon.png" alt="LinkedIn icon"></a>
+            <a href="https://github.com/liztheshiz" target="_blank" class="footer-link"><img class="footer-link__image"
+                    src="img/github-icon.png" alt="Github icon"></a>
         </div>
     </footer>
 

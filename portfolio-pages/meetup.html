@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Liz Stone | Meetup</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Work+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/portfolio-page.css">
+</head>
+
+<body class="page-body body-test">
+    <header class="page-header">
+        <a class="page-header__item page-header__home" href="../index.html">
+            <p>LIZ STONE</p>
+        </a>
+        <nav class="page-header__item">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a role="menuitem" href="../work.html" class="navigation-list__item">Work</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" href="../about.html" class="navigation-list__item">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <div class="portfolio-grid">
+            <div class="portfolio-grid__item">
+                <img class="screenshot image" src="../img/screenshots/meetup.png">
+            </div>
+            <div class="portfolio-grid__item porfolio-grid__item__text">
+                <h1 class="portfolio-title">Meetup</h1>
+                <div class="portfolio-link"><a href="https://liztheshiz.github.io/meetup/" target="_blank">FULL PROJECT
+                        &#8594</a></div>
+                <p>Meetup, a simple app providing a filter-able list of web dev events, provided an opportunity to
+                    develop a progressive web app, as well as learn how to use a serverless service on AWS. It was
+                    developed from a Test-Driven Development approach using Jest (and later, Cucumber) to a 100% test
+                    coverage standard. I also experiemented with Puppeteer to incorporate some end-to-end testing.</p>
+                <p>User authorization for accessing the Google Calendar API is handled by a Google OAuth2 protocol, and
+                    it makes use of a serverless authorization service set up on AWS.</p>
+                <p>The final app incorporates some simple data visualization using Recharts. As a PWA, it is installable
+                    and fully functional offline using cached data from the user's most recent online visit.</p>
+                <a class="github-button" href="https://github.com/liztheshiz/meetup" target="_blank"><img
+                        class="portfolio-button--github" src="../img/github-button.png"></a>
+            </div>
+            <a class="arrow left-arrow" href="cinema-database.html">&lt;</a>
+            <a class="arrow right-arrow" href="chat-app.html">&gt;</a>
+        </div>
+    </main>
+
+    <img class="footer-mountains" src="../img/footer_1920_beartooth.png">
+
+    <footer class="page-footer">
+        <p class="email">lizzystone13@gmail.com</p>
+        <div class="social-media">
+            <a href="https://linkedin.com/in/liz-stone-793106a4" target="_blank" class="footer-link"><img
+                    class="footer-link__image" src="../img/linkedin-icon.png" alt="LinkedIn icon"></a>
+            <a href="https://github.com/liztheshiz" target="_blank" class="footer-link"><img class="footer-link__image"
+                    src="../img/github-icon.png" alt="Github icon"></a>
+        </div>
+    </footer>
+
+    <!-- <script src="js/tota11y.min.js"></script> -->
+</body>
+
+</html>

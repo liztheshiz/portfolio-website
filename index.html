@@ -4,60 +4,39 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>Liz Stone | Home Page</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Work+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 
-<body>
-    <header id="home-header"></header>
-
-    <div class="bar left-bar"></div>
-
+<body id="home">
     <main id="home-main">
-        <div id="home">
-            <img id="home__logo" src="img/portfolio-logo.png" alt="Logo that says Liz Stone">
+        <h1 id="home__logo">LIZ STONE</h1>
 
-            <img id="home__portrait" src="img/profile-pic.jpg" alt="Profile image">
-
-            <div id="home__description">
-                Web Developer<br>
-                &<br>
-                Soundtrack Artist
-            </div>
-
-            <nav id="home__navigation">
-                <ul role="menubar" id="home-navigation-list">
-                    <li role="presentation">
-                        <a role="menuitem" href="about.html" class="home-navigation-list__item">About</a>
-                    </li>
-                    <li role="presentation">
-                        <a role="menuitem" href="work.html" class="home-navigation-list__item">Work</a>
-                    </li>
-                    <li role="presentation">
-                        <a role="menuitem" href="contact.html" class="home-navigation-list__item">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+        <div id="home__description">
+            WEB DEVELOPER
         </div>
+
+        <a class="work-button__container" href="work.html"><button class="work-button">SELECTED WORKS</button></a>
+
+        <img id="clouds" src="img/footer_beartooth_clouds.png">
+        <img id="mountain-background" class="mountain" src="img/footer_1920_beartooth_backmountain.png">
+        <img id="mountain-foreground" class="mountain" src="img/footer_1920_beartooth_frontmountain.png">
     </main>
 
-    <div class="bar right-bar"></div>
-
-    <footer class="page-footer">
-        <p>Find me on</p>
+    <footer class="page-footer--home">
+        <p class="email">lizzystone13@gmail.com</p>
         <div class="social-media">
             <a href="https://linkedin.com/in/liz-stone-793106a4" target="_blank" class="footer-link"><img
-                    src="img/linkedin-icon.svg" alt="LinkedIn icon"></a>
-            <a href="https://github.com/liztheshiz" target="_blank" class="footer-link"><img src="img/github-icon.svg"
-                    alt="Github icon"></a>
-            <a href="https://soundcloud.com/liztone" target="_blank" class="footer-link"><img
-                    src="img/soundcloud-icon.svg" alt="Soundcloud icon"></a>
+                    class="footer-link__image" src="img/linkedin-icon.png" alt="LinkedIn icon"></a>
+            <a href="https://github.com/liztheshiz" target="_blank" class="footer-link"><img class="footer-link__image"
+                    src="img/github-icon.png" alt="Github icon"></a>
         </div>
     </footer>
 
