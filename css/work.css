@@ -103,28 +103,6 @@
 	RESPONSIVE ELEMENTS
 	>>><<< */
 
-/* ALL FOOTER PLACEMENT LOGIC */
-@media all and (min-width: 2300px),
-(min-width: 1660px) and (max-aspect-ratio: 9/5),
-(min-width: 981px) and (max-aspect-ratio: 6/5),
-(max-width: 980px) and (max-aspect-ratio: 3/4) {
-    .footer-mountains {
-        bottom: 0;
-        transform: translateY(10%);
-    }
-
-    .page-footer {
-        bottom: 20px;
-    }
-
-    @media all and (max-width: 980px) and (max-aspect-ratio: 3/4) {
-        .footer-mountains {
-            bottom: 0;
-            transform: translateY(10%);
-        }
-    }
-}
-
 @media all and (max-width: 1300px) {
     .work-grid {
         grid-template-columns: 1fr 1fr 1fr;
@@ -170,12 +148,6 @@
 @media all and (max-width: 760px) {
     .work-grid {
         grid-gap: 25px;
-    }
-}
-
-@media all and (max-width: 650px) and (max-height: 625px) {
-    .page-footer {
-        bottom: 10px;
     }
 }
 

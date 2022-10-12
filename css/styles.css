@@ -298,7 +298,9 @@ button:focus,
     width: 100%;
     z-index: -1;
     position: absolute;
-    transform: translateY(-84%);
+    /*transform: translateY(-84%);*/
+    bottom: 0;
+    transform: translateY(16%);
 }
 
 .page-footer {
@@ -392,6 +394,10 @@ button:focus,
 
 @media all and (max-width: 760px),
 (max-height: 600px) {
+    .page-footer {
+        bottom: 4px;
+    }
+
     .email {
         font-size: 14px;
     }
