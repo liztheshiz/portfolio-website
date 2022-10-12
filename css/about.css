@@ -48,17 +48,17 @@
 	RESPONSIVE ELEMENTS
 	>>><<< */
 
-@media all and (min-width: 1860px) and (max-width: 1980px) {
-    #liz-photo {
-        width: 120%;
-        transform: translateX(-60px);
-    }
-}
-
 @media all and (min-width: 2170px) and (max-width: 2290px) {
     #liz-photo {
         width: 120%;
         transform: translateX(-80px);
+    }
+}
+
+@media all and (min-width: 1860px) and (max-width: 1980px) {
+    #liz-photo {
+        width: 120%;
+        transform: translateX(-60px);
     }
 }
 
@@ -73,13 +73,6 @@
     .about-grid {
         max-width: 90%;
     }
-
-    /*@media all and (min-width: 1111px) {
-        #liz-photo {
-            width: 116%;
-            transform: translateX(-50px);
-        }
-    }*/
 }
 
 @media all and (max-width: 1110px) {
@@ -88,6 +81,7 @@
         position: relative;
     }
 
+    /* couldn't get image to float to bottom of container */
     /*.about-grid__item:first-child {
         height: 100%;
         float: left;
