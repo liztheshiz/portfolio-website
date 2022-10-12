@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Liz Stone | Cinema.Database</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Work+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/portfolio-page.css">
+</head>
+
+<body class="page-body body-test">
+    <header class="page-header">
+        <a class="page-header__item page-header__home" href="../index.html">
+            <p>LIZ STONE</p>
+        </a>
+        <nav class="page-header__item">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a role="menuitem" href="../work.html" class="navigation-list__item">Work</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" href="../about.html" class="navigation-list__item">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <div class="portfolio-grid">
+            <div class="portfolio-grid__item">
+                <img class="screenshot image" src="../img/screenshots/cinemadatabase1.png">
+                <img class="screenshot image multi-screenshot" src="../img/screenshots/cinemadatabase2.png">
+            </div>
+            <div class="portfolio-grid__item porfolio-grid__item__text">
+                <h1 id="cinema-database-title" class="portfolio-title">Cinema.Database</h1>
+                <div class="portfolio-link"><a href="https://cinemadatabase.netlify.app/" target="_blank">FULL PROJECT
+                        &#8594</a></div>
+                <p>This project provided an opportunity to develop both the backend and frontend of an application using
+                    the MERN stack (MongoDB, Express, React, Node).</p>
+                <p>The backend utilizes numerous modules, most prominently Express, for interacting with a small
+                    database of films and users through a RESTful API. The final NoSQL database was also written from
+                    scratch in MongoDB using the Mongo Shell, and an earlier version of the database was written in
+                    PostgreSQL to practice utilizing a relational database. Registered users are authenticated using
+                    JWT, and authorization of a valid user is required to access the database. All API testing was done
+                    using Postman, and you can find a collection of these tests on the <a
+                        href="https://github.com/liztheshiz/movie-api" target="_blank">API GitHub page</a>.</p>
+                <p>The frontend is a single-page application built with React. It uses a combination of class and
+                    functional components in order to showcase my knowledge of lifecycle methods, hooks, and prop types.
+                    The UI was built with React Bootstrap, and the final design is the result of a collaboration with
+                    <a href="https://www.linkedin.com/in/annaferrari1/" target="_blank">Anna Ferrari.
+                </p></a>
+                <p>Special care was taken to implement a straightforward UX system regarding user validation of the
+                    forms on the site, whose input must be compatible with the requirements of the API. API requests are
+                    handled using Axios.</p>
+                <p>While the project was originally developed in the MVC design pattern, a Flux design pattern was
+                    implemented in the final app to better handle persistent state across components, using React Redux.
+                </p>
+                <div class="portfolio-link"><a href="../movie-case.html">CASE STUDY &#8594</a></div>
+                <a class="github-button" href="https://github.com/liztheshiz/movie-client" target="_blank"><img
+                        class="portfolio-button--github" src="../img/github-button.png"></a>
+            </div>
+            <a class="arrow left-arrow left-arrow--wide" href="dnd.html">&lt;</a>
+            <a class="arrow right-arrow right-arrow--wide" href="meetup.html">&gt;</a>
+        </div>
+    </main>
+
+    <img class="footer-mountains" src="../img/footer_1920_beartooth.png">
+
+    <footer class="page-footer">
+        <p class="email">lizzystone13@gmail.com</p>
+        <div class="social-media">
+            <a href="https://linkedin.com/in/liz-stone-793106a4" target="_blank" class="footer-link"><img
+                    class="footer-link__image" src="../img/linkedin-icon.png" alt="LinkedIn icon"></a>
+            <a href="https://github.com/liztheshiz" target="_blank" class="footer-link"><img class="footer-link__image"
+                    src="../img/github-icon.png" alt="Github icon"></a>
+        </div>
+    </footer>
+
+    <!-- <script src="js/tota11y.min.js"></script> -->
+</body>
+
+</html>

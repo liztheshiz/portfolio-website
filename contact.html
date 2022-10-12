@@ -10,24 +10,23 @@
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Work+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
     <header class="page-header">
-        <img class="page-header_item" src="img/portfolio-logo.png" alt="">
-
-        <nav class="page-header_item">
+        <a class="page-header__item page-header__home" href="index.html">
+            <p>LIZ STONE</p>
+        </a>
+        <nav class="page-header__item">
             <ul role="menubar" class="navigation-list">
                 <li role="presentation">
-                    <a role="menuitem" href="index.html" class="navigation-list__item">Home</a>
+                    <a role="menuitem" href="work.html" class="navigation-list__item">Work</a>
                 </li>
                 <li role="presentation">
                     <a role="menuitem" href="about.html" class="navigation-list__item">About</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" href="work.html" class="navigation-list__item">Work</a>
                 </li>
                 <li role="presentation">
                     <a role="menuitem" href="contact.html"
@@ -37,15 +36,14 @@
         </nav>
     </header>
 
-    <main>
+    <main class="page-main">
         <h1>Contact</h1>
         <div class="contact-grid">
             <div class="contact-grid__item">
                 <div class="contact-list">
                     Elizabeth Stone<br>
-                    Somerville, MA<br>
+                    Boston, MA<br>
                     <br>
-                    <a href="tel:+14062242936">Tel (406) 224-2936</a><br>
                     <a href="mailto:lizzystone13@gmail.com">lizzystone13@gmail.com</a><br>
                     <a href="mailto:lizzystone13@gmail.com">Contact me</a>
                 </div>
@@ -63,24 +61,25 @@
                     <textarea class="user-input" id="user-message" maxlength="240" required></textarea><br>
                     <p>*Starred items are required.</p>
 
-                    <button type="submit" value="send">Send</button>
+                    <button id="contact-submit-button" type="submit" value="send">Send</button>
                 </form>
             </div>
         </div>
     </main>
 
+    <img class="footer-mountains" src="img/footer_1920_beartooth.png">
+
     <footer class="page-footer">
-        <p>Find me on</p>
+        <p class="email">lizzystone13@gmail.com</p>
         <div class="social-media">
             <a href="https://linkedin.com/in/liz-stone-793106a4" target="_blank" class="footer-link"><img
-                    src="img/linkedin-icon.svg" alt="LinkedIn icon"></a>
-            <a href="https://github.com/liztheshiz" target="_blank" class="footer-link"><img src="img/github-icon.svg"
-                    alt="Github icon"></a>
-            <a href="https://soundcloud.com/liztone" target="_blank" class="footer-link"><img
-                    src="img/soundcloud-icon.svg" alt="Soundcloud icon"></a>
+                    class="footer-link__image" src="img/linkedin-icon.png" alt="LinkedIn icon"></a>
+            <a href="https://github.com/liztheshiz" target="_blank" class="footer-link"><img class="footer-link__image"
+                    src="img/github-icon.png" alt="Github icon"></a>
         </div>
     </footer>
 
+    <script src="js/scripts.js"></script>
     <!-- <script src="js/tota11y.min.js"></script> -->
 </body>
 
