@@ -146,9 +146,9 @@
 	RESPONSIVE ELEMENTS
 	>>><<< */
 
-/* Default settings are for screen sizes with 
- * width: 761px-1440px
- * height: 785px-853px */
+/* Default settings are for screen sizes of size: 
+ * Width: 959px-1440px
+ * Height: 785px-853px */
 
 /* WIDTH */
 /* Largest screens (4k monitors) */
@@ -329,7 +329,7 @@
 }
 
 /* Other screens (phones and tablets) */
-@media all and (max-width: 760px) {
+@media all and (max-width: 958px) {
     #home__logo {
         font-size: 90px;
         bottom: 463px;
@@ -414,8 +414,8 @@
 
     @media all and (min-width: 1441px) {}
 
-    /* Position adjusted for font size change @760px width */
-    @media all and (max-width: 760px) {
+    /* Position adjusted for font size change @958px width */
+    @media all and (max-width: 958px) {
         #home__logo {
             top: 25%;
         }
@@ -459,7 +459,7 @@
         top: 13%;
     }
 
-    @media all and (max-width: 760px) {
+    @media all and (max-width: 958px) {
         #home__logo {
             top: 22.1%;
         }
@@ -506,7 +506,7 @@
     }
 
     /* Only change font size if still in large format @761px min */
-    @media all and (min-width: 761px) {
+    @media all and (min-width: 959px) {
         #home__logo {
             top: 8.2%;
             font-size: 130px;
@@ -553,7 +553,7 @@
         transform: translateX(-60px);
     }
 
-    @media all and (min-width: 761px) {
+    @media all and (min-width: 959px) {
         #home__logo {
             font-size: 110px;
             top: 6.9%;
