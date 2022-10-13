@@ -151,115 +151,7 @@
  * Height: 785px-853px */
 
 /* WIDTH */
-/* Largest screens (4k monitors) */
-/* Need to adjust for small height w large width here! */
-@media all and (min-width: 2000px) {
-    #clouds {
-        width: 5120px;
-    }
-
-    .mountain {
-        width: 2560px;
-    }
-
-    @media all and (max-height: 1420px) {
-        #home__logo {
-            font-size: 266px;
-            top: 24.8%;
-        }
-
-        #home__description {
-            font-size: 96px;
-            top: 55%;
-        }
-
-        .work-button__container {
-            top: 70%;
-        }
-
-        .work-button {
-            font-size: 44px;
-            padding: 18px 36px;
-            border-width: 2px;
-        }
-
-        .mountain {
-            top: 25%;
-        }
-    }
-
-    @media all and (min-height: 1421px) {
-        #home__logo {
-            font-size: 266px;
-            bottom: 790px;
-        }
-
-        #home__description {
-            font-size: 96px;
-            bottom: 640px;
-        }
-
-        .work-button__container {
-            bottom: 500px;
-        }
-
-        .work-button {
-            font-size: 44px;
-            padding: 18px 36px;
-            border-width: 2px;
-        }
-    }
-}
-
 /* Large screens (monitors) */
-@media all and (min-width: 1800px) {
-    #home__logo {
-        font-size: 207px;
-        bottom: 609px;
-    }
-
-    #home__description {
-        font-size: 74px;
-        bottom: 500px;
-    }
-
-    .work-button__container {
-        bottom: 386px;
-    }
-
-    .work-button {
-        font-size: 36px;
-        padding: 10px 20px;
-        border-width: 2px;
-    }
-
-    #clouds {
-        width: 4000px;
-    }
-
-    .mountain {
-        width: 2000px
-    }
-
-    @media all and (max-height: 1100px) {
-        #home__logo {
-            top: 16.7%;
-        }
-
-        #home__description {
-            top: 45.5%;
-        }
-
-        .work-button__container {
-            top: 60%;
-        }
-
-        .mountain {
-            top: 17%;
-        }
-    }
-}
-
 @media all and (min-width: 1441px) {
     #home__logo {
         font-size: 180px;
@@ -327,6 +219,117 @@
         }
     }
 }
+
+@media all and (min-width: 1800px) {
+    #home__logo {
+        font-size: 207px;
+        bottom: 609px;
+    }
+
+    #home__description {
+        font-size: 74px;
+        bottom: 500px;
+    }
+
+    .work-button__container {
+        bottom: 386px;
+    }
+
+    .work-button {
+        font-size: 36px;
+        padding: 10px 20px;
+        border-width: 2px;
+    }
+
+    #clouds {
+        width: 4000px;
+    }
+
+    .mountain {
+        width: 2000px
+    }
+
+    @media all and (max-height: 1100px) {
+        #home__logo {
+            top: 16.7%;
+        }
+
+        #home__description {
+            top: 45.5%;
+        }
+
+        .work-button__container {
+            top: 60%;
+        }
+
+        .mountain {
+            top: 17%;
+        }
+    }
+}
+
+
+/* Largest screens (4k monitors) */
+/* Need to adjust for small height w large width here! */
+@media all and (min-width: 2000px) {
+    #clouds {
+        width: 5120px;
+    }
+
+    .mountain {
+        width: 2560px;
+    }
+
+    @media all and (max-height: 1420px) {
+        #home__logo {
+            font-size: 266px;
+            top: 24.8%;
+        }
+
+        #home__description {
+            font-size: 96px;
+            top: 55%;
+        }
+
+        .work-button__container {
+            top: 70%;
+        }
+
+        .work-button {
+            font-size: 44px;
+            padding: 18px 36px;
+            border-width: 2px;
+        }
+
+        .mountain {
+            top: 25%;
+        }
+    }
+
+    @media all and (min-height: 1421px) {
+        #home__logo {
+            font-size: 266px;
+            bottom: 790px;
+        }
+
+        #home__description {
+            font-size: 96px;
+            bottom: 640px;
+        }
+
+        .work-button__container {
+            bottom: 500px;
+        }
+
+        .work-button {
+            font-size: 44px;
+            padding: 18px 36px;
+            border-width: 2px;
+        }
+    }
+}
+
+
 
 /* Other screens (phones and tablets) */
 @media all and (max-width: 958px) {
