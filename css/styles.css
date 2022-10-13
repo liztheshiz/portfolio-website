@@ -339,10 +339,16 @@ button:focus,
 	RESPONSIVE ELEMENTS
 	>>><<< */
 
-@media all and (min-width: 2170px) {
+@media all and (min-width: 1500px) {
     .page-main {
-        padding-left: 24%;
-        padding-right: 24%;
+        padding: var(--margin) var(--double-margin) 20% var(--double-margin);
+    }
+}
+
+@media all and (min-width: 1660px) {
+    .page-main {
+        padding-left: 14%;
+        padding-right: 14%;
     }
 }
 
@@ -355,16 +361,10 @@ button:focus,
     @media all and (min-height: 1110px) {}
 }
 
-@media all and (min-width: 1660px) {
+@media all and (min-width: 2170px) {
     .page-main {
-        padding-left: 14%;
-        padding-right: 14%;
-    }
-}
-
-@media all and (min-width: 1500px) {
-    .page-main {
-        padding: var(--margin) var(--double-margin) 20% var(--double-margin);
+        padding-left: 24%;
+        padding-right: 24%;
     }
 }
 
