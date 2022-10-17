@@ -133,6 +133,7 @@ main {
     .arrow {
         font-size: 50px;
         top: 20%;
+        bottom: unset;
     }
 
     .left-arrow {
