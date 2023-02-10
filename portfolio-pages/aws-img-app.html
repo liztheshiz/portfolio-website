@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Liz Stone | MyFlix</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Work+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/portfolio-page.css">
+</head>
+
+<body class="page-body body-test">
+    <header class="page-header">
+        <a class="page-header__item page-header__home" href="../index.html">
+            <p>LIZ STONE</p>
+        </a>
+        <nav class="page-header__item">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a role="menuitem" href="../work.html" class="navigation-list__item">Work</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" href="../about.html" class="navigation-list__item">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <div class="portfolio-grid">
+            <div class="portfolio-grid__item">
+                <img class="screenshot image" src="../img/screenshots/aws1.png">
+                <img class="screenshot image multi-screenshot" src="../img/screenshots/aws2.png">
+            </div>
+            <div class="portfolio-grid__item porfolio-grid__item__text">
+                <h1 class="portfolio-title">AWS Implementation of Cinema.Database</h1>
+                <!--<div class="portfolio-link"><a href="../aws-case.html">CASE STUDY &#8594</a></div>-->
+                <p>To familiarize myself with cloud architecture and practices, I refactored my <a
+                        href="cinema-database.html">Cinema.Database</a> app for deployment on AWS as part of my Cloud
+                    Computing for Developers course at CareerFoundry. In addition to its original functionality, users
+                    could upload and retrieve images to and from an AWS S3 bucket.</p>
+                <p>The app's deployment followed AWS best practices in security, reliability, and efficiency. This meant
+                    familiarizing myself with many of the most common and vital AWS services; and let me tell you, there
+                    are a lot of them!
+                </p>
+                <p>Here is a non-exhaustive list of some of the services and skills learned for this project:
+                <ul>
+                    <li>EC2 instances, accessing them through the CLI, and configuring with Linux commands</li>
+                    <li>VPC configuration and public + private subnets</li>
+                    <li>bastion instances to access instances on those private subnets</li>
+                    <li>ALBs and ASGs to direct web traffic between redundant servers and ensure reliability</li>
+                    <li>S3 buckets and static website configuration</li>
+                    <li>AWS SDK in JavaScript to interact with S3 buckets</li>
+                    <li>Lambda functions, their triggers and permissions</li>
+                    <li>IAM roles and policies, security groups, and Internet and NAT gateways, all optimized to follow
+                        the principle of least privelage</li>
+                </ul>
+                </p>
+                <p>This is a very simplified overview of some of the specific tools I learned to utilize. For a more
+                    in-depth look at my process and to dig into the nitty-gritty of this app's cloud architecture,
+                    please check out the case study! (coming soon!)</p>
+                <p>To culminate this project and further demonstrate my understanding of AWS cloud concepts, I
+                    will be sitting the AWS CCP exam later this month.</p>
+                <p>Note: To avoid the cost of hosting on the cloud, the live version of the app is no longer available.
+                    You can refer to the case study and <a href="https://github.com/liztheshiz/aws-img-app">GitHub
+                        repo</a> to get a better sense of what the app did and how it was deployed!</p>
+                <a class="github-button" href="https://github.com/liztheshiz/aws-img-app" target="_blank"><img
+                        class="portfolio-button--github" src="../img/github-button.png"></a>
+            </div>
+            <a class="arrow left-arrow" href="cinema-database.html">&lt;</a>
+            <a class="arrow right-arrow" href="meetup.html">&gt;</a>
+        </div>
+    </main>
+
+    <img class="footer-mountains" src="../img/footer_1920_beartooth.png">
+
+    <footer class="page-footer">
+        <p class="email">lizzystone13@gmail.com</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/its-liz/" target="_blank" class="footer-link"><img
+                    class="footer-link__image" src="../img/linkedin-icon.png" alt="LinkedIn icon"></a>
+            <a href="https://github.com/liztheshiz" target="_blank" class="footer-link"><img class="footer-link__image"
+                    src="../img/github-icon.png" alt="Github icon"></a>
+        </div>
+    </footer>
+
+    <!-- <script src="js/tota11y.min.js"></script> -->
+</body>
+
+</html>
