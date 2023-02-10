@@ -97,6 +97,11 @@
         font-size: 18px;
         letter-spacing: 3px;
     }
+
+    .work-grid__item--last {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
 }
 
 
@@ -132,6 +137,15 @@
         margin-top: 14px;
         margin-bottom: -3px;
     }
+
+    .work-grid__item--last {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        justify-self: center;
+        max-width: 47%;
+    }
 }
 
 @media all and (max-width: 830px) {
@@ -143,6 +157,10 @@
         font-size: 14px;
         margin-top: 13px;
         margin-bottom: -5px;
+    }
+
+    .work-grid__item--last {
+        justify-self: center;
     }
 }
 
@@ -170,6 +188,14 @@
         font-size: 14px;
         margin-top: 13px;
         margin-bottom: -5px;
+    }
+
+    .work-grid__item--last {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        max-width: 100%;
     }
 }
 
