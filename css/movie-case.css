@@ -152,6 +152,14 @@
     font-weight: 600;
 }
 
+.case-study__grid--aws {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+    justify-content: space-around;
+    margin: 0;
+}
+
 /* SLIDESHOW */
 
 /* Styling for area of the slideshow */
