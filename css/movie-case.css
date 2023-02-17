@@ -41,6 +41,14 @@
     margin: 40px;
 }
 
+.case__img-container--aws {
+    text-align: center;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .case__screenshot__main {
     max-width: 700px;
     border-radius: 3px;
@@ -134,6 +142,11 @@
 .case__image--aws {
     border-radius: 3px;
     max-width: 700px;
+}
+
+.caption {
+    max-width: 700px;
+    text-align: center;
 }
 
 .case-study__grid {

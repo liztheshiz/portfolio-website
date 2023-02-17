@@ -67,18 +67,24 @@
                         subnets with public access (open ingress and egress), private access (open egress but ingress
                         only from within the VPC), and even more private access for the database (ingress and egress
                         only within the VPC).</p>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/1_VPC.png"
                             alt="screenshot of VPC configuration">
+                        <p class="caption">VPC configuration: 3 public, 3 private, and 3 database subnets. Public
+                            subnets route to
+                            internet gateway and private subnets route to NAT gateway</p>
                     </div>
                     <p class="case-study__body">Within each of these subdivisions were three subnets (three public,
                         three private, three database), each deployed in different Availability Zones within the US East
                         1 region. This would allow for me to implement horizontal scaling later on, discussed in detail
                         later in this case study.</p>
                     <h4>Database Deploy</h4>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/2_EC2.png"
                             alt="screenshot of list of EC2 instances">
+                        <p class="caption">List of all instances running in this VPC for this app. Web servers on
+                            private subnet,
+                            database instances on database subnet, and bastion instance on public subnet</p>
                     </div>
                     <p class="case-study__body">Starting from the bottom layer, I decided to simply copy my database
                         onto an EC2 instance where it would run as a local MongoDB server. I learned about and
@@ -112,29 +118,35 @@
                         they could receive traffic from the ALB and send/receive traffic to the database, but that was
                         it (besides SSH access from the bastion instance). The ALB could now distribute incoming traffic
                         across the instances, also acting as the public-facing entry point for the web servers.</p>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/3_ALB.png"
                             alt="screenshot of ALB configuration">
+                        <p class="caption">ALB whose DNS is called by client making API calls</p>
                     </div>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/4_TargetGroup.png"
                             alt="screenshot of target group configuration">
+                        <p class="caption">Target group of ALB: 3 web server instances</p>
                     </div>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/5_ASG.png"
                             alt="screenshot of ASG configuration">
+                        <p class="caption">ASG with launch template from web server AMI, ensuring 3 running web servers
+                        </p>
                     </div>
                     <h4>Client Site Deploy</h4>
                     <p class="case-study__body">The client-side code was relatively easier to deploy. All API calls had
                         to be updated to reference the ALB DNS, then the client code was copied into an S3 bucket and
                         configured as a static website (again using the AWS CLI).</p>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/6_client-bucket.png"
                             alt="screenshot of client bucket contents">
+                        <p class="caption">Public S3 bucket containing client code</p>
                     </div>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/7_client-commands.png"
                             alt="screenshot of commands to make client bucket">
+                        <p class="caption">Sample of AWS CLI calls made to create and populate static site bucket</p>
                     </div>
                 </div>
 
@@ -153,21 +165,24 @@
                         of images, and get a specific image from the bucket, using the AWS SDK. I then added some simple
                         UI elements in the React frontend code (pictured below), and simply tied these to the newly
                         created endpoints in the API.</p>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/13_web-app1.png"
                             alt="screenshot of client site showing new aws functionality">
+                        <p class="caption">Screenshot from client site with S3 DNS in address bar</p>
                     </div>
                     <p class="case-study__body">This also required setting up a new IAM role that allowed read/write
                         access to the bucket for the EC2 web server. This was as simple as creating read-only and
                         write-only policies for my image bucket, then attaching these to a role which could be assumed
                         by an EC2 instance.</p>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/11_write-policy.png"
                             alt="screenshot of write policy">
+                        <p class="caption">Write-only policy for image bucket</p>
                     </div>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/12_read-policy.png"
                             alt="screenshot of read policy">
+                        <p class="caption">Read-only policy for image bucket</p>
                     </div>
                     <h4>Addition of Lambda</h4>
                     <p class="case-study__body">Finally, to make use of a simple Lambda function, I set about adding
@@ -175,20 +190,28 @@
                         Lambda function would be triggered to create and upload a separate thumbnail of the image, and
                         this thumbnail is what would be seen when the user fetched a list of the images. The original
                         image could still be viewed by clicking on one of the thumbnails.</p>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/8_lambda-trigger.png"
                             alt="screenshot of lambda trigger configuration">
+                        <p class="caption">Lambda function configuration for creating thumbnail when image uploaded.
+                            Triggers when image
+                            uploaded with orig/ prefix (i.e. uploaded from client site)</p>
                     </div>
                     <p class="case-study__body">The Lambda handler function would create a thumbnail version of any new
                         image added to the bucket, then upload this new thumbnail to the bucket with a different prefix
                         using the SDK. This also required creating another IAM role with read and write access to the
                         bucket, this time to be assumed by a Lambda function.</p>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/9_lambda-role.png"
                             alt="screenshot of lambda role">
+                        <p class="caption">IAM role for Lambda function allowing basic Lambda permission, plus read +
+                            write access to
+                            image bucket</p>
                     </div>
-                    <div class="case__img-container">
+                    <div class="case__img-container--aws">
                         <img class="case__image--aws" src="img/aws-case/10_EC2-role.png" alt="screenshot of ec2 role">
+                        <p class="caption">IAM role for EC2 instances (web servers) allowing read + write access to
+                            image bucket</p>
                     </div>
                     <p class="case-study__body">To avoid infinite recursion, the Lambda function would only trigger on
                         new objects with the “orig/” prefix, which is what would be uploaded from the client site. For
