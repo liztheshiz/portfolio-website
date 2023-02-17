@@ -131,6 +131,11 @@
     border-radius: 3px;
 }
 
+.case__image--aws {
+    border-radius: 3px;
+    max-width: 700px;
+}
+
 .case-study__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
