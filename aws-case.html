@@ -51,7 +51,7 @@
             <h2>Method</h2>
             <div class="case-study__grid--aws">
                 <div class="case-study__grid__item">
-                    <h3>Migration</h3>
+                    <h3>Migration to the Cloud</h3>
                     <div class="case__img-container">
                         <img class="case__image" src="img/movie-case/server.png" alt="image of a server">
                     </div>
@@ -118,59 +118,43 @@
                     <div class="case__img-container">
                         <img class="case__image" src="img/movie-case/client.jpg" alt="image of web app on laptop">
                     </div>
-                    <p class="case-study__body">I began by building out the basic framework of the app in order to
-                        familiarize myself with React’s component structure, as well as test the functionality of the
-                        app without any data. Bootstrap's handy UI library sped up this process, and kept the design
-                        consistent.</p>
-                    <p class="case-study__body">When implementing app capabilities that involved user interaction, I
-                        took extra care to note UX
-                        concerns like form validation; this would become especially important as users needed to input
-                        information to the specifications of the API that was working behind-the-scenes.</p>
-                    <p class="case-study__body"> As a final step before deployment, I collaborated with a designer to
-                        update the original design into something more eye-catching and content appropriate.</p>
-                    <div class="link-container">
+                    <p class="case-study__body">At this point, the cloud-deployed site worked! Everything communicated
+                        with each other within the cloud in the most secure way possible, following architecture
+                        principles that ensured the app would always be running, and doing so efficiently. But there
+                        were a few more aspects of cloud computing with which I wanted to familiarize myself that were
+                        not covered in the base app, so I set about adding new functionality involving S3 buckets,
+                        Lambda, the AWS SDK, and (more) IAM.</p>
+                    <h4>Initial Updates</h4>
+                    <p class="case-study__body">The first half of this undertaking required getting a little familiar
+                        with the AWS SDK so that users could interact with the contents of the S3 bucket right from the
+                        app. I started by adding a few new endpoints to the API that could upload an image, get a list
+                        of images, and get a specific image from the bucket, using the AWS SDK. I then added some simple
+                        UI elements in the React frontend code (pictured below), and simply tied these to the newly
+                        created endpoints in the API.</p>
+                    <p class="case-study__body">This also required setting up a new IAM role that allowed read/write
+                        access to the bucket for the EC2 web server. This was as simple as creating read-only and
+                        write-only policies for my image bucket, then attaching these to a role which could be assumed
+                        by an EC2 instance.</p>
+                    <h4>Addition of Lambda</h4>
+                    <p class="case-study__body">Finally, to make use of a simple Lambda function, I set about adding
+                        thumbnail functionality to these features. This meant that when a user uploaded an image, the
+                        Lambda function would be triggered to create and upload a separate thumbnail of the image, and
+                        this thumbnail is what would be seen when the user fetched a list of the images. The original
+                        image could still be viewed by clicking on one of the thumbnails.</p>
+                    <p class="case-study__body">The Lambda handler function would create a thumbnail version of any new
+                        image added to the bucket, then upload this new thumbnail to the bucket with a different prefix
+                        using the SDK. This also required creating another IAM role with read and write access to the
+                        bucket, this time to be assumed by a Lambda function.</p>
+                    <p class="case-study__body">To avoid infinite recursion, the Lambda function would only trigger on
+                        new objects with the “orig/” prefix, which is what would be uploaded from the client site. For
+                        extra security, the handler function would also check for the thumbnail prefix and automatically
+                        return without uploading anything if it was detected.</p>
+                    <!--<div class="link-container">
                         <a href="https://cinemadatabase.netlify.app/" target="_blank">Experience the final product
                             here.*</a>
                         <p class="case-study__note">*Please note that you will need to make an account to use most
                             features of the app.</p>
-                    </div>
-                </div>
-            </div>
-
-            <h3>Testing</h3>
-            <div class="case-study__grid">
-                <div class="case-study__grid__item">
-                    <img class="case-study__postman" src="img/movie-case/postman-icon.png" alt="Postman icon">
-                    <p class="case-study__body">All testing on the server-side was done in Postman. Endpoint tests were
-                        saved for regular testing, which was carried out throughout the project each time functionality
-                        was added or changed.</p>
-                </div>
-                <div class="case-study__grid__item">
-                    <p class="case-study__body">Client-side testing was carried out continuously; I kept the project
-                        open on one screen to test immediate results as code was changed or added. Special
-                        attention to testing was given at integral parts of development, such as after laying out the
-                        basic framework, and after linking the app with my API.</p>
-                </div>
-            </div>
-
-            <h2>Project Screenshots</h2>
-            <div id="slideshow">
-                <div class="slide-wrapper">
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case1.png">
-                    </div>
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case2.png">
-                    </div>
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case3.png">
-                    </div>
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case4.png">
-                    </div>
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case5.png">
-                    </div>
+                    </div>-->
                 </div>
             </div>
 
