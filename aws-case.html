@@ -32,16 +32,16 @@
                 <h2>Overview</h2>
                 <p class="case-study__description">The cloud deploy of Cinema.Database rearchitects the underlying
                     structure of the app to fit AWS best practices, as well as adds new functionality that interacts
-                    directly with an S3 bucket through client-side code.
+                    directly with an S3 bucket.
                 </p>
                 <div class="case__screenshot__container">
                     <img class="case__screenshot" src="img/aws-case/15_web-app3.png" alt="screenshot from project">
                 </div>
                 <p class="case-study__body"><span class="case-study__title">Context: </span>
-                    Culmination of project work during CareerFoundry’s Cloud Computing for Developers course</p>
+                    Culmination of project work in CareerFoundry’s Cloud Computing for Developers course</p>
                 <p class="case-study__body"><span class="case-study__title">Purpose: </span>
-                    Develop and deploy an app fully on the AWS cloud platform to gain proficiency in AWS tools and
-                    technologies</p>
+                    Develop and deploy an app fully on the AWS cloud platform to gain proficiency in developing in the
+                    AWS cloud</p>
                 <p class="case-study__body"><span class="case-study__title">Objective: </span>
                     Ensure app architecture is secure, reliable, and efficient, following AWS best practices</p>
                 <p class="case-study__body"><span class="case-study__title">AWS Services Used: </span>
@@ -51,6 +51,9 @@
             <h2>Method</h2>
             <div class="case-study__grid--aws">
                 <div class="case-study__grid__item">
+                    <div class="link-container">
+                        <p class="case-study__note">Click any image to enlarge.</p>
+                    </div>
                     <h3>Migration to the Cloud</h3>
                     <p class="case-study__body">The first steps in this project involved migrating the already existing
                         app to the cloud. The app in its entirety is made up of three basic parts: a client site, a
@@ -68,23 +71,24 @@
                         only from within the VPC), and even more private access for the database (ingress and egress
                         only within the VPC).</p>
                     <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/1_VPC.png"
-                            alt="screenshot of VPC configuration">
+                        <a href="img/aws-case/1_VPC.png" target="_blank"><img class="case__image--aws"
+                                src="img/aws-case/1_VPC.png" alt="screenshot of VPC configuration"></a>
                         <p class="caption">VPC configuration: 3 public, 3 private, and 3 database subnets. Public
-                            subnets route to
-                            internet gateway and private subnets route to NAT gateway</p>
+                            subnets route to internet gateway and private subnets route to NAT gateway</p>
                     </div>
                     <p class="case-study__body">Within each of these subdivisions were three subnets (three public,
                         three private, three database), each deployed in different Availability Zones within the US East
-                        1 region. This would allow for me to implement horizontal scaling later on, discussed in detail
-                        later in this case study.</p>
+                        1 region where I and my user base were located. The use of mulitple AZs would allow for me to
+                        implement a more reliable architecture later on, discussed in detail later in this case study.
+                    </p>
                     <h4>Database Deploy</h4>
                     <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/2_EC2.png"
-                            alt="screenshot of list of EC2 instances">
+                        <a href="img/aws-case/2_EC2.png" target="_blank"><img class="case__image--aws"
+                                src="img/aws-case/2_EC2.png" alt="screenshot of list of EC2 instances"></a>
                         <p class="caption">List of all instances running in this VPC for this app. Web servers on
-                            private subnet,
-                            database instances on database subnet, and bastion instance on public subnet</p>
+                            private subnets, database instances on database subnet, and bastion instance on public
+                            subnet
+                        </p>
                     </div>
                     <p class="case-study__body">Starting from the bottom layer, I decided to simply copy my database
                         onto an EC2 instance where it would run as a local MongoDB server. I learned about and
@@ -100,10 +104,10 @@
                         (once they were created and their IPs known) and SSH access from a bastion instance deployed on
                         a public subnet.</p>
                     <h4>Server Deploy</h4>
-                    <p class="case-study__body">Which brings us to the API instances. The API was initially deployed to
-                        just one instance where it could be configured and copied into an AMI. The creation of this
-                        instance and the deployment and configuration of the API were all done through the AWS CLI to
-                        better familiarize myself with other methods of interacting with the AWS API beyond the
+                    <p class="case-study__body">Which brings us to the API (web server) instances. The API was initially
+                        deployed to just one instance where it could be configured and copied into an AMI. The creation
+                        of this instance and the deployment and configuration of the API were all done through the AWS
+                        CLI to better familiarize myself with other methods of interacting with the AWS API beyond the
                         management console.</p>
                     <p class="case-study__body">The API was copied onto the instance, and a few necessary changes were
                         made to the code, such as updating the CORS policy and adding an environment variable that
@@ -119,18 +123,18 @@
                         it (besides SSH access from the bastion instance). The ALB could now distribute incoming traffic
                         across the instances, also acting as the public-facing entry point for the web servers.</p>
                     <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/3_ALB.png"
-                            alt="screenshot of ALB configuration">
+                        <a href="img/aws-case/3_ALB.png" target="_blank"><img class="case__image--aws"
+                                src="img/aws-case/3_ALB.png" alt="screenshot of ALB configuration"></a>
                         <p class="caption">ALB whose DNS is called by client making API calls</p>
                     </div>
                     <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/4_TargetGroup.png"
-                            alt="screenshot of target group configuration">
+                        <a href="img/aws-case/4_TargetGroup.png" target="_blank"><img class="case__image--aws"
+                                src="img/aws-case/4_TargetGroup.png" alt="screenshot of target group configuration"></a>
                         <p class="caption">Target group of ALB: 3 web server instances</p>
                     </div>
                     <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/5_ASG.png"
-                            alt="screenshot of ASG configuration">
+                        <a href="img/aws-case/5_ASG.png" target="_blank"><img class="case__image--aws"
+                                src="img/aws-case/5_ASG.png" alt="screenshot of ASG configuration"></a>
                         <p class="caption">ASG with launch template from web server AMI, ensuring 3 running web servers
                         </p>
                     </div>
@@ -139,13 +143,9 @@
                         to be updated to reference the ALB DNS, then the client code was copied into an S3 bucket and
                         configured as a static website (again using the AWS CLI).</p>
                     <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/6_client-bucket.png"
-                            alt="screenshot of client bucket contents">
-                        <p class="caption">Public S3 bucket containing client code</p>
-                    </div>
-                    <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/7_client-commands.png"
-                            alt="screenshot of commands to make client bucket">
+                        <a href="img/aws-case/7_client-commands.png" target="_blank"><img class="case__image--aws"
+                                src="img/aws-case/7_client-commands.png"
+                                alt="screenshot of commands to make client bucket"></a>
                         <p class="caption">Sample of AWS CLI calls made to create and populate static site bucket</p>
                     </div>
                 </div>
@@ -166,8 +166,9 @@
                         UI elements in the React frontend code (pictured below), and simply tied these to the newly
                         created endpoints in the API.</p>
                     <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/13_web-app1.png"
-                            alt="screenshot of client site showing new aws functionality">
+                        <a href="img/aws-case/13_web-app1.png" target="_blank"><img class="case__image--aws"
+                                src="img/aws-case/13_web-app1.png"
+                                alt="screenshot of client site showing new aws functionality"></a>
                         <p class="caption">Screenshot from client site with S3 DNS in address bar</p>
                     </div>
                     <p class="case-study__body">This also required setting up a new IAM role that allowed read/write
@@ -175,13 +176,13 @@
                         write-only policies for my image bucket, then attaching these to a role which could be assumed
                         by an EC2 instance.</p>
                     <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/11_write-policy.png"
-                            alt="screenshot of write policy">
+                        <a href="img/aws-case/11_write-policy.png" target="_blank"><img class="case__image--aws"
+                                src="img/aws-case/11_write-policy.png" alt="screenshot of write policy"></a>
                         <p class="caption">Write-only policy for image bucket</p>
                     </div>
                     <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/12_read-policy.png"
-                            alt="screenshot of read policy">
+                        <a href="img/aws-case/12_read-policy.png" target="_blank"><img class="case__image--aws"
+                                src="img/aws-case/12_read-policy.png" alt="screenshot of read policy"></a>
                         <p class="caption">Read-only policy for image bucket</p>
                     </div>
                     <h4>Addition of Lambda</h4>
@@ -191,25 +192,33 @@
                         this thumbnail is what would be seen when the user fetched a list of the images. The original
                         image could still be viewed by clicking on one of the thumbnails.</p>
                     <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/8_lambda-trigger.png"
-                            alt="screenshot of lambda trigger configuration">
+                        <a href="img/aws-case/8_lambda-trigger.png" target="_blank"><img class="case__image--aws"
+                                src="img/aws-case/8_lambda-trigger.png"
+                                alt="screenshot of lambda trigger configuration"></a>
                         <p class="caption">Lambda function configuration for creating thumbnail when image uploaded.
                             Triggers when image
                             uploaded with orig/ prefix (i.e. uploaded from client site)</p>
                     </div>
                     <p class="case-study__body">The Lambda handler function would create a thumbnail version of any new
                         image added to the bucket, then upload this new thumbnail to the bucket with a different prefix
-                        using the SDK. This also required creating another IAM role with read and write access to the
+                        using the SDK.</p>
+                    <div class="link-container">
+                        <a href="https://github.com/liztheshiz/aws-img-app" target="_blank">View the handler function
+                            code in the lambda-function/ folder of this repo.</a>
+                    </div>
+                    <p class="case-study__body">This also required creating another IAM role with read and write access
+                        to the
                         bucket, this time to be assumed by a Lambda function.</p>
                     <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/9_lambda-role.png"
-                            alt="screenshot of lambda role">
+                        <a href="img/aws-case/9_lambda-role.png" target="_blank"><img class="case__image--aws"
+                                src="img/aws-case/9_lambda-role.png" alt="screenshot of lambda role"></a>
                         <p class="caption">IAM role for Lambda function allowing basic Lambda permission, plus read +
                             write access to
                             image bucket</p>
                     </div>
                     <div class="case__img-container--aws">
-                        <img class="case__image--aws" src="img/aws-case/10_EC2-role.png" alt="screenshot of ec2 role">
+                        <a href="img/aws-case/10_EC2-role.png" target="_blank"><img class="case__image--aws"
+                                src="img/aws-case/10_EC2-role.png" alt="screenshot of ec2 role"></a>
                         <p class="caption">IAM role for EC2 instances (web servers) allowing read + write access to
                             image bucket</p>
                     </div>
@@ -222,7 +231,12 @@
                         notes to properly document everything that was done, I shut down the site to save the cost of
                         keeping all of these AWS services running, so the site is no longer live. If you want to see a
                         sample of the app in action, check out this short <a
-                            href="https://www.youtube.com/watch?v=sy7x8cHAuOw" target="_blank">YouTube demo.</a></p>
+                            href="https://www.youtube.com/watch?v=sy7x8cHAuOw" target="_blank">YouTube demo:</a></p>
+                    <div class="case__img-container--aws">
+                        <a href="https://www.youtube.com/watch?v=sy7x8cHAuOw" target="_blank"><img
+                                class="case__image--aws" src="img/aws-case/16_demo-screenshot.png"
+                                alt="screenshot of ec2 role"></a>
+                    </div>
                     <!--<div class="link-container">
                         <a href="https://cinemadatabase.netlify.app/" target="_blank">Experience the final product
                             here.*</a>
