@@ -18,170 +18,193 @@
 
 <body class="page-body">
     <main class="case-study__main page-main">
-        <a href="portfolio-pages/cinema-database.html" class="case-study__return">
-            &#8592 RETURN</a>
+        <div class="case-study__content">
+            <a href="portfolio-pages/cinema-database.html" class="case-study__return">
+                &#8592 RETURN</a>
 
-        <h1 class="case-study__main-title">CINEMA.DATABASE: A CASE STUDY</h1>
+            <h1 class="case-study__main-title">CINEMA.DATABASE: A CASE STUDY</h1>
 
-        <div class="case-study__container">
-            <div class="case__img-container__main">
-                <img class="case__screenshot__main" src="img/movie-case/intro-image.jpg"
-                    alt="screenshot of project homepage">
-            </div>
-            <div class="case-study__section">
-                <h2>Overview</h2>
-                <p class="case-study__description">Cinema.Database is a simple web app that provides
-                    access to a small database of films, where users can register and save their own list of favorites.
-                </p>
-                <div class="case__screenshot__container">
-                    <img class="case__screenshot" src="img/movie-case/movie-case4.png" alt="screenshot from project">
+            <div class="case-study__container">
+                <div class="case__img-container__main">
+                    <img class="case__screenshot__main" src="img/movie-case/intro-image.jpg"
+                        alt="screenshot of project homepage">
                 </div>
-                <p class="case-study__body"><span class="case-study__title">Context: </span>
-                    Assigned as part of CareerFoundry’s Full-Stack Web Development course</p>
-                <p class="case-study__body"><span class="case-study__title">Purpose: </span>
-                    Develop both the back- and front-end from scrath to gain experience in creating databases and
-                    developing with React</p>
-                <p class="case-study__body"><span class="case-study__title">Objective: </span>
-                    Provide users with information about a pool of films, and an ability to save their favorites, in
-                    a seamless and bug-free app</p>
-                <p class="case-study__body"><span class="case-study__title">Tech Stack: </span>
-                    MongoDB, Express, React, Node (MERN)</p>
-                <p class="case-study__body"><span class="case-study__title">Tools: </span>
-                    Parcel | Bootstrap | Postman</p>
-            </div>
-
-            <h2>Method</h2>
-            <div class="case-study__grid">
-                <div class="case-study__grid__item">
-                    <h3>Server-Side</h3>
-                    <div class="case__img-container">
-                        <img class="case__image" src="img/movie-case/server.png" alt="image of a server">
-                    </div>
-                    <p class="case-study__body">Before coding anything, I listed out all the app’s functionalities that
-                        would need to interact with the database, like retrieving movie details or adding a movie to
-                        favorites, and then I translated these functionalities into HTML endpoints to build out the
-                        structure of my Express API. This preparation step kept the initial coding efficient and
-                        comprehensive, helping me know exactly where to start with my project.</p>
-                    <div class="link-container">
-                        <a href="https://cinemadatabase.herokuapp.com/" target="_blank">View all endpoints in the
-                            documentation here.</a>
-                    </div>
-                    <p class="case-study__body">I next wrote the database itself in MongoDB and updated my API to use
-                        it. An important part of this step was adding layers of security to protect the data, like JWT
-                        authentication which requires users to sign in to retrieve and write data, and password hashing
-                        that prevents anyone (even the owner of the database) from viewing a user’s password.</p>
-                </div>
-
-                <div class="case-study__grid__item">
-                    <h3>Client-Side</h3>
-                    <div class="case__img-container">
-                        <img class="case__image" src="img/movie-case/client.jpg" alt="image of web app on laptop">
-                    </div>
-                    <p class="case-study__body">I began by building out the basic framework of the app in order to
-                        familiarize myself with React’s component structure, as well as test the functionality of the
-                        app without any data. Bootstrap's handy UI library sped up this process, and kept the design
-                        consistent.</p>
-                    <p class="case-study__body">When implementing app capabilities that involved user interaction, I
-                        took extra care to note UX
-                        concerns like form validation; this would become especially important as users needed to input
-                        information to the specifications of the API that was working behind-the-scenes.</p>
-                    <p class="case-study__body"> As a final step before deployment, I collaborated with a designer to
-                        update the original design into something more eye-catching and content appropriate.</p>
-                    <div class="link-container">
-                        <a href="https://cinemadatabase.netlify.app/" target="_blank">Experience the final product
-                            here.*</a>
-                        <p class="case-study__note">*Please note that you will need to make an account to use most
-                            features of the app.</p>
-                    </div>
-                </div>
-            </div>
-
-            <h3>Testing</h3>
-            <div class="case-study__grid">
-                <div class="case-study__grid__item">
-                    <img class="case-study__postman" src="img/movie-case/postman-icon.png" alt="Postman icon">
-                    <p class="case-study__body">All testing on the server-side was done in Postman. Endpoint tests were
-                        saved for regular testing, which was carried out throughout the project each time functionality
-                        was added or changed.</p>
-                </div>
-                <div class="case-study__grid__item">
-                    <p class="case-study__body">Client-side testing was carried out continuously; I kept the project
-                        open on one screen to test immediate results as code was changed or added. Special
-                        attention to testing was given at integral parts of development, such as after laying out the
-                        basic framework, and after linking the app with my API.</p>
-                </div>
-            </div>
-
-            <h2>Project Screenshots</h2>
-            <div id="slideshow">
-                <div class="slide-wrapper">
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case1.png">
-                    </div>
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case2.png">
-                    </div>
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case3.png">
-                    </div>
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case4.png">
-                    </div>
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case5.png">
-                    </div>
-                </div>
-            </div>
-
-            <h2>Retrospective</h2>
-            <div class="case-study__grid">
-                <div class="case-study__grid__item">
-                    <h3>Challenges</h3>
-                    <p class="case-study__body">The most challenging part of this project was developing with new tools
-                        (React and Parcel) and learning how best to use them as I went.</p>
-                    <p class="case-study__body">Parcel’s quirks in particular slowed down production time significantly.
-                        From this challenge, I was able to readjust my <img class="case-study__parcel"
-                            src="img/movie-case/parcel-icon.png" alt="Parcel logo"> production schedule to set aside
-                        time for learning how to best utilize this finicky tool, and I made sure to record my solutions
-                        for my future self or anyone else who might view my project (which you can view at the end of
-                        the ReadMe on <a href="https://github.com/liztheshiz/movie-client"
-                            target="_blank">Cinema.Database’s GitHub page</a>.) This allowed me to move forward
-                        efficiently with the rest of the project.
+                <div class="case-study__section">
+                    <h2>Overview</h2>
+                    <p class="case-study__description">Cinema.Database is a simple web app that provides
+                        access to a small database of films, where users can register and save their own list of
+                        favorites.
                     </p>
+                    <div class="case__screenshot__container">
+                        <img class="case__screenshot" src="img/movie-case/movie-case4.png"
+                            alt="screenshot from project">
+                    </div>
+                    <p class="case-study__body"><span class="case-study__title">Context: </span>
+                        Assigned as part of CareerFoundry’s Full-Stack Web Development course</p>
+                    <p class="case-study__body"><span class="case-study__title">Purpose: </span>
+                        Develop both the back- and front-end from scrath to gain experience in creating databases and
+                        developing with React</p>
+                    <p class="case-study__body"><span class="case-study__title">Objective: </span>
+                        Provide users with information about a pool of films, and an ability to save their favorites, in
+                        a seamless and bug-free app</p>
+                    <p class="case-study__body"><span class="case-study__title">Tech Stack: </span>
+                        MongoDB, Express, React, Node (MERN)</p>
+                    <p class="case-study__body"><span class="case-study__title">Tools: </span>
+                        Parcel | Bootstrap | Postman</p>
                 </div>
-                <div class="case-study__grid__item">
-                    <h3>Hindsight</h3>
-                    <p class="case-study__body">Cinema.Database was only the second full web app I had developed, so I
-                        was focused mainly on learning React. Since developing this app, I have continued to learn much
-                        more about other development practices and tools, so if I were to begin this project again, I
-                        would likely use a different, less glitch-prone build tool like Create React App, which I
-                        used to build my next project, <a href="https://liztheshiz.github.io/meetup/"
-                            target="_blank">Meetup</a>.</p>
-                    <p class="case-study__body">I also might prefer a more formalized testing process. While the
-                        informal test-as-you-go approach worked well for a small project like this, in the future I
-                        might utilize an automated, test-driven approach with a tool like Jest to keep myself practiced
-                        with common tools, and to make things easier down the line should I decide to increase the scope
-                        of the project.</p>
-                </div>
-            </div>
 
-            <h2>Credits</h2>
-            <div class="case-study__grid2">
-                <div class="case-study__grid2__item">
-                    <p>Developed by</p>
-                    <p>Design by</p>
-                    <p>Project idea by</p>
+                <h2>Method</h2>
+                <div class="case-study__grid">
+                    <div class="case-study__grid__item">
+                        <h3>Server-Side</h3>
+                        <div class="case__img-container">
+                            <img class="case__image" src="img/movie-case/server.png" alt="image of a server">
+                        </div>
+                        <p class="case-study__body">Before coding anything, I listed out all the app’s functionalities
+                            that
+                            would need to interact with the database, like retrieving movie details or adding a movie to
+                            favorites, and then I translated these functionalities into HTML endpoints to build out the
+                            structure of my Express API. This preparation step kept the initial coding efficient and
+                            comprehensive, helping me know exactly where to start with my project.</p>
+                        <div class="link-container">
+                            <a href="https://cinemadatabase.herokuapp.com/" target="_blank">View all endpoints in the
+                                documentation here.</a>
+                        </div>
+                        <p class="case-study__body">I next wrote the database itself in MongoDB and updated my API to
+                            use
+                            it. An important part of this step was adding layers of security to protect the data, like
+                            JWT
+                            authentication which requires users to sign in to retrieve and write data, and password
+                            hashing
+                            that prevents anyone (even the owner of the database) from viewing a user’s password.</p>
+                    </div>
+
+                    <div class="case-study__grid__item">
+                        <h3>Client-Side</h3>
+                        <div class="case__img-container">
+                            <img class="case__image" src="img/movie-case/client.jpg" alt="image of web app on laptop">
+                        </div>
+                        <p class="case-study__body">I began by building out the basic framework of the app in order to
+                            familiarize myself with React’s component structure, as well as test the functionality of
+                            the
+                            app without any data. Bootstrap's handy UI library sped up this process, and kept the design
+                            consistent.</p>
+                        <p class="case-study__body">When implementing app capabilities that involved user interaction, I
+                            took extra care to note UX
+                            concerns like form validation; this would become especially important as users needed to
+                            input
+                            information to the specifications of the API that was working behind-the-scenes.</p>
+                        <p class="case-study__body"> As a final step before deployment, I collaborated with a designer
+                            to
+                            update the original design into something more eye-catching and content appropriate.</p>
+                        <div class="link-container">
+                            <a href="https://cinemadatabase.netlify.app/" target="_blank">Experience the final product
+                                here.*</a>
+                            <p class="case-study__note">*Please note that you will need to make an account to use most
+                                features of the app.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="case-study__grid2__item">
-                    <p>Liz Stone</p>
-                    <p><a href="https://www.linkedin.com/in/annaferrari1/" target="_blank">Anna Ferrari</a></p>
-                    <p>CareerFoundry</p>
+
+                <h3>Testing</h3>
+                <div class="case-study__grid">
+                    <div class="case-study__grid__item">
+                        <img class="case-study__postman" src="img/movie-case/postman-icon.png" alt="Postman icon">
+                        <p class="case-study__body">All testing on the server-side was done in Postman. Endpoint tests
+                            were
+                            saved for regular testing, which was carried out throughout the project each time
+                            functionality
+                            was added or changed.</p>
+                    </div>
+                    <div class="case-study__grid__item">
+                        <p class="case-study__body">Client-side testing was carried out continuously; I kept the project
+                            open on one screen to test immediate results as code was changed or added. Special
+                            attention to testing was given at integral parts of development, such as after laying out
+                            the
+                            basic framework, and after linking the app with my API.</p>
+                    </div>
+                </div>
+
+                <h2>Project Screenshots</h2>
+                <div id="slideshow">
+                    <div class="slide-wrapper">
+                        <div class="slide">
+                            <img class="slide-image" src="img/movie-case/movie-case1.png">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-image" src="img/movie-case/movie-case2.png">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-image" src="img/movie-case/movie-case3.png">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-image" src="img/movie-case/movie-case4.png">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-image" src="img/movie-case/movie-case5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Retrospective</h2>
+                <div class="case-study__grid">
+                    <div class="case-study__grid__item">
+                        <h3>Challenges</h3>
+                        <p class="case-study__body">The most challenging part of this project was developing with new
+                            tools
+                            (React and Parcel) and learning how best to use them as I went.</p>
+                        <p class="case-study__body">Parcel’s quirks in particular slowed down production time
+                            significantly.
+                            From this challenge, I was able to readjust my <img class="case-study__parcel"
+                                src="img/movie-case/parcel-icon.png" alt="Parcel logo"> production schedule to set aside
+                            time for learning how to best utilize this finicky tool, and I made sure to record my
+                            solutions
+                            for my future self or anyone else who might view my project (which you can view at the end
+                            of
+                            the ReadMe on <a href="https://github.com/liztheshiz/movie-client"
+                                target="_blank">Cinema.Database’s GitHub page</a>.) This allowed me to move forward
+                            efficiently with the rest of the project.
+                        </p>
+                    </div>
+                    <div class="case-study__grid__item">
+                        <h3>Hindsight</h3>
+                        <p class="case-study__body">Cinema.Database was only the second full web app I had developed, so
+                            I
+                            was focused mainly on learning React. Since developing this app, I have continued to learn
+                            much
+                            more about other development practices and tools, so if I were to begin this project again,
+                            I
+                            would likely use a different, less glitch-prone build tool like Create React App, which I
+                            used to build my next project, <a href="https://liztheshiz.github.io/meetup/"
+                                target="_blank">Meetup</a>.</p>
+                        <p class="case-study__body">I also might prefer a more formalized testing process. While the
+                            informal test-as-you-go approach worked well for a small project like this, in the future I
+                            might utilize an automated, test-driven approach with a tool like Jest to keep myself
+                            practiced
+                            with common tools, and to make things easier down the line should I decide to increase the
+                            scope
+                            of the project.</p>
+                    </div>
+                </div>
+
+                <h2>Credits</h2>
+                <div class="case-study__grid2">
+                    <div class="case-study__grid2__item">
+                        <p>Developed by</p>
+                        <p>Design by</p>
+                        <p>Project idea by</p>
+                    </div>
+                    <div class="case-study__grid2__item">
+                        <p>Liz Stone</p>
+                        <p><a href="https://www.linkedin.com/in/annaferrari1/" target="_blank">Anna Ferrari</a></p>
+                        <p>CareerFoundry</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="link-container">
-            <div class="case-study__note">
-                Free Stock photos by <a href="https://www.vecteezy.com/free-photos" target="_blank">Vecteezy</a>
+            <div class="link-container">
+                <div class="case-study__note">
+                    Free Stock photos by <a href="https://www.vecteezy.com/free-photos" target="_blank">Vecteezy</a>
+                </div>
             </div>
         </div>
     </main>
