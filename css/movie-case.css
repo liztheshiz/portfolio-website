@@ -229,6 +229,13 @@
     justify-content: center;
 }
 
+.case-study__aws-badge {
+    max-width: 160px;
+    float: right;
+    margin: 12px;
+    margin-bottom: 10px;
+}
+
 /* SLIDESHOW */
 
 /* Styling for area of the slideshow */
