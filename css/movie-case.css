@@ -1,6 +1,6 @@
 /* 	>>><<<
 	CASE STUDY ELEMENTS
-    ** NOTE: Some of these elements are specific to the CinemaDB case. AWS case-specifc items are found below.
+    ** NOTE: Some of these elements are specific to the CinemaDB (movie) case. AWS case-specifc items are found below.
 	>>><<< */
 .case-study__header {
     position: absolute;
@@ -143,12 +143,6 @@
     border-radius: 3px;
 }
 
-.caption {
-    max-width: 700px;
-    text-align: center;
-    font-size: 14px;
-}
-
 .case-study__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -185,6 +179,20 @@
     max-width: 600px;
 }
 
+.enlarge-note {
+    text-align: center;
+    font-size: 10px;
+    margin: 0;
+    margin-top: -2px;
+}
+
+.caption {
+    max-width: 600px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
 .aws-case__screenshot-grid__image {
     border-radius: 3px;
     max-width: 100%;
@@ -201,6 +209,7 @@
 
 .aws-case-study__method-grid__item {
     max-width: 100%;
+    text-align: justify;
 }
 
 .aws-case__screenshot-grid {
@@ -356,6 +365,11 @@
         max-width: 400px;
     }
 
+    .caption {
+        max-width: 380px;
+        font-size: 12px;
+    }
+
     .aws-case__screenshot-grid {
         grid-template-columns: 200px 200px;
     }
@@ -439,8 +453,16 @@
     }
 
     /* AWS */
+    .aws-case-study__method-grid {
+        padding: 40px;
+    }
+
+    .aws-case__screenshot-container {
+        margin: 40px 0;
+    }
+
     .aws-case__screenshot {
-        max-width: 300px;
+        max-width: 100%;
     }
 
     .aws-case__screenshot-grid {
@@ -515,13 +537,9 @@
     }
 
     /* AWS */
-    .aws-case__screenshot-container {
-        padding: 0;
-    }
 
-    .aws-case__screenshot {
-        max-width: 88%;
-        margin: 0 auto;
+    .aws-case-study__method-grid {
+        padding: 20px;
     }
 
     .aws-case__screenshot-grid__item {
@@ -535,6 +553,19 @@
 }
 
 @media all and (max-width: 360px) {
+    .case-study__main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* AWS */
+
+    .aws-case-study__method-grid {
+        padding: 0;
+    }
+
+    /* SLIDESHOW */
+
     #slideshow {
         height: 190px;
         width: 280px;
