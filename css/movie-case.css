@@ -1,5 +1,6 @@
 /* 	>>><<<
 	CASE STUDY ELEMENTS
+    ** NOTE: Some of these elements are specific to the CinemaDB case. AWS case-specifc items are found below.
 	>>><<< */
 .case-study__header {
     position: absolute;
@@ -25,6 +26,11 @@
     padding: 80px 30px 20% 30px;
 }
 
+.case-study__content {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
 .case-study__container {
     max-width: 80%;
     margin: 0 auto;
@@ -39,14 +45,6 @@
 .case__img-container {
     text-align: center;
     margin: 40px;
-}
-
-.case__img-container--aws {
-    text-align: center;
-    margin: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .case__screenshot__main {
@@ -145,11 +143,6 @@
     border-radius: 3px;
 }
 
-.case__image--aws {
-    border-radius: 3px;
-    max-width: 700px;
-}
-
 .caption {
     max-width: 700px;
     text-align: center;
@@ -177,13 +170,54 @@
     font-weight: 600;
 }
 
-.case-study__grid--aws {
+/* AWS */
+
+.aws-case__screenshot-container {
+    text-align: center;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aws-case__screenshot {
+    border-radius: 3px;
+    max-width: 600px;
+}
+
+.aws-case__screenshot-grid__image {
+    border-radius: 3px;
+    max-width: 100%;
+}
+
+.aws-case-study__method-grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 50px;
     justify-content: space-around;
     margin: 0;
     padding: 0 100px;
+}
+
+.aws-case-study__method-grid__item {
+    max-width: 100%;
+}
+
+.aws-case__screenshot-grid {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-gap: 40px;
+    justify-content: center;
+    align-content: center;
+    margin: 40px;
+}
+
+.aws-case__screenshot-grid__item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
 /* SLIDESHOW */
@@ -249,6 +283,14 @@
 /* 	>>><<<
 	RESPONSIVE ELEMENTS
 	>>><<< */
+@media all and (max-width: 1220px) {
+
+    /* AWS */
+    .aws-case__screenshot-grid {
+        grid-template-columns: 280px 280px;
+    }
+}
+
 @media all and (max-width: 950px) {
     .case-study__main-title {
         font-size: 36px;
@@ -309,6 +351,16 @@
         max-width: 100px;
     }
 
+    /* AWS */
+    .aws-case__screenshot {
+        max-width: 400px;
+    }
+
+    .aws-case__screenshot-grid {
+        grid-template-columns: 200px 200px;
+    }
+
+    /* SLIDESHOW */
     #slideshow {
         height: 340px;
         width: 500px;
@@ -386,6 +438,16 @@
         max-width: 100%;
     }
 
+    /* AWS */
+    .aws-case__screenshot {
+        max-width: 300px;
+    }
+
+    .aws-case__screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* SLIDESHOW */
     #slideshow {
         height: 200px;
         width: 300px;
@@ -448,6 +510,25 @@
     }
 
     .case__screenshot {
+        max-width: 88%;
+        margin: 0 auto;
+    }
+
+    /* AWS */
+    .aws-case__screenshot-container {
+        padding: 0;
+    }
+
+    .aws-case__screenshot {
+        max-width: 88%;
+        margin: 0 auto;
+    }
+
+    .aws-case__screenshot-grid__item {
+        padding: 0;
+    }
+
+    .aws-case__screenshot-grid__image {
         max-width: 88%;
         margin: 0 auto;
     }
