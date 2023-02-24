@@ -151,6 +151,10 @@
     margin: 0;
 }
 
+.case-study__grid__item {
+    text-align: justify;
+}
+
 .case-study__grid2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -232,8 +236,7 @@
 .case-study__aws-badge {
     max-width: 160px;
     float: right;
-    margin: 12px;
-    margin-bottom: 10px;
+    margin: 10px -10px 4px 12px;
 }
 
 /* SLIDESHOW */
@@ -379,6 +382,10 @@
 
     .aws-case__screenshot-grid {
         grid-template-columns: 200px 200px;
+    }
+
+    .case-study__aws-badge {
+        max-width: 120px;
     }
 
     /* SLIDESHOW */
