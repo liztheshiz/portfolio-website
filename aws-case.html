@@ -18,167 +18,302 @@
 
 <body class="page-body">
     <main class="case-study__main page-main">
-        <a href="portfolio-pages/aws-img-app.html" class="case-study__return">
-            &#8592 RETURN</a>
+        <div class="case-study__content">
+            <a href="portfolio-pages/aws-img-app.html" class="case-study__return">
+                &#8592 RETURN</a>
 
-        <h1 class="case-study__main-title">CINEMA.DATABASE: AWS IMPLEMENTATION</h1>
+            <h1 class="case-study__main-title">CINEMA.DATABASE: AWS IMPLEMENTATION</h1>
 
-        <div class="case-study__container">
-            <div class="case__img-container__main">
-                <img class="case__screenshot__main" src="img/aws-case/intro-image.jpg"
-                    alt="screenshot of project homepage">
-            </div>
-            <div class="case-study__section">
-                <h2>Overview</h2>
-                <p class="case-study__description">Cinema.Database is a simple web app that provides
-                    access to a small database of films, where users can register and save their own list of favorites.
-                </p>
-                <div class="case__screenshot__container">
-                    <img class="case__screenshot" src="img/movie-case/movie-case4.png" alt="screenshot from project">
+            <div class="case-study__container">
+                <div class="case__img-container__main">
+                    <img class="case__screenshot__main" src="img/aws-case/intro-image.jpg"
+                        alt="artist's rendition of the virtual cloud">
                 </div>
-                <p class="case-study__body"><span class="case-study__title">Context: </span>
-                    Culmination of project work during CareerFoundry’s Cloud Computing for Developers course</p>
-                <p class="case-study__body"><span class="case-study__title">Purpose: </span>
-                    Develop and deploy an app fully on the AWS cloud platform to gain proficiency in AWS tools and
-                    technologies</p>
-                <p class="case-study__body"><span class="case-study__title">Objective: </span>
-                    Ensure app architecture is secure, reliable, and efficient, following AWS best practices</p>
-                <p class="case-study__body"><span class="case-study__title">AWS Services Used: </span>
-                    EC2, VPC, SG, ASG, ALB, AMI, IAM, S3, SDK, Lambda</p>
-            </div>
-
-            <h2>Method</h2>
-            <div class="case-study__grid">
-                <div class="case-study__grid__item">
-                    <h3>Server-Side</h3>
-                    <div class="case__img-container">
-                        <img class="case__image" src="img/movie-case/server.png" alt="image of a server">
+                <div class="case-study__section">
+                    <h2>Overview</h2>
+                    <p class="case-study__description">The cloud deploy of Cinema.Database rearchitects the underlying
+                        structure of the app to fit AWS best practices, as well as adds new functionality that interacts
+                        directly with an S3 bucket.
+                    </p>
+                    <div class="case__screenshot__container">
+                        <img class="case__screenshot" src="img/aws-case/15_web-app3.png" alt="screenshot from project">
                     </div>
-                    <p class="case-study__body">Before coding anything, I listed out all the app’s functionalities that
-                        would need to interact with the database, like retrieving movie details or adding a movie to
-                        favorites, and then I translated these functionalities into HTML endpoints to build out the
-                        structure of my Express API. This preparation step kept the initial coding efficient and
-                        comprehensive, helping me know exactly where to start with my project.</p>
-                    <div class="link-container">
+                    <p class="case-study__body"><span class="case-study__title">Context: </span>
+                        Culmination of project work in CareerFoundry’s Cloud Computing for Developers course</p>
+                    <p class="case-study__body"><span class="case-study__title">Purpose: </span>
+                        Develop and deploy an app fully on the AWS cloud platform to gain proficiency in developing in
+                        the AWS cloud</p>
+                    <p class="case-study__body"><span class="case-study__title">Objective: </span>
+                        Ensure app architecture is secure, reliable, and efficient, following AWS best practices</p>
+                    <p class="case-study__body"><span class="case-study__title">AWS Services Used: </span>
+                        EC2, VPC, SG, ASG, ALB, AMI, IAM, S3, SDK, Lambda</p>
+                </div>
+
+                <h2>Method</h2>
+                <div class="aws-case-study__method-grid">
+                    <div class="aws-case-study__method-grid__item">
+                        <h3>Migration to the Cloud</h3>
+                        <p class="case-study__body case-study__body--aws">The first steps in this project involved
+                            migrating the already existing app to the cloud. The app in its entirety is made up of three
+                            basic parts: a client site, a backend API, and a database. All of these components would
+                            need to be moved to AWS in a configuration that maximized the benefits of using the cloud.
+                        </p>
+                        <!--<div class="link-container">
                         <a href="https://cinemadatabase.herokuapp.com/" target="_blank">View all endpoints in the
                             documentation here.</a>
+                    </div>-->
+                        <h4>Setup</h4>
+                        <p class="case-study__body case-study__body--aws">Before actually deploying anything, I set up a
+                            custom VPC where my EC2 instances would run. This allowed me to control ingress and egress
+                            to each component of my app by dividing my network into subnets with various levels of
+                            access. The VPC was divided into subnets with public access (open ingress and egress),
+                            private access (open egress but ingress only from within the VPC), and even more private
+                            access for the database (ingress and egress only within the VPC).</p>
+                        <div class="aws-case__screenshot-container">
+                            <a href="img/aws-case/1_VPC.png" target="_blank"><img class="aws-case__screenshot"
+                                    src="img/aws-case/1_VPC.png" alt="screenshot of VPC configuration"></a>
+                            <p class="enlarge-note">Click to enlarge</p>
+                            <p class="caption">VPC configuration: 3 public, 3 private, and 3 database subnets. Public
+                                subnets route to internet gateway and private subnets route to NAT gateway</p>
+                        </div>
+                        <p class="case-study__body case-study__body--aws">Within each of these subdivisions were three
+                            subnets (three public, three private, three database), each deployed in different
+                            Availability Zones within the US East 1 region where I and my user base were located. The
+                            use of mulitple AZs would allow for me to implement a more reliable architecture later on,
+                            discussed in detail later in this case study.
+                        </p>
+                        <h4>Database Deploy</h4>
+                        <div class="aws-case__screenshot-container">
+                            <a href="img/aws-case/2_EC2.png" target="_blank"><img class="aws-case__screenshot"
+                                    src="img/aws-case/2_EC2.png" alt="screenshot of list of EC2 instances"></a>
+                            <p class="enlarge-note">Click to enlarge</p>
+                            <p class="caption">List of all instances running in this VPC for this app. Web servers on
+                                private subnets, database instances on database subnet, and bastion instance on public
+                                subnet
+                            </p>
+                        </div>
+                        <p class="case-study__body case-study__body--aws">Starting from the bottom layer, I decided to
+                            simply copy my database onto an EC2 instance where it would run as a local MongoDB server. I
+                            learned about and considered the pros and cons of other deploy methods, in particular
+                            converting the database to the AWS-managed NoSQL service DynamoDB, but I ultimately didn’t
+                            use DynamoDB in order to avoid some of the required refactoring and extra time needed to
+                            deploy with this method. Since this is a relatively simple app with a simple database, it
+                            seemed the best choice to maintain that simplicity.</p>
+                        <p class="case-study__body case-study__body--aws">The EC2 instance housing my database was
+                            deployed to a database subnet of my VPC, where the attached security group and lack of
+                            gateway prevented any access to the public internet, but allowed certain traffic within the
+                            VPC. Following the principle of least privilege, the security group only allowed traffic to
+                            and from the EC2 instances housing the API (once they were created and their IPs known) and
+                            SSH access from a bastion instance deployed on a public subnet.</p>
+                        <h4>Server Deploy</h4>
+                        <p class="case-study__body case-study__body--aws">Which brings us to the API (web server)
+                            instances. The API was initially deployed to just one instance where it could be configured
+                            and copied into an AMI. The creation of this instance and the deployment and configuration
+                            of the API were all done through the AWS CLI to better familiarize myself with other methods
+                            of interacting with the AWS API beyond the management console.</p>
+                        <p class="case-study__body case-study__body--aws">The API was copied onto the instance, and a
+                            few necessary changes were made to the code, such as updating the CORS policy and adding an
+                            environment variable that referenced the MongoDB instance I had just made. Finally, the API
+                            was configured to run as a server (on port 8081, which you may see in some screenshots).</p>
+                        <h4>Refinement</h4>
+                        <p class="case-study__body case-study__body--aws">While the backend of the app would have
+                            functioned fine in this configuration, I wanted to simulate a real-world deployment as much
+                            as possible, which would require additional measures of security and resiliency to failure.
+                            So, I followed the architecture suggested by AWS as a best practice, and deployed the web
+                            server to an ASG, targeted by an ALB. The 3 redundant web servers in the ASG were deployed
+                            in private subnets, so they could receive traffic from the ALB and send/receive traffic to
+                            the database, but that was it (besides SSH access from the bastion instance). The ALB could
+                            now distribute incoming traffic across the instances, also acting as the public-facing entry
+                            point for the web servers.</p>
+                        <div class="aws-case__screenshot-container">
+                            <a href="img/aws-case/3_ALB.png" target="_blank"><img class="aws-case__screenshot"
+                                    src="img/aws-case/3_ALB.png" alt="screenshot of ALB configuration"></a>
+                            <p class="enlarge-note">Click to enlarge</p>
+                            <p class="caption">ALB whose DNS is called by client making API calls</p>
+                        </div>
+                        <div class="aws-case__screenshot-container">
+                            <a href="img/aws-case/4_TargetGroup.png" target="_blank"><img class="aws-case__screenshot"
+                                    src="img/aws-case/4_TargetGroup.png"
+                                    alt="screenshot of target group configuration"></a>
+                            <p class="enlarge-note">Click to enlarge</p>
+                            <p class="caption">Target group of ALB: 3 web server instances</p>
+                        </div>
+                        <div class="aws-case__screenshot-container">
+                            <a href="img/aws-case/5_ASG.png" target="_blank"><img class="aws-case__screenshot"
+                                    src="img/aws-case/5_ASG.png" alt="screenshot of ASG configuration"></a>
+                            <p class="enlarge-note">Click to enlarge</p>
+                            <p class="caption">ASG with launch template from web server AMI, ensuring 3 running web
+                                servers
+                            </p>
+                        </div>
+                        <h4>Client Site Deploy</h4>
+                        <p class="case-study__body case-study__body--aws">The client-side code was relatively easier to
+                            deploy. All API calls had to be updated to reference the ALB DNS, then the client code was
+                            copied into an S3 bucket and configured as a static website (again using the AWS CLI).</p>
+                        <div class="aws-case__screenshot-container">
+                            <a href="img/aws-case/7_client-commands.png" target="_blank"><img
+                                    class="aws-case__screenshot" src="img/aws-case/7_client-commands.png"
+                                    alt="screenshot of commands to make client bucket"></a>
+                            <p class="enlarge-note">Click to enlarge</p>
+                            <p class="caption">Sample of AWS CLI calls made to create and populate static site bucket
+                            </p>
+                        </div>
                     </div>
-                    <p class="case-study__body">I next wrote the database itself in MongoDB and updated my API to use
-                        it. An important part of this step was adding layers of security to protect the data, like JWT
-                        authentication which requires users to sign in to retrieve and write data, and password hashing
-                        that prevents anyone (even the owner of the database) from viewing a user’s password.</p>
-                </div>
 
-                <div class="case-study__grid__item">
-                    <h3>Client-Side</h3>
-                    <div class="case__img-container">
-                        <img class="case__image" src="img/movie-case/client.jpg" alt="image of web app on laptop">
-                    </div>
-                    <p class="case-study__body">I began by building out the basic framework of the app in order to
-                        familiarize myself with React’s component structure, as well as test the functionality of the
-                        app without any data. Bootstrap's handy UI library sped up this process, and kept the design
-                        consistent.</p>
-                    <p class="case-study__body">When implementing app capabilities that involved user interaction, I
-                        took extra care to note UX
-                        concerns like form validation; this would become especially important as users needed to input
-                        information to the specifications of the API that was working behind-the-scenes.</p>
-                    <p class="case-study__body"> As a final step before deployment, I collaborated with a designer to
-                        update the original design into something more eye-catching and content appropriate.</p>
-                    <div class="link-container">
+                    <div class="aws-case-study__method-grid__item">
+                        <h3>Adding S3 Functionality</h3>
+                        <p class="case-study__body case-study__body--aws">At this point, the cloud-deployed site worked!
+                            Everything communicated with each other within the cloud in the most secure way possible,
+                            following architecture principles that ensured the app would always be running reliably and
+                            efficiently. But there were a few more aspects of cloud computing with which I wanted to
+                            familiarize myself that were not covered in the base app, so I set about adding new
+                            functionality involving S3 buckets, Lambda, the AWS SDK, and (more) IAM.</p>
+                        <h4>Initial Updates</h4>
+                        <p class="case-study__body case-study__body--aws">The first half of this undertaking required
+                            getting a little familiar with the AWS SDK so that users could interact with the contents of
+                            the S3 bucket right from the app. I started by adding a few new endpoints to the API that
+                            could upload an image, get a list of images, and get a specific image from the bucket, using
+                            the AWS SDK. I then added some simple UI elements in the React frontend code (pictured
+                            below), and simply tied these to the newly created endpoints in the API.</p>
+                        <div class="aws-case__screenshot-container">
+                            <a href="img/aws-case/13_web-app1.png" target="_blank"><img class="aws-case__screenshot"
+                                    src="img/aws-case/13_web-app1.png"
+                                    alt="screenshot of client site showing new aws functionality"></a>
+                            <p class="enlarge-note">Click to enlarge</p>
+                            <p class="caption">Screenshot from client site with S3 DNS in address bar</p>
+                        </div>
+                        <p class="case-study__body case-study__body--aws">This also required setting up a new IAM role
+                            that allowed read/write access to the bucket for the EC2 web server. This was as simple as
+                            creating read-only and write-only policies for my image bucket, then attaching these to a
+                            role which could be assumed by an EC2 instance.</p>
+                        <div class="aws-case__screenshot-grid">
+                            <div class="aws-case__screenshot-grid__item">
+                                <a href="img/aws-case/11_write-policy.png" target="_blank"><img
+                                        class="aws-case__screenshot-grid__image" src="img/aws-case/11_write-policy.png"
+                                        alt="screenshot of write policy"></a>
+                                <p class="enlarge-note">Click to enlarge</p>
+                                <p class="caption--grid">Write-only policy for image bucket</p>
+                            </div>
+                            <div class="aws-case__screenshot-grid__item">
+                                <a href="img/aws-case/12_read-policy.png" target="_blank"><img
+                                        class="aws-case__screenshot-grid__image" src="img/aws-case/12_read-policy.png"
+                                        alt="screenshot of read policy"></a>
+                                <p class="enlarge-note">Click to enlarge</p>
+                                <p class="caption--grid">Read-only policy for image bucket</p>
+                            </div>
+                        </div>
+                        <h4>Addition of Lambda</h4>
+                        <p class="case-study__body case-study__body--aws">Finally, to make use of a simple Lambda
+                            function, I set about adding thumbnail functionality to these features. This meant that when
+                            a user uploaded an image, the Lambda function would be triggered to create and upload a
+                            separate thumbnail of the image, and this thumbnail is what would be seen when the user
+                            fetched a list of the images. The original image could still be viewed by clicking on one of
+                            the thumbnails.</p>
+                        <div class="aws-case__screenshot-container">
+                            <a href="img/aws-case/8_lambda-trigger.png" target="_blank"><img
+                                    class="aws-case__screenshot" src="img/aws-case/8_lambda-trigger.png"
+                                    alt="screenshot of lambda trigger configuration"></a>
+                            <p class="enlarge-note">Click to enlarge</p>
+                            <p class="caption">Trigger for the "create-thumbnail" Lambda function. Triggers when image
+                                uploaded with "orig/" prefix (i.e. uploaded from client site) and creates thumbnail of
+                                uploaded image</p>
+                        </div>
+                        <p class="case-study__body case-study__body--aws">The Lambda handler function would create a
+                            thumbnail version of any new image added to the bucket, then upload this new thumbnail to
+                            the bucket with a different prefix using the SDK.</p>
+                        <div class="link-container">
+                            <a href="https://github.com/liztheshiz/aws-img-app" target="_blank">View the handler
+                                function code in the "lambda-function/" folder of this repo.</a>
+                        </div>
+                        <p class="case-study__body case-study__body--aws">This also required creating another IAM role
+                            with read and write access to the bucket, this time to be assumed by a Lambda function.</p>
+                        <div class="aws-case__screenshot-container">
+                            <a href="img/aws-case/9_lambda-role.png" target="_blank"><img class="aws-case__screenshot"
+                                    src="img/aws-case/9_lambda-role.png" alt="screenshot of lambda role"></a>
+                            <p class="enlarge-note">Click to enlarge</p>
+                            <p class="caption">IAM role for Lambda function allowing basic Lambda permission, plus read
+                                + write access to image bucket</p>
+                        </div>
+                        <div class="aws-case__screenshot-container">
+                            <a href="img/aws-case/10_EC2-role.png" target="_blank"><img class="aws-case__screenshot"
+                                    src="img/aws-case/10_EC2-role.png" alt="screenshot of ec2 role"></a>
+                            <p class="enlarge-note">Click to enlarge</p>
+                            <p class="caption">IAM role for EC2 instances (web servers) allowing read + write access to
+                                image bucket</p>
+                        </div>
+                        <p class="case-study__body case-study__body--aws">To avoid infinite recursion, the Lambda
+                            function would only trigger on new objects with the “orig/” prefix, which is what would be
+                            uploaded from the client site. For extra security, the handler function would also check for
+                            the thumbnail prefix and automatically return without uploading anything if it was detected.
+                        </p>
+                        <p class="case-study__body case-study__body--aws">And with that, the project was completed! Once
+                            I took screenshots and notes to properly document everything that was done, I shut down the
+                            site to save the cost of keeping all of these AWS services running, so the site is no longer
+                            live. If you want to see a sample of the app in action, check out this short <a
+                                href="https://www.youtube.com/watch?v=sy7x8cHAuOw" target="_blank">YouTube demo:</a></p>
+                        <div class="aws-case__screenshot-container">
+                            <a href="https://www.youtube.com/watch?v=sy7x8cHAuOw" target="_blank"><img
+                                    class="aws-case__screenshot" src="img/aws-case/16_demo-screenshot.png"
+                                    alt="screenshot of ec2 role"></a>
+                        </div>
+                        <!--<div class="link-container">
                         <a href="https://cinemadatabase.netlify.app/" target="_blank">Experience the final product
                             here.*</a>
                         <p class="case-study__note">*Please note that you will need to make an account to use most
                             features of the app.</p>
+                    </div>-->
                     </div>
                 </div>
-            </div>
 
-            <h3>Testing</h3>
-            <div class="case-study__grid">
-                <div class="case-study__grid__item">
-                    <img class="case-study__postman" src="img/movie-case/postman-icon.png" alt="Postman icon">
-                    <p class="case-study__body">All testing on the server-side was done in Postman. Endpoint tests were
-                        saved for regular testing, which was carried out throughout the project each time functionality
-                        was added or changed.</p>
+                <h2>Retrospective</h2>
+                <div class="case-study__grid">
+                    <div class="case-study__grid__item">
+                        <h3>Looking Back</h3>
+                        <p class="case-study__body">My objective for this project was to learn how to use the
+                            fundamentals of AWS. As such, I was primarily focused on getting the AWS services up and
+                            running, and picking up these skills as I went. Some of these services - EC2 setup, ideal
+                            VPC configuration, S3 interaction, e.g. - I became very familiar and comfortable with, but a
+                            plethora of others - AWS-managed databases, dedicated security services, billing and
+                            management services, to name a few - remained untouched in my project.</p>
+                        <p class="case-study__body">If I were to start this project again, I would think of new ways to
+                            integrate even more AWS services, such as migrating my MongoDB database to AWS’s DynamoDB,
+                            setting up automated security services like GuardDuty and (Advanced) Shield, and exploring
+                            the Marketplace for any helpful third-party software.</p>
+                    </div>
+                    <div class="case-study__grid__item">
+                        <h3>Moving Forward</h3>
+                        <p class="case-study__body">In conjunction with CareerFoundry’s Cloud Computing for Developers
+                            course, I completed several official AWS training modules and dedicated some
+                            <img class="case-study__aws-badge" src="img/aws-case/aws-certified-cloud-practitioner.png"
+                                alt="official AWS Certified Cloud Practitioner badge"> extra time to studying in
+                            preparation for the AWS Certified Cloud Practitioner exam. Shortly following my completion
+                            of this project and the course, I sat the exam and received my official AWS CCP
+                            certification.
+                        </p>
+                        <p class="case-study__body">It’s my hope that in earning this certification, as well as in
+                            completing and presenting this project, I have demonstrated my foundational knowledge of AWS
+                            services and how they can best be utilized to harness the power of the cloud.</p>
+                    </div>
                 </div>
-                <div class="case-study__grid__item">
-                    <p class="case-study__body">Client-side testing was carried out continuously; I kept the project
-                        open on one screen to test immediate results as code was changed or added. Special
-                        attention to testing was given at integral parts of development, such as after laying out the
-                        basic framework, and after linking the app with my API.</p>
-                </div>
-            </div>
 
-            <h2>Project Screenshots</h2>
-            <div id="slideshow">
-                <div class="slide-wrapper">
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case1.png">
+                <h2>Credits</h2>
+                <div class="case-study__grid2">
+                    <div class="case-study__grid2__item">
+                        <p>Developed by</p>
+                        <p>Design by</p>
+                        <p>Project idea by</p>
                     </div>
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case2.png">
-                    </div>
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case3.png">
-                    </div>
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case4.png">
-                    </div>
-                    <div class="slide">
-                        <img class="slide-image" src="img/movie-case/movie-case5.png">
+                    <div class="case-study__grid2__item">
+                        <p>Liz Stone</p>
+                        <p><a href="https://www.linkedin.com/in/annaferrari1/" target="_blank">Anna Ferrari</a></p>
+                        <p>CareerFoundry</p>
                     </div>
                 </div>
             </div>
-
-            <h2>Retrospective</h2>
-            <div class="case-study__grid">
-                <div class="case-study__grid__item">
-                    <h3>Challenges</h3>
-                    <p class="case-study__body">The most challenging part of this project was developing with new tools
-                        (React and Parcel) and learning how best to use them as I went.</p>
-                    <p class="case-study__body">Parcel’s quirks in particular slowed down production time significantly.
-                        From this challenge, I was able to readjust my <img class="case-study__parcel"
-                            src="img/movie-case/parcel-icon.png" alt="Parcel logo"> production schedule to set aside
-                        time for learning how to best utilize this finicky tool, and I made sure to record my solutions
-                        for my future self or anyone else who might view my project (which you can view at the end of
-                        the ReadMe on <a href="https://github.com/liztheshiz/movie-client"
-                            target="_blank">Cinema.Database’s GitHub page</a>.) This allowed me to move forward
-                        efficiently with the rest of the project.
-                    </p>
+            <div class="link-container">
+                <div class="case-study__note">
+                    Free Stock photos by <a href="https://www.vecteezy.com/free-photos" target="_blank">Vecteezy</a>
                 </div>
-                <div class="case-study__grid__item">
-                    <h3>Hindsight</h3>
-                    <p class="case-study__body">Cinema.Database was only the second full web app I had developed, so I
-                        was focused mainly on learning React. Since developing this app, I have continued to learn much
-                        more about other development practices and tools, so if I were to begin this project again, I
-                        would likely use a different, less glitch-prone build tool like Create React App, which I
-                        used to build my next project, <a href="https://liztheshiz.github.io/meetup/"
-                            target="_blank">Meetup</a>.</p>
-                    <p class="case-study__body">I also might prefer a more formalized testing process. While the
-                        informal test-as-you-go approach worked well for a small project like this, in the future I
-                        might utilize an automated, test-driven approach with a tool like Jest to keep myself practiced
-                        with common tools, and to make things easier down the line should I decide to increase the scope
-                        of the project.</p>
-                </div>
-            </div>
-
-            <h2>Credits</h2>
-            <div class="case-study__grid2">
-                <div class="case-study__grid2__item">
-                    <p>Developed by</p>
-                    <p>Design by</p>
-                    <p>Project idea by</p>
-                </div>
-                <div class="case-study__grid2__item">
-                    <p>Liz Stone</p>
-                    <p><a href="https://www.linkedin.com/in/annaferrari1/" target="_blank">Anna Ferrari</a></p>
-                    <p>CareerFoundry</p>
-                </div>
-            </div>
-        </div>
-        <div class="link-container">
-            <div class="case-study__note">
-                Free Stock photos by <a href="https://www.vecteezy.com/free-photos" target="_blank">Vecteezy</a>
             </div>
         </div>
     </main>
