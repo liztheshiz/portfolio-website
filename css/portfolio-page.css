@@ -31,6 +31,16 @@ main {
     border-left: 1px solid black;
 }
 
+.blurb {
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+    margin-left: 14px;
+    margin-right: 14px;
+    padding: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
 .screenshot {
     max-width: 100%;
 }
